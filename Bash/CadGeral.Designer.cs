@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnFuncionario = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.BtnCadastros_Produtos = new System.Windows.Forms.Button();
             this.btnCadastro = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -38,7 +42,12 @@
             // 
             this.panel1.AutoSize = true;
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnFuncionario);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.BtnCadastros_Produtos);
             this.panel1.Controls.Add(this.btnCadastro);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -47,6 +56,73 @@
             this.panel1.Size = new System.Drawing.Size(1272, 791);
             this.panel1.TabIndex = 3;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(465, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(277, 39);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Pagina de Cadastros";
+            // 
+            // btnFuncionario
+            // 
+            this.btnFuncionario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnFuncionario.FlatAppearance.BorderSize = 0;
+            this.btnFuncionario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFuncionario.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFuncionario.ForeColor = System.Drawing.Color.Black;
+            this.btnFuncionario.Image = global::Bash.Properties.Resources.identification;
+            this.btnFuncionario.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnFuncionario.Location = new System.Drawing.Point(740, 217);
+            this.btnFuncionario.Margin = new System.Windows.Forms.Padding(50);
+            this.btnFuncionario.Name = "btnFuncionario";
+            this.btnFuncionario.Size = new System.Drawing.Size(111, 112);
+            this.btnFuncionario.TabIndex = 8;
+            this.btnFuncionario.Text = "Cadastro de Funcionarios";
+            this.btnFuncionario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnFuncionario.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Image = global::Bash.Properties.Resources.Rectangle_4;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(318, 429);
+            this.button2.Margin = new System.Windows.Forms.Padding(50);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(111, 109);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Cadastro de Usuarios";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = global::Bash.Properties.Resources.Rectangle_2;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(529, 429);
+            this.button1.Margin = new System.Windows.Forms.Padding(50);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(111, 109);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Cadastro de Estoque";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // BtnCadastros_Produtos
             // 
             this.BtnCadastros_Produtos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -54,13 +130,14 @@
             this.BtnCadastros_Produtos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCadastros_Produtos.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCadastros_Produtos.ForeColor = System.Drawing.Color.Black;
-            this.BtnCadastros_Produtos.Image = global::Bash.Properties.Resources.icons8_procurar_estoque_48;
+            this.BtnCadastros_Produtos.Image = global::Bash.Properties.Resources.Rectangle_3;
             this.BtnCadastros_Produtos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnCadastros_Produtos.Location = new System.Drawing.Point(184, 85);
+            this.BtnCadastros_Produtos.Location = new System.Drawing.Point(529, 217);
+            this.BtnCadastros_Produtos.Margin = new System.Windows.Forms.Padding(50);
             this.BtnCadastros_Produtos.Name = "BtnCadastros_Produtos";
-            this.BtnCadastros_Produtos.Size = new System.Drawing.Size(95, 99);
+            this.BtnCadastros_Produtos.Size = new System.Drawing.Size(111, 112);
             this.BtnCadastros_Produtos.TabIndex = 4;
-            this.BtnCadastros_Produtos.Text = "Cadastro de \r\nEstoque\r\n";
+            this.BtnCadastros_Produtos.Text = "Cadastro de Itens";
             this.BtnCadastros_Produtos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnCadastros_Produtos.UseVisualStyleBackColor = true;
             this.BtnCadastros_Produtos.Click += new System.EventHandler(this.button2_Click);
@@ -73,13 +150,14 @@
             this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastro.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastro.ForeColor = System.Drawing.Color.Black;
-            this.btnCadastro.Image = global::Bash.Properties.Resources.iconfinder_UI_Basic_outline_77_4733185;
+            this.btnCadastro.Image = global::Bash.Properties.Resources.Rectangle_1;
             this.btnCadastro.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCadastro.Location = new System.Drawing.Point(67, 85);
+            this.btnCadastro.Location = new System.Drawing.Point(318, 217);
+            this.btnCadastro.Margin = new System.Windows.Forms.Padding(50);
             this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(111, 99);
+            this.btnCadastro.Size = new System.Drawing.Size(111, 112);
             this.btnCadastro.TabIndex = 3;
-            this.btnCadastro.Text = "Cadastro de \r\nPessoas Fisicas\r\n";
+            this.btnCadastro.Text = "Cadastro de Clientes";
             this.btnCadastro.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCadastro.UseVisualStyleBackColor = true;
             this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
@@ -100,6 +178,7 @@
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,5 +188,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCadastro;
         private System.Windows.Forms.Button BtnCadastros_Produtos;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnFuncionario;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -31,7 +31,6 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtCodBarras = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtQuantidade = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSair = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -40,7 +39,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.lblCodBarra = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
@@ -72,7 +70,7 @@
             this.txtCodBarras.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.txtCodBarras.Multiline = true;
             this.txtCodBarras.Name = "txtCodBarras";
-            this.txtCodBarras.Size = new System.Drawing.Size(100, 23);
+            this.txtCodBarras.Size = new System.Drawing.Size(242, 23);
             this.txtCodBarras.TabIndex = 1;
             // 
             // txtNome
@@ -84,15 +82,6 @@
             this.txtNome.Size = new System.Drawing.Size(242, 24);
             this.txtNome.TabIndex = 2;
             // 
-            // txtQuantidade
-            // 
-            this.txtQuantidade.Location = new System.Drawing.Point(142, 152);
-            this.txtQuantidade.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
-            this.txtQuantidade.Multiline = true;
-            this.txtQuantidade.Name = "txtQuantidade";
-            this.txtQuantidade.Size = new System.Drawing.Size(117, 23);
-            this.txtQuantidade.TabIndex = 3;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnSair);
@@ -102,7 +91,6 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.lblNome);
             this.panel1.Controls.Add(this.lblCodBarra);
             this.panel1.Controls.Add(this.lblId);
@@ -127,7 +115,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 348);
+            this.label7.Location = new System.Drawing.Point(12, 327);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(86, 19);
             this.label7.TabIndex = 22;
@@ -137,7 +125,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 308);
+            this.label6.Location = new System.Drawing.Point(12, 284);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 19);
             this.label6.TabIndex = 21;
@@ -147,7 +135,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 276);
+            this.label5.Location = new System.Drawing.Point(12, 252);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 19);
             this.label5.TabIndex = 20;
@@ -157,7 +145,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 214);
+            this.label2.Location = new System.Drawing.Point(12, 156);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 19);
             this.label2.TabIndex = 19;
@@ -167,7 +155,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 246);
+            this.label1.Location = new System.Drawing.Point(13, 219);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 19);
             this.label1.TabIndex = 18;
@@ -177,27 +165,17 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 182);
+            this.label4.Location = new System.Drawing.Point(13, 188);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 19);
             this.label4.TabIndex = 17;
             this.label4.Text = "Valor de Venda";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 151);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 19);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Quantidade";
-            // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(12, 119);
+            this.lblNome.Location = new System.Drawing.Point(12, 125);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(47, 19);
             this.lblNome.TabIndex = 15;
@@ -207,7 +185,7 @@
             // 
             this.lblCodBarra.AutoSize = true;
             this.lblCodBarra.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodBarra.Location = new System.Drawing.Point(12, 86);
+            this.lblCodBarra.Location = new System.Drawing.Point(13, 91);
             this.lblCodBarra.Name = "lblCodBarra";
             this.lblCodBarra.Size = new System.Drawing.Size(120, 19);
             this.lblCodBarra.TabIndex = 14;
@@ -234,7 +212,7 @@
             // 
             // txtCustoUnitario
             // 
-            this.txtCustoUnitario.Location = new System.Drawing.Point(142, 215);
+            this.txtCustoUnitario.Location = new System.Drawing.Point(142, 152);
             this.txtCustoUnitario.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.txtCustoUnitario.Multiline = true;
             this.txtCustoUnitario.Name = "txtCustoUnitario";
@@ -243,7 +221,7 @@
             // 
             // txtPeso
             // 
-            this.txtPeso.Location = new System.Drawing.Point(142, 247);
+            this.txtPeso.Location = new System.Drawing.Point(142, 215);
             this.txtPeso.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.txtPeso.Multiline = true;
             this.txtPeso.Name = "txtPeso";
@@ -252,7 +230,7 @@
             // 
             // txtFabricante
             // 
-            this.txtFabricante.Location = new System.Drawing.Point(142, 309);
+            this.txtFabricante.Location = new System.Drawing.Point(142, 280);
             this.txtFabricante.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.txtFabricante.Multiline = true;
             this.txtFabricante.Name = "txtFabricante";
@@ -261,7 +239,7 @@
             // 
             // txtObs
             // 
-            this.txtObs.Location = new System.Drawing.Point(142, 348);
+            this.txtObs.Location = new System.Drawing.Point(142, 327);
             this.txtObs.Multiline = true;
             this.txtObs.Name = "txtObs";
             this.txtObs.Size = new System.Drawing.Size(322, 125);
@@ -270,7 +248,7 @@
             // cbCategoria
             // 
             this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(142, 280);
+            this.cbCategoria.Location = new System.Drawing.Point(142, 250);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(168, 21);
             this.cbCategoria.TabIndex = 20;
@@ -321,7 +299,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(800, 620);
+            this.ClientSize = new System.Drawing.Size(527, 620);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.btnEditar);
@@ -333,7 +311,6 @@
             this.Controls.Add(this.txtCustoUnitario);
             this.Controls.Add(this.txtVenda);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtQuantidade);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.txtCodBarras);
             this.Controls.Add(this.txtId);
@@ -352,7 +329,6 @@
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtCodBarras;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -360,7 +336,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblCodBarra;
         private System.Windows.Forms.Label lblId;
