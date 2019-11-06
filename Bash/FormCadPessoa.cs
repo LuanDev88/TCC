@@ -7,29 +7,25 @@ namespace Bash
 {
     public partial class FormCadPessoa : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=bash1.database.windows.net;Initial Catalog=bash;User ID=bash;Password=!Senai456");
-
-       
+        SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=E:\\Bash\\Bash\\bashbd.mdf;Integrated Security=True;Connect Timeout=30");
         public FormCadPessoa()
         {
             InitializeComponent();
-
-            
         }
         
         public void Carregadtg()
         {
-            //string str = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=E:\\Bash\\Bash\\bashbd.mdf;Integrated Security=True;Connect Timeout=30";
-            //string query = "Select * from cadastro";
-            //SqlConnection con = new SqlConnection(str);
-            //SqlCommand cmd = new SqlCommand(query, con);
-            //con.Open();
-            //cmd.CommandType = CommandType.Text;
-            //SqlDataAdapter da = new SqlDataAdapter(cmd);
-            //DataTable cadastro = new DataTable();
-            //da.Fill(cadastro);
-            ////dtgCadastro.DataSource = cadastro;
-            //con.Close();
+            string str = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=E:\\Bash\\Bash\\bashbd.mdf;Integrated Security=True;Connect Timeout=30";
+            string query = "Select * from cadastro";
+            SqlConnection con = new SqlConnection(str);
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            cmd.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable cadastro = new DataTable();
+            da.Fill(cadastro);
+            //dtgCadastro.DataSource = cadastro;
+            con.Close();
         }
        
         private void BtnSair_Click(object sender, EventArgs e)
@@ -61,7 +57,6 @@ namespace Bash
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Registro Inserido!!");
                 Carregadtg();
-                
                 con.Close();
                 txtId.Text = "";
                 txtcpf.Text = "";
@@ -131,7 +126,6 @@ namespace Bash
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            
             try
             {
                 con.Open();
@@ -168,7 +162,6 @@ namespace Bash
             {
                 MessageBox.Show(er.Message);
             }
-           
         }
 
         private void BtnExcluir_Click(object sender, EventArgs e)
