@@ -9,14 +9,14 @@ namespace Bash
     {
         SqlConnection con = new SqlConnection("Data Source=bash1.database.windows.net;Initial Catalog=bash;User ID=bash;Password=!Senai456");
 
-       
+
         public FormCadPessoa()
         {
             InitializeComponent();
 
-            
+
         }
-        
+
         public void Carregadtg()
         {
             //string str = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=E:\\Bash\\Bash\\bashbd.mdf;Integrated Security=True;Connect Timeout=30";
@@ -31,7 +31,7 @@ namespace Bash
             ////dtgCadastro.DataSource = cadastro;
             //con.Close();
         }
-       
+
         private void BtnSair_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -61,7 +61,7 @@ namespace Bash
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Registro Inserido!!");
                 Carregadtg();
-                
+
                 con.Close();
                 txtId.Text = "";
                 txtcpf.Text = "";
@@ -131,7 +131,7 @@ namespace Bash
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
                 con.Open();
@@ -168,7 +168,7 @@ namespace Bash
             {
                 MessageBox.Show(er.Message);
             }
-           
+
         }
 
         private void BtnExcluir_Click(object sender, EventArgs e)

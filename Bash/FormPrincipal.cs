@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace Bash
 {
@@ -21,21 +15,7 @@ namespace Bash
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string str = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=E:\\Bash\\Bash\\bashbd.mdf;Integrated Security=True;Connect Timeout=30";
-                string query = "select * from bebidas";
-                SqlConnection con = new SqlConnection(str);
-                SqlCommand cmd = new SqlCommand(query, con);
-                con.Open();
-                DataSet ds = new DataSet();
-                MessageBox.Show("Banco de Dados Conectado!");
-                con.Close();
-            }
-            catch (Exception er)
-            {
-                MessageBox.Show(er.Message);
-            }
+
         }
 
         private void Button4_Click(object sender, EventArgs e)
@@ -50,10 +30,10 @@ namespace Bash
 
         private void BtnCadastro_Click(object sender, EventArgs e)
         {
-           
+
         }
 
-       
+
         private void Button2_Click_1(object sender, EventArgs e)
         {
             panel3.Controls.Clear();
@@ -66,17 +46,17 @@ namespace Bash
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void BtnCadastros_Enter(object sender, EventArgs e)
         {
-         
+
         }
 
         private void BtnCadastros_Leave(object sender, EventArgs e)
         {
-           
+
         }
 
         private void BtnEstoque_Click(object sender, EventArgs e)
@@ -123,6 +103,25 @@ namespace Bash
             pdv.TopLevel = false;
             panel3.Controls.Add(pdv);
             pdv.Show();
+        }
+
+        private void BtnTesteBanco_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string str = "Server=127.0.0.1;Database=bash;Uid=root;Pwd=;";
+                string query = "select * from bash";
+                MySqlConnection con = new MySqlConnection(str);
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                con.Open();
+                DataSet ds = new DataSet();
+                MessageBox.Show("Banco de Dados Conectado!");
+                con.Close();
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
         }
     }
 }

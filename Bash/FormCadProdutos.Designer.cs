@@ -29,29 +29,23 @@
         private void InitializeComponent()
         {
             this.txtId = new System.Windows.Forms.TextBox();
-            this.txtCodBarras = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSair = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.lblCodBarra = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.txtVenda = new System.Windows.Forms.TextBox();
             this.txtCustoUnitario = new System.Windows.Forms.TextBox();
-            this.txtPeso = new System.Windows.Forms.TextBox();
-            this.txtFabricante = new System.Windows.Forms.TextBox();
             this.txtObs = new System.Windows.Forms.TextBox();
-            this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtFabricante = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,15 +58,6 @@
             this.txtId.Size = new System.Drawing.Size(38, 23);
             this.txtId.TabIndex = 0;
             // 
-            // txtCodBarras
-            // 
-            this.txtCodBarras.Location = new System.Drawing.Point(142, 87);
-            this.txtCodBarras.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
-            this.txtCodBarras.Multiline = true;
-            this.txtCodBarras.Name = "txtCodBarras";
-            this.txtCodBarras.Size = new System.Drawing.Size(242, 23);
-            this.txtCodBarras.TabIndex = 1;
-            // 
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(142, 120);
@@ -84,15 +69,12 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnSair);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.lblNome);
-            this.panel1.Controls.Add(this.lblCodBarra);
             this.panel1.Controls.Add(this.lblId);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -121,26 +103,6 @@
             this.label7.TabIndex = 22;
             this.label7.Text = "Observação";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 284);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 19);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "Fabricante";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 252);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 19);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "Categoria";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -150,16 +112,6 @@
             this.label2.Size = new System.Drawing.Size(102, 19);
             this.label2.TabIndex = 19;
             this.label2.Text = "Custo Unitario";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 219);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 19);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Peso";
             // 
             // label4
             // 
@@ -180,16 +132,6 @@
             this.lblNome.Size = new System.Drawing.Size(47, 19);
             this.lblNome.TabIndex = 15;
             this.lblNome.Text = "Nome";
-            // 
-            // lblCodBarra
-            // 
-            this.lblCodBarra.AutoSize = true;
-            this.lblCodBarra.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodBarra.Location = new System.Drawing.Point(13, 91);
-            this.lblCodBarra.Name = "lblCodBarra";
-            this.lblCodBarra.Size = new System.Drawing.Size(120, 19);
-            this.lblCodBarra.TabIndex = 14;
-            this.lblCodBarra.Text = "Codigo de Barras";
             // 
             // lblId
             // 
@@ -219,24 +161,6 @@
             this.txtCustoUnitario.Size = new System.Drawing.Size(100, 23);
             this.txtCustoUnitario.TabIndex = 15;
             // 
-            // txtPeso
-            // 
-            this.txtPeso.Location = new System.Drawing.Point(142, 215);
-            this.txtPeso.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
-            this.txtPeso.Multiline = true;
-            this.txtPeso.Name = "txtPeso";
-            this.txtPeso.Size = new System.Drawing.Size(88, 23);
-            this.txtPeso.TabIndex = 16;
-            // 
-            // txtFabricante
-            // 
-            this.txtFabricante.Location = new System.Drawing.Point(142, 280);
-            this.txtFabricante.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
-            this.txtFabricante.Multiline = true;
-            this.txtFabricante.Name = "txtFabricante";
-            this.txtFabricante.Size = new System.Drawing.Size(219, 23);
-            this.txtFabricante.TabIndex = 18;
-            // 
             // txtObs
             // 
             this.txtObs.Location = new System.Drawing.Point(142, 327);
@@ -244,14 +168,6 @@
             this.txtObs.Name = "txtObs";
             this.txtObs.Size = new System.Drawing.Size(322, 125);
             this.txtObs.TabIndex = 19;
-            // 
-            // cbCategoria
-            // 
-            this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(142, 250);
-            this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(168, 21);
-            this.cbCategoria.TabIndex = 20;
             // 
             // btnSalvar
             // 
@@ -294,25 +210,41 @@
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 220);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 19);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Fabricante";
+            // 
+            // txtFabricante
+            // 
+            this.txtFabricante.Location = new System.Drawing.Point(142, 215);
+            this.txtFabricante.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.txtFabricante.Multiline = true;
+            this.txtFabricante.Name = "txtFabricante";
+            this.txtFabricante.Size = new System.Drawing.Size(100, 24);
+            this.txtFabricante.TabIndex = 25;
+            // 
             // FormCadProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(527, 620);
+            this.Controls.Add(this.txtFabricante);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.txtObs);
-            this.Controls.Add(this.txtFabricante);
-            this.Controls.Add(this.txtPeso);
             this.Controls.Add(this.txtCustoUnitario);
             this.Controls.Add(this.txtVenda);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.txtCodBarras);
             this.Controls.Add(this.txtId);
             this.Name = "FormCadProduto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -327,28 +259,22 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.TextBox txtCodBarras;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.Label lblCodBarra;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.TextBox txtVenda;
         private System.Windows.Forms.TextBox txtCustoUnitario;
-        private System.Windows.Forms.TextBox txtPeso;
-        private System.Windows.Forms.TextBox txtFabricante;
         private System.Windows.Forms.TextBox txtObs;
-        private System.Windows.Forms.ComboBox cbCategoria;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtFabricante;
     }
 }

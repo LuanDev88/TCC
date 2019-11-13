@@ -169,6 +169,7 @@
             this.btnTesteBanco.Text = "Teste de \r\nBanco";
             this.btnTesteBanco.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTesteBanco.UseVisualStyleBackColor = true;
+            this.btnTesteBanco.Click += new System.EventHandler(this.BtnTesteBanco_Click);
             // 
             // FormPrincipal
             // 
