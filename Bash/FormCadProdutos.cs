@@ -7,7 +7,7 @@ namespace Bash
 {
     public partial class FormCadProduto : Form
     {
-        MySqlConnection con = new MySqlConnection("Server=127.0.0.1;Database=teste;Uid=root;Pwd=;");
+        MySqlConnection con = new MySqlConnection("Server=127.0.0.1;Database=bash;Uid=root;Pwd=;");
         public FormCadProduto()
         {
             InitializeComponent();
@@ -23,15 +23,15 @@ namespace Bash
             try
             {
                 con.Open();
-
-                MySqlCommand comando;
-                comando = new MySqlCommand("INSERT INTO produto(nome) VALUES (@nome)", con);
-                comando.Parameters.AddWithValue("@nome", MySqlDbType.VarChar).Value = txtNome.Text;
-                //cmd.Parameters.AddWithValue("@descricao", MySqlDbType.Text).Value = Convert.ToString(txtObs.Text.Trim());
-                //cmd.Parameters.AddWithValue("@valor_compra", MySqlDbType.Decimal).Value = Convert.ToString(txtCustoUnitario.Text.Trim());
-                //cmd.Parameters.AddWithValue("@valor_venda", MySqlDbType.Decimal).Value = Convert.ToString(txtVenda.Text.Trim());
-                //cmd.Parameters.AddWithValue("@fabricante", MySqlDbType.VarChar).Value = Convert.ToString(txtFabricante.Text.Trim());
-                comando.ExecuteNonQuery();
+                
+                MySqlCommand cmd = new MySqlCommand("inserir_produto", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("?nome", MySqlDbType.VarChar).Value = txtNome.Text;
+                cmd.Parameters.Add("?descricao", MySqlDbType.Text).Value = txtObs.Text.Trim();
+                cmd.Parameters.Add("?valor_compra", MySqlDbType.Decimal).Value = txtCustoUnitario.Text.Trim().Replace(".",",");
+                cmd.Parameters.Add("?valor_venda", MySqlDbType.Decimal).Value = txtVenda.Text.Trim().Replace(".", ",");
+                cmd.Parameters.Add("?fabricante", MySqlDbType.VarChar).Value = txtFabricante.Text.Trim();
+                cmd.ExecuteNonQuery();
                 MessageBox.Show("Registro Inserido!!");
                 con.Close();
             }
@@ -39,6 +39,7 @@ namespace Bash
             catch (Exception er)
             {
                 MessageBox.Show(er.Message);
+                con.Close();
             }
         }
     }

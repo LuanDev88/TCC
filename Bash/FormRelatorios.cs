@@ -47,9 +47,8 @@ namespace Bash
             Pessoa.txtId.Text = this.DtgPessoa.CurrentRow.Cells[0].Value.ToString();
             Pessoa.txtNome.Text = this.DtgPessoa.CurrentRow.Cells[1].Value.ToString();
             Pessoa.txtcpf.Text = this.DtgPessoa.CurrentRow.Cells[2].Value.ToString();
-            Pessoa.txtRg.Text = this.DtgPessoa.CurrentRow.Cells[3].Value.ToString();
+            
             Pessoa.txtCelular.Text = this.DtgPessoa.CurrentRow.Cells[4].Value.ToString();
-            Pessoa.txtTelefone.Text = this.DtgPessoa.CurrentRow.Cells[5].Value.ToString();
             Pessoa.txtEndereco.Text = this.DtgPessoa.CurrentRow.Cells[6].Value.ToString();
             Pessoa.txtNumero.Text = this.DtgPessoa.CurrentRow.Cells[7].Value.ToString();
             Pessoa.txtEstado.Text = this.DtgPessoa.CurrentRow.Cells[8].Value.ToString();

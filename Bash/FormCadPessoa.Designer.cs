@@ -34,18 +34,6 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.txtEstado = new System.Windows.Forms.TextBox();
-            this.txtCidade = new System.Windows.Forms.TextBox();
-            this.txtNumero = new System.Windows.Forms.TextBox();
-            this.txtEndereco = new System.Windows.Forms.TextBox();
-            this.txtCelular = new System.Windows.Forms.TextBox();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
-            this.txtRg = new System.Windows.Forms.TextBox();
-            this.txtcpf = new System.Windows.Forms.TextBox();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -53,38 +41,74 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.txtEstado = new System.Windows.Forms.TextBox();
+            this.txtCidade = new System.Windows.Forms.TextBox();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.txtCelular = new System.Windows.Forms.TextBox();
+            this.txtcpf = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtSobrenome = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.cbSexo = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtCep = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtCep);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.label17);
+            this.panel1.Controls.Add(this.cbSexo);
+            this.panel1.Controls.Add(this.txtBairro);
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.txtSobrenome);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.btnPesquisar);
+            this.panel1.Controls.Add(this.txtEstado);
+            this.panel1.Controls.Add(this.txtCidade);
+            this.panel1.Controls.Add(this.txtNumero);
+            this.panel1.Controls.Add(this.txtEndereco);
+            this.panel1.Controls.Add(this.txtCelular);
+            this.panel1.Controls.Add(this.txtcpf);
+            this.panel1.Controls.Add(this.txtNome);
+            this.panel1.Controls.Add(this.txtId);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(492, 548);
+            this.panel1.Size = new System.Drawing.Size(544, 699);
             this.panel1.TabIndex = 0;
             // 
             // panel4
@@ -94,9 +118,9 @@
             this.panel4.Controls.Add(this.btnEditar);
             this.panel4.Controls.Add(this.btnCadastrar);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 472);
+            this.panel4.Location = new System.Drawing.Point(0, 629);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(492, 76);
+            this.panel4.Size = new System.Drawing.Size(544, 70);
             this.panel4.TabIndex = 14;
             // 
             // btnSair
@@ -139,122 +163,13 @@
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnPesquisar);
-            this.panel3.Controls.Add(this.txtEstado);
-            this.panel3.Controls.Add(this.txtCidade);
-            this.panel3.Controls.Add(this.txtNumero);
-            this.panel3.Controls.Add(this.txtEndereco);
-            this.panel3.Controls.Add(this.txtCelular);
-            this.panel3.Controls.Add(this.txtTelefone);
-            this.panel3.Controls.Add(this.txtRg);
-            this.panel3.Controls.Add(this.txtcpf);
-            this.panel3.Controls.Add(this.txtNome);
-            this.panel3.Controls.Add(this.txtId);
-            this.panel3.Location = new System.Drawing.Point(100, 69);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(387, 397);
-            this.panel3.TabIndex = 13;
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Location = new System.Drawing.Point(102, 31);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(116, 25);
-            this.btnPesquisar.TabIndex = 10;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            this.btnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
-            // 
-            // txtEstado
-            // 
-            this.txtEstado.Location = new System.Drawing.Point(3, 294);
-            this.txtEstado.Multiline = true;
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(135, 23);
-            this.txtEstado.TabIndex = 9;
-            // 
-            // txtCidade
-            // 
-            this.txtCidade.Location = new System.Drawing.Point(3, 265);
-            this.txtCidade.Multiline = true;
-            this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(135, 23);
-            this.txtCidade.TabIndex = 8;
-            // 
-            // txtNumero
-            // 
-            this.txtNumero.Location = new System.Drawing.Point(3, 236);
-            this.txtNumero.Multiline = true;
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(80, 23);
-            this.txtNumero.TabIndex = 7;
-            // 
-            // txtEndereco
-            // 
-            this.txtEndereco.Location = new System.Drawing.Point(3, 207);
-            this.txtEndereco.Multiline = true;
-            this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(376, 23);
-            this.txtEndereco.TabIndex = 6;
-            // 
-            // txtCelular
-            // 
-            this.txtCelular.Location = new System.Drawing.Point(3, 178);
-            this.txtCelular.Multiline = true;
-            this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(155, 23);
-            this.txtCelular.TabIndex = 5;
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Location = new System.Drawing.Point(3, 149);
-            this.txtTelefone.Multiline = true;
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(155, 23);
-            this.txtTelefone.TabIndex = 4;
-            // 
-            // txtRg
-            // 
-            this.txtRg.Location = new System.Drawing.Point(3, 120);
-            this.txtRg.Multiline = true;
-            this.txtRg.Name = "txtRg";
-            this.txtRg.Size = new System.Drawing.Size(225, 23);
-            this.txtRg.TabIndex = 3;
-            // 
-            // txtcpf
-            // 
-            this.txtcpf.Location = new System.Drawing.Point(3, 91);
-            this.txtcpf.Multiline = true;
-            this.txtcpf.Name = "txtcpf";
-            this.txtcpf.Size = new System.Drawing.Size(225, 23);
-            this.txtcpf.TabIndex = 2;
-            // 
-            // txtNome
-            // 
-            this.txtNome.Location = new System.Drawing.Point(3, 62);
-            this.txtNome.Multiline = true;
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(337, 23);
-            this.txtNome.TabIndex = 1;
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(3, 31);
-            this.txtId.Multiline = true;
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(80, 25);
-            this.txtId.TabIndex = 0;
-            this.txtId.TextChanged += new System.EventHandler(this.TxtId_TextChanged);
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label12);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(492, 63);
+            this.panel2.Size = new System.Drawing.Size(544, 63);
             this.panel2.TabIndex = 12;
             // 
             // label12
@@ -271,7 +186,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(12, 371);
+            this.label11.Location = new System.Drawing.Point(12, 560);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(44, 15);
             this.label11.TabIndex = 11;
@@ -281,7 +196,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(12, 342);
+            this.label10.Location = new System.Drawing.Point(12, 521);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(45, 15);
             this.label10.TabIndex = 10;
@@ -291,7 +206,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(12, 313);
+            this.label9.Location = new System.Drawing.Point(12, 404);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 15);
             this.label9.TabIndex = 9;
@@ -301,7 +216,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(12, 284);
+            this.label8.Location = new System.Drawing.Point(12, 365);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(57, 15);
             this.label8.TabIndex = 8;
@@ -311,21 +226,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 255);
+            this.label7.Location = new System.Drawing.Point(12, 599);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 15);
             this.label7.TabIndex = 7;
             this.label7.Text = "Celular";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 226);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 15);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Telefone";
             // 
             // label5
             // 
@@ -336,21 +241,11 @@
             this.label5.Size = new System.Drawing.Size(0, 15);
             this.label5.TabIndex = 5;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 197);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(22, 15);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "RG";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 168);
+            this.label3.Location = new System.Drawing.Point(12, 326);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 15);
             this.label3.TabIndex = 3;
@@ -362,9 +257,9 @@
             this.label2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 139);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 15);
+            this.label2.Size = new System.Drawing.Size(89, 15);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Pessoa Fisica";
+            this.label2.Text = "Primeiro Nome";
             // 
             // label1
             // 
@@ -376,11 +271,208 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "ID";
             // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Location = new System.Drawing.Point(228, 106);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(116, 25);
+            this.btnPesquisar.TabIndex = 25;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            // 
+            // txtEstado
+            // 
+            this.txtEstado.Location = new System.Drawing.Point(129, 552);
+            this.txtEstado.Margin = new System.Windows.Forms.Padding(8);
+            this.txtEstado.Multiline = true;
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(135, 23);
+            this.txtEstado.TabIndex = 24;
+            // 
+            // txtCidade
+            // 
+            this.txtCidade.Location = new System.Drawing.Point(129, 513);
+            this.txtCidade.Margin = new System.Windows.Forms.Padding(8);
+            this.txtCidade.Multiline = true;
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(135, 23);
+            this.txtCidade.TabIndex = 23;
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.Location = new System.Drawing.Point(129, 396);
+            this.txtNumero.Margin = new System.Windows.Forms.Padding(8);
+            this.txtNumero.Multiline = true;
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(80, 23);
+            this.txtNumero.TabIndex = 22;
+            // 
+            // txtEndereco
+            // 
+            this.txtEndereco.Location = new System.Drawing.Point(129, 357);
+            this.txtEndereco.Margin = new System.Windows.Forms.Padding(8);
+            this.txtEndereco.Multiline = true;
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(376, 23);
+            this.txtEndereco.TabIndex = 21;
+            // 
+            // txtCelular
+            // 
+            this.txtCelular.Location = new System.Drawing.Point(129, 591);
+            this.txtCelular.Margin = new System.Windows.Forms.Padding(8);
+            this.txtCelular.Multiline = true;
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(155, 23);
+            this.txtCelular.TabIndex = 20;
+            // 
+            // txtcpf
+            // 
+            this.txtcpf.Location = new System.Drawing.Point(129, 318);
+            this.txtcpf.Margin = new System.Windows.Forms.Padding(8);
+            this.txtcpf.Multiline = true;
+            this.txtcpf.Name = "txtcpf";
+            this.txtcpf.Size = new System.Drawing.Size(225, 23);
+            this.txtcpf.TabIndex = 17;
+            // 
+            // txtNome
+            // 
+            this.txtNome.Location = new System.Drawing.Point(129, 137);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(8);
+            this.txtNome.Multiline = true;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(337, 23);
+            this.txtNome.TabIndex = 16;
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(129, 106);
+            this.txtId.Multiline = true;
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(80, 25);
+            this.txtId.TabIndex = 15;
+            // 
+            // txtSobrenome
+            // 
+            this.txtSobrenome.Location = new System.Drawing.Point(129, 176);
+            this.txtSobrenome.Margin = new System.Windows.Forms.Padding(8);
+            this.txtSobrenome.Multiline = true;
+            this.txtSobrenome.Name = "txtSobrenome";
+            this.txtSobrenome.Size = new System.Drawing.Size(135, 23);
+            this.txtSobrenome.TabIndex = 27;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(12, 184);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(68, 15);
+            this.label13.TabIndex = 26;
+            this.label13.Text = "Sobrenome";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(129, 215);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(8);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(135, 23);
+            this.textBox2.TabIndex = 29;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(12, 223);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(44, 15);
+            this.label14.TabIndex = 28;
+            this.label14.Text = "Estado";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(12, 287);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(101, 15);
+            this.label15.TabIndex = 30;
+            this.label15.Text = "Data Nascimento";
+            // 
+            // txtBairro
+            // 
+            this.txtBairro.Location = new System.Drawing.Point(129, 435);
+            this.txtBairro.Margin = new System.Windows.Forms.Padding(8);
+            this.txtBairro.Multiline = true;
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(135, 23);
+            this.txtBairro.TabIndex = 33;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(12, 443);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(42, 15);
+            this.label16.TabIndex = 32;
+            this.label16.Text = "Bairro";
+            // 
+            // cbSexo
+            // 
+            this.cbSexo.FormattingEnabled = true;
+            this.cbSexo.Items.AddRange(new object[] {
+            "Masculino",
+            "Feminino"});
+            this.cbSexo.Location = new System.Drawing.Point(129, 250);
+            this.cbSexo.Name = "cbSexo";
+            this.cbSexo.Size = new System.Drawing.Size(121, 21);
+            this.cbSexo.TabIndex = 34;
+            this.cbSexo.Text = "Escolha o sexo...";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(12, 256);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(32, 15);
+            this.label17.TabIndex = 35;
+            this.label17.Text = "Sexo";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(129, 282);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(8);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(121, 20);
+            this.dateTimePicker1.TabIndex = 36;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 482);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(27, 15);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "CEP";
+            // 
+            // txtCep
+            // 
+            this.txtCep.Location = new System.Drawing.Point(129, 474);
+            this.txtCep.Margin = new System.Windows.Forms.Padding(8);
+            this.txtCep.Multiline = true;
+            this.txtCep.Name = "txtCep";
+            this.txtCep.Size = new System.Drawing.Size(135, 23);
+            this.txtCep.TabIndex = 38;
+            // 
             // FormCadPessoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 548);
+            this.ClientSize = new System.Drawing.Size(544, 699);
             this.Controls.Add(this.panel1);
             this.Name = "FormCadPessoa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -389,8 +481,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -403,13 +493,10 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
@@ -419,16 +506,26 @@
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnCadastrar;
+        public System.Windows.Forms.TextBox txtCep;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.ComboBox cbSexo;
+        public System.Windows.Forms.TextBox txtBairro;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        public System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label14;
+        public System.Windows.Forms.TextBox txtSobrenome;
+        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnPesquisar;
+        public System.Windows.Forms.TextBox txtEstado;
+        public System.Windows.Forms.TextBox txtCidade;
         public System.Windows.Forms.TextBox txtNumero;
         public System.Windows.Forms.TextBox txtEndereco;
         public System.Windows.Forms.TextBox txtCelular;
-        public System.Windows.Forms.TextBox txtTelefone;
-        public System.Windows.Forms.TextBox txtRg;
         public System.Windows.Forms.TextBox txtcpf;
         public System.Windows.Forms.TextBox txtNome;
         public System.Windows.Forms.TextBox txtId;
-        public System.Windows.Forms.TextBox txtEstado;
-        public System.Windows.Forms.TextBox txtCidade;
     }
 }

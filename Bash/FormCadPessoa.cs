@@ -50,7 +50,6 @@ namespace Bash
                 SqlCommand cmd = new SqlCommand("inserir", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@nome", SqlDbType.NChar).Value = txtNome.Text.Trim();
-                cmd.Parameters.AddWithValue("@rg", SqlDbType.NChar).Value = txtRg.Text.Trim();
                 cmd.Parameters.AddWithValue("@cpf", SqlDbType.NChar).Value = txtcpf.Text.Trim();
                 cmd.Parameters.AddWithValue("@telefone", SqlDbType.NChar).Value = txtNome.Text.Trim();
                 cmd.Parameters.AddWithValue("@endereco", SqlDbType.NChar).Value = txtEndereco.Text.Trim();
@@ -68,12 +67,10 @@ namespace Bash
                 txtNome.Text = "";
                 txtEndereco.Text = "";
                 txtCelular.Text = "";
-                txtRg.Text = "";
                 txtEndereco.Text = "";
                 txtNumero.Text = "";
                 txtEstado.Text = "";
                 txtCidade.Text = "";
-                txtTelefone.Text = "";
             }
 
             catch (Exception er)
@@ -97,8 +94,6 @@ namespace Bash
                     txtId.Text = rd["id"].ToString();
                     txtNome.Text = rd["nome"].ToString();
                     txtcpf.Text = rd["cpf"].ToString();
-                    txtRg.Text = rd["rg"].ToString();
-                    txtTelefone.Text = rd["telefone"].ToString();
                     txtCelular.Text = rd["celular"].ToString();
                     txtEndereco.Text = rd["endereco"].ToString();
                     txtNumero.Text = rd["numero"].ToString();
@@ -114,12 +109,11 @@ namespace Bash
                     txtNome.Text = "";
                     txtEndereco.Text = "";
                     txtCelular.Text = "";
-                    txtRg.Text = "";
                     txtEndereco.Text = "";
                     txtNumero.Text = "";
                     txtEstado.Text = "";
                     txtCidade.Text = "";
-                    txtTelefone.Text = "";
+
                 }
                 con.Close();
 
@@ -139,7 +133,6 @@ namespace Bash
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("id", SqlDbType.Int).Value = txtId.Text.Trim();
                 cmd.Parameters.AddWithValue("@nome", SqlDbType.NChar).Value = txtNome.Text.Trim();
-                cmd.Parameters.AddWithValue("@rg", SqlDbType.NChar).Value = txtRg.Text.Trim();
                 cmd.Parameters.AddWithValue("@cpf", SqlDbType.NChar).Value = txtcpf.Text.Trim();
                 cmd.Parameters.AddWithValue("@telefone", SqlDbType.NChar).Value = txtNome.Text.Trim();
                 cmd.Parameters.AddWithValue("@endereco", SqlDbType.NChar).Value = txtEndereco.Text.Trim();
@@ -156,12 +149,10 @@ namespace Bash
                 txtNome.Text = "";
                 txtEndereco.Text = "";
                 txtCelular.Text = "";
-                txtRg.Text = "";
                 txtEndereco.Text = "";
                 txtNumero.Text = "";
                 txtEstado.Text = "";
                 txtCidade.Text = "";
-                txtTelefone.Text = "";
             }
 
             catch (Exception er)
@@ -188,12 +179,10 @@ namespace Bash
                 txtNome.Text = "";
                 txtEndereco.Text = "";
                 txtCelular.Text = "";
-                txtRg.Text = "";
                 txtEndereco.Text = "";
                 txtNumero.Text = "";
                 txtEstado.Text = "";
                 txtCidade.Text = "";
-                txtTelefone.Text = "";
 
             }
             catch (Exception er)
