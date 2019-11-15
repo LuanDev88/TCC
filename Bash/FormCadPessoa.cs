@@ -2,13 +2,13 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Bash
 {
     public partial class FormCadPessoa : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=bash1.database.windows.net;Initial Catalog=bash;User ID=bash;Password=!Senai456");
-
+        MySqlConnection con = new MySqlConnection("Server=127.0.0.1;Database=bash;Uid=root;Pwd=;");
 
         public FormCadPessoa()
         {
@@ -47,16 +47,21 @@ namespace Bash
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("inserir", con);
+                MySqlCommand cmd = new MySqlCommand("insert_cliente", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@nome", SqlDbType.NChar).Value = txtNome.Text.Trim();
-                cmd.Parameters.AddWithValue("@cpf", SqlDbType.NChar).Value = txtcpf.Text.Trim();
-                cmd.Parameters.AddWithValue("@telefone", SqlDbType.NChar).Value = txtNome.Text.Trim();
-                cmd.Parameters.AddWithValue("@endereco", SqlDbType.NChar).Value = txtEndereco.Text.Trim();
-                cmd.Parameters.AddWithValue("@celular", SqlDbType.NChar).Value = txtCelular.Text.Trim();
-                cmd.Parameters.AddWithValue("@numero", SqlDbType.Int).Value = txtNumero.Text.Trim();
-                cmd.Parameters.AddWithValue("@cidade", SqlDbType.NChar).Value = txtCidade.Text.Trim();
-                cmd.Parameters.AddWithValue("@estado", SqlDbType.NChar).Value = txtEstado.Text.Trim();
+                cmd.Parameters.Add("@nome", MySqlDbType.VarChar).Value = txtNome.Text.Trim();
+                cmd.Parameters.Add("@sobrenome", MySqlDbType.VarChar).Value = txtSobrenome.Text.Trim();
+                cmd.Parameters.Add("@sexo", MySqlDbType.VarChar).Value = cbSexo.Text.Trim();
+                cmd.Parameters.Add("@data_nascimento", MySqlDbType.Date).Value = Convert.ToDateTime(dtpNascimento.Text.Trim());
+                cmd.Parameters.Add("@cpf", MySqlDbType.VarChar).Value = txtcpf.Text.Trim();
+                cmd.Parameters.Add("@endereco", MySqlDbType.VarChar).Value = txtEndereco.Text.Trim();
+                cmd.Parameters.Add("@numero", MySqlDbType.Int32).Value = txtNumero.Text.Trim();
+                cmd.Parameters.Add("@bairro", MySqlDbType.VarChar).Value = txtBairro.Text.Trim();
+                cmd.Parameters.Add("@cep", MySqlDbType.VarChar).Value = txtCep.Text.Trim();
+                cmd.Parameters.Add("@celular", MySqlDbType.VarChar).Value = txtCelular.Text.Trim();
+                cmd.Parameters.Add("@cidade", MySqlDbType.VarChar).Value = txtCidade.Text.Trim();
+                cmd.Parameters.Add("@estado", MySqlDbType.VarChar).Value = txtEstado.Text.Trim();
+
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Registro Inserido!!");
                 Carregadtg();
@@ -71,56 +76,25 @@ namespace Bash
                 txtNumero.Text = "";
                 txtEstado.Text = "";
                 txtCidade.Text = "";
+                txtSobrenome.Text = "";
+                txtCep.Text = "";
+                txtCidade.Text = "";
+                txtBairro.Text = "";
+                cbSexo.Text = "Escolha o sexo...";
+                dtpNascimento.Value = DateTime.Now;
+                
             }
 
             catch (Exception er)
             {
                 MessageBox.Show(er.Message);
+                con.Close();
             }
         }
 
         private void BtnPesquisar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                con.Open();
-                SqlCommand cmd = new SqlCommand("pesquisar", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Id", this.txtId.Text);
-
-                SqlDataReader rd = cmd.ExecuteReader();
-                if (rd.Read())
-                {
-                    txtId.Text = rd["id"].ToString();
-                    txtNome.Text = rd["nome"].ToString();
-                    txtcpf.Text = rd["cpf"].ToString();
-                    txtCelular.Text = rd["celular"].ToString();
-                    txtEndereco.Text = rd["endereco"].ToString();
-                    txtNumero.Text = rd["numero"].ToString();
-                    txtCidade.Text = rd["cidade"].ToString();
-                    txtEstado.Text = rd["estado"].ToString();
-
-                }
-                else
-                {
-                    MessageBox.Show("Registro não encontrado");
-                    txtId.Text = "";
-                    txtcpf.Text = "";
-                    txtNome.Text = "";
-                    txtEndereco.Text = "";
-                    txtCelular.Text = "";
-                    txtEndereco.Text = "";
-                    txtNumero.Text = "";
-                    txtEstado.Text = "";
-                    txtCidade.Text = "";
-
-                }
-                con.Close();
-
-            }
-            finally
-            {
-            }
+            
         }
 
         private void BtnEditar_Click(object sender, EventArgs e)
@@ -129,20 +103,26 @@ namespace Bash
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("editar", con);
+                MySqlCommand cmd = new MySqlCommand("editar_cliente", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("id", SqlDbType.Int).Value = txtId.Text.Trim();
-                cmd.Parameters.AddWithValue("@nome", SqlDbType.NChar).Value = txtNome.Text.Trim();
-                cmd.Parameters.AddWithValue("@cpf", SqlDbType.NChar).Value = txtcpf.Text.Trim();
-                cmd.Parameters.AddWithValue("@telefone", SqlDbType.NChar).Value = txtNome.Text.Trim();
-                cmd.Parameters.AddWithValue("@endereco", SqlDbType.NChar).Value = txtEndereco.Text.Trim();
-                cmd.Parameters.AddWithValue("@celular", SqlDbType.NChar).Value = txtCelular.Text.Trim();
-                cmd.Parameters.AddWithValue("@numero", SqlDbType.Int).Value = txtNumero.Text.Trim();
-                cmd.Parameters.AddWithValue("@cidade", SqlDbType.NChar).Value = txtCidade.Text.Trim();
-                cmd.Parameters.AddWithValue("@estado", SqlDbType.NChar).Value = txtEstado.Text.Trim();
+                cmd.Parameters.Add("@id", MySqlDbType.Int32).Value = txtId.Text.Trim();
+                cmd.Parameters.Add("@nome", MySqlDbType.VarChar).Value = txtNome.Text.Trim();
+                cmd.Parameters.Add("@sobrenome", MySqlDbType.VarChar).Value = txtSobrenome.Text.Trim();
+                cmd.Parameters.Add("@sexo", MySqlDbType.VarChar).Value = cbSexo.Text.Trim();
+                cmd.Parameters.Add("@data_nascimento", MySqlDbType.Date).Value = Convert.ToDateTime(dtpNascimento.Text.Trim());
+                cmd.Parameters.Add("@cpf", MySqlDbType.VarChar).Value = txtcpf.Text.Trim();
+                cmd.Parameters.Add("@endereco", MySqlDbType.VarChar).Value = txtEndereco.Text.Trim();
+                cmd.Parameters.Add("@numero", MySqlDbType.Int32).Value = txtNumero.Text.Trim();
+                cmd.Parameters.Add("@bairro", MySqlDbType.VarChar).Value = txtBairro.Text.Trim();
+                cmd.Parameters.Add("@cep", MySqlDbType.VarChar).Value = txtCep.Text.Trim();
+                cmd.Parameters.Add("@celular", MySqlDbType.VarChar).Value = txtCelular.Text.Trim();
+                cmd.Parameters.Add("@cidade", MySqlDbType.VarChar).Value = txtCidade.Text.Trim();
+                cmd.Parameters.Add("@estado", MySqlDbType.VarChar).Value = txtEstado.Text.Trim();
+
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Registro Alterado!!");
                 Carregadtg();
+
                 con.Close();
                 txtId.Text = "";
                 txtcpf.Text = "";
@@ -153,11 +133,18 @@ namespace Bash
                 txtNumero.Text = "";
                 txtEstado.Text = "";
                 txtCidade.Text = "";
+                txtSobrenome.Text = "";
+                txtCep.Text = "";
+                txtCidade.Text = "";
+                txtBairro.Text = "";
+                cbSexo.Text = "Escolha o sexo...";
+                dtpNascimento.Value = DateTime.Now;
             }
 
             catch (Exception er)
             {
                 MessageBox.Show(er.Message);
+                con.Close();
             }
 
         }
@@ -167,12 +154,13 @@ namespace Bash
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("excluir", con);
+                MySqlCommand cmd = new MySqlCommand("excluir_cliente", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@id", this.txtId.Text);
+                cmd.Parameters.Add("@id", MySqlDbType.Int32).Value = txtId.Text;
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Item Apagado!!");
                 Carregadtg();
+                con.Close();
                 con.Close();
                 txtId.Text = "";
                 txtcpf.Text = "";
@@ -183,6 +171,12 @@ namespace Bash
                 txtNumero.Text = "";
                 txtEstado.Text = "";
                 txtCidade.Text = "";
+                txtSobrenome.Text = "";
+                txtCep.Text = "";
+                txtCidade.Text = "";
+                txtBairro.Text = "";
+                cbSexo.Text = "Escolha o sexo...";
+                dtpNascimento.Value = DateTime.Now;
 
             }
             catch (Exception er)
@@ -213,6 +207,82 @@ namespace Bash
         private void TxtId_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnPesquisar_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand("select * from cliente where id = ?;", con);
+                //cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("id", MySqlDbType.Int32).Value = txtId.Text;
+
+                MySqlDataReader rd = cmd.ExecuteReader();
+                if (rd.Read())
+                {
+                    txtId.Text = rd["id"].ToString();
+                    txtNome.Text = rd["nome"].ToString();
+                    txtcpf.Text = rd["cpf"].ToString();
+                    txtCelular.Text = rd["celular"].ToString();
+                    txtEndereco.Text = rd["endereco"].ToString();
+                    txtNumero.Text = rd["numero"].ToString();
+                    txtCidade.Text = rd["cidade"].ToString();
+                    txtEstado.Text = rd["estado"].ToString();
+                    txtSobrenome.Text = rd["sobrenome"].ToString();
+                    txtCep.Text = rd["cep"].ToString();
+                    txtBairro.Text = rd["bairro"].ToString();
+                    cbSexo.Text = rd["sexo"].ToString();
+                    //dtpNascimento.Text = rd["data_nascimento"].ToString();
+
+                }
+                else
+                {
+                    MessageBox.Show("Registro não encontrado");
+                    con.Close();
+                    txtId.Text = "";
+                    txtcpf.Text = "";
+                    txtNome.Text = "";
+                    txtEndereco.Text = "";
+                    txtCelular.Text = "";
+                    txtEndereco.Text = "";
+                    txtNumero.Text = "";
+                    txtEstado.Text = "";
+                    txtCidade.Text = "";
+                    txtSobrenome.Text = "";
+                    txtCep.Text = "";
+                    txtCidade.Text = "";
+                    txtBairro.Text = "";
+                    cbSexo.Text = "Escolha o sexo...";
+                    dtpNascimento.Value = DateTime.Now;
+
+                }
+                con.Close();
+
+            }
+            finally
+            {
+            }
+        }
+
+        private void BtnLimpar_Click(object sender, EventArgs e)
+        {
+            con.Close();
+            txtId.Text = "";
+            txtcpf.Text = "";
+            txtNome.Text = "";
+            txtEndereco.Text = "";
+            txtCelular.Text = "";
+            txtEndereco.Text = "";
+            txtNumero.Text = "";
+            txtEstado.Text = "";
+            txtCidade.Text = "";
+            txtSobrenome.Text = "";
+            txtCep.Text = "";
+            txtCidade.Text = "";
+            txtBairro.Text = "";
+            cbSexo.Text = "Escolha o sexo...";
+            dtpNascimento.Value = DateTime.Now;
         }
     }
 }
