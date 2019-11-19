@@ -47,7 +47,7 @@ namespace Bash
             try
             {
                 con.Open();
-                MySqlCommand cmd = new MySqlCommand("insert_cliente", con);
+                MySqlCommand cmd = new MySqlCommand("inserir_cliente", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@nome", MySqlDbType.VarChar).Value = txtNome.Text.Trim();
                 cmd.Parameters.Add("@sobrenome", MySqlDbType.VarChar).Value = txtSobrenome.Text.Trim();
@@ -103,9 +103,10 @@ namespace Bash
             try
             {
                 con.Open();
-                MySqlCommand cmd = new MySqlCommand("editar_cliente", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@id", MySqlDbType.Int32).Value = txtId.Text.Trim();
+                MySqlCommand cmd = new MySqlCommand("UPDATE cliente SET nome= @nome,sobrenome= @sobrenome,sexo=@sexo, data_nascimento= @data_nascimento," + 
+                "cpf=@cpf, endereco = @endereco, numero=@numero,bairro = @bairro,cep=@cep,celular= @celular,cidade=cidade,estado=@estado WHERE id_cliente = @id_cliente;", con);
+                //cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@id_cliente", MySqlDbType.Int32).Value = txtId.Text.Trim();
                 cmd.Parameters.Add("@nome", MySqlDbType.VarChar).Value = txtNome.Text.Trim();
                 cmd.Parameters.Add("@sobrenome", MySqlDbType.VarChar).Value = txtSobrenome.Text.Trim();
                 cmd.Parameters.Add("@sexo", MySqlDbType.VarChar).Value = cbSexo.Text.Trim();
@@ -154,9 +155,9 @@ namespace Bash
             try
             {
                 con.Open();
-                MySqlCommand cmd = new MySqlCommand("excluir_cliente", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@id", MySqlDbType.Int32).Value = txtId.Text;
+                MySqlCommand cmd = new MySqlCommand("DELETE FROM cliente WHERE id_cliente = @id_cliente", con);
+                //cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@id_cliente", MySqlDbType.Int32).Value = txtId.Text;
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Item Apagado!!");
                 Carregadtg();
@@ -214,14 +215,14 @@ namespace Bash
             try
             {
                 con.Open();
-                MySqlCommand cmd = new MySqlCommand("select * from cliente where id = ?;", con);
+                MySqlCommand cmd = new MySqlCommand("select * from cliente where id_cliente = ?;", con);
                 //cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("id", MySqlDbType.Int32).Value = txtId.Text;
+                cmd.Parameters.Add("id_cliente", MySqlDbType.Int32).Value = txtId.Text;
 
                 MySqlDataReader rd = cmd.ExecuteReader();
                 if (rd.Read())
                 {
-                    txtId.Text = rd["id"].ToString();
+                    txtId.Text = rd["id_cliente"].ToString();
                     txtNome.Text = rd["nome"].ToString();
                     txtcpf.Text = rd["cpf"].ToString();
                     txtCelular.Text = rd["celular"].ToString();

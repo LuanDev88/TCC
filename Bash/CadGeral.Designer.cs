@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnFuncionario = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnUsuarios = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.BtnCadastros_Produtos = new System.Windows.Forms.Button();
             this.btnCadastro = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -45,7 +45,7 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnFuncionario);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnUsuarios);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.BtnCadastros_Produtos);
@@ -55,16 +55,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1272, 791);
             this.panel1.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(465, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(277, 39);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Pagina de Cadastros";
             // 
             // btnFuncionario
             // 
@@ -85,24 +75,25 @@
             this.btnFuncionario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnFuncionario.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnUsuarios
             // 
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Image = global::Bash.Properties.Resources.Rectangle_4;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(318, 429);
-            this.button2.Margin = new System.Windows.Forms.Padding(50);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 109);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Cadastro de Usuarios";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnUsuarios.FlatAppearance.BorderSize = 0;
+            this.btnUsuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuarios.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.ForeColor = System.Drawing.Color.Black;
+            this.btnUsuarios.Image = global::Bash.Properties.Resources.Rectangle_4;
+            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnUsuarios.Location = new System.Drawing.Point(318, 429);
+            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(50);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(111, 109);
+            this.btnUsuarios.TabIndex = 7;
+            this.btnUsuarios.Text = "Cadastro de Usuarios";
+            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // button1
             // 
@@ -122,6 +113,16 @@
             this.button1.Text = "Cadastro de Estoque";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(465, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(277, 39);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Pagina de Cadastros";
             // 
             // BtnCadastros_Produtos
             // 
@@ -190,7 +191,7 @@
         private System.Windows.Forms.Button BtnCadastros_Produtos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnFuncionario;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Button button1;
     }
 }

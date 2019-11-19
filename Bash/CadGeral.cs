@@ -47,5 +47,11 @@ namespace Bash
             FormCadProduto Prod = new FormCadProduto();
             Prod.ShowDialog();
         }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            FormUsers user = new FormUsers();
+            user.ShowDialog();
+        }
     }
 }
