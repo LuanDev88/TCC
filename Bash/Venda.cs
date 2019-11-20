@@ -10,8 +10,14 @@ namespace Bash
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void TxtPesquisar_TextChanged(object sender, EventArgs e)
         {
+            
+        }
+
+        private void TxtPesquisar_Click(object sender, EventArgs e)
+        {
+            txtPesquisar.Text = "";
 
         }
     }
