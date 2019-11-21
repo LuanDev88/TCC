@@ -113,6 +113,7 @@
             this.button1.Text = "Cadastro de Estoque";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label1
             // 

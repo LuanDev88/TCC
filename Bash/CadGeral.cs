@@ -53,5 +53,11 @@ namespace Bash
             FormUsers user = new FormUsers();
             user.ShowDialog();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            FormEstoque est = new FormEstoque();
+            est.ShowDialog();
+        }
     }
 }

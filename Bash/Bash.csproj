@@ -72,11 +72,11 @@
     <Compile Include="FormCadProdutos.Designer.cs">
       <DependentUpon>FormCadProdutos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPDV.cs">
+    <Compile Include="FormEstoque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPDV.Designer.cs">
-      <DependentUpon>FormPDV.cs</DependentUpon>
+    <Compile Include="FormEstoque.Designer.cs">
+      <DependentUpon>FormEstoque.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
@@ -110,8 +110,8 @@
     <EmbeddedResource Include="FormCadProdutos.resx">
       <DependentUpon>FormCadProdutos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPDV.resx">
-      <DependentUpon>FormPDV.cs</DependentUpon>
+    <EmbeddedResource Include="FormEstoque.resx">
+      <DependentUpon>FormEstoque.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>

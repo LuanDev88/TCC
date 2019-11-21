@@ -62,7 +62,7 @@ namespace Bash
         private void BtnEstoque_Click(object sender, EventArgs e)
         {
             panel3.Controls.Clear();
-            FormPDV pdv = new FormPDV();
+            FormEstoque pdv = new FormEstoque();
             pdv.TopLevel = false;
             panel3.Controls.Add(pdv);
             pdv.Show();

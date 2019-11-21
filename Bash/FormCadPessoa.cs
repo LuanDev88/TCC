@@ -239,23 +239,7 @@ namespace Bash
                 }
                 else
                 {
-                    MessageBox.Show("Registro não encontrado");
-                    con.Close();
-                    txtId.Text = "";
-                    txtcpf.Text = "";
-                    txtNome.Text = "";
-                    txtEndereco.Text = "";
-                    txtCelular.Text = "";
-                    txtEndereco.Text = "";
-                    txtNumero.Text = "";
-                    txtEstado.Text = "";
-                    txtCidade.Text = "";
-                    txtSobrenome.Text = "";
-                    txtCep.Text = "";
-                    txtCidade.Text = "";
-                    txtBairro.Text = "";
-                    cbSexo.Text = "Escolha o sexo...";
-                    dtpNascimento.Value = DateTime.Now;
+                    
 
                 }
                 con.Close();
