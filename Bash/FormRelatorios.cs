@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 
 
+
 namespace Bash
 {
     public partial class FormRelatorios : Form
@@ -46,9 +47,9 @@ namespace Bash
             FormCadPessoa Pessoa = new FormCadPessoa();
             Pessoa.txtId.Text = this.DtgPessoa.CurrentRow.Cells[0].Value.ToString();
             Pessoa.txtNome.Text = this.DtgPessoa.CurrentRow.Cells[1].Value.ToString();
-            Pessoa.txtcpf.Text = this.DtgPessoa.CurrentRow.Cells[2].Value.ToString();
+            Pessoa.MskCPF.Text = this.DtgPessoa.CurrentRow.Cells[2].Value.ToString();
             
-            Pessoa.txtCelular.Text = this.DtgPessoa.CurrentRow.Cells[4].Value.ToString();
+            Pessoa.MskCelular.Text = this.DtgPessoa.CurrentRow.Cells[4].Value.ToString();
             Pessoa.txtEndereco.Text = this.DtgPessoa.CurrentRow.Cells[6].Value.ToString();
             Pessoa.txtNumero.Text = this.DtgPessoa.CurrentRow.Cells[7].Value.ToString();
             Pessoa.txtEstado.Text = this.DtgPessoa.CurrentRow.Cells[8].Value.ToString();

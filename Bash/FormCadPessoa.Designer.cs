@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtCep = new System.Windows.Forms.TextBox();
+            this.MskCelular = new System.Windows.Forms.MaskedTextBox();
+            this.MskCEP = new System.Windows.Forms.MaskedTextBox();
+            this.MskCPF = new System.Windows.Forms.MaskedTextBox();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
             this.label17 = new System.Windows.Forms.Label();
@@ -44,8 +47,6 @@
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.txtEndereco = new System.Windows.Forms.TextBox();
-            this.txtCelular = new System.Windows.Forms.TextBox();
-            this.txtcpf = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -64,7 +65,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnLimpar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -72,8 +72,10 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.MskCelular);
+            this.panel1.Controls.Add(this.MskCEP);
+            this.panel1.Controls.Add(this.MskCPF);
             this.panel1.Controls.Add(this.btnLimpar);
-            this.panel1.Controls.Add(this.txtCep);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.dtpNascimento);
             this.panel1.Controls.Add(this.label17);
@@ -88,8 +90,6 @@
             this.panel1.Controls.Add(this.txtCidade);
             this.panel1.Controls.Add(this.txtNumero);
             this.panel1.Controls.Add(this.txtEndereco);
-            this.panel1.Controls.Add(this.txtCelular);
-            this.panel1.Controls.Add(this.txtcpf);
             this.panel1.Controls.Add(this.txtNome);
             this.panel1.Controls.Add(this.txtId);
             this.panel1.Controls.Add(this.panel4);
@@ -109,14 +109,41 @@
             this.panel1.Size = new System.Drawing.Size(544, 699);
             this.panel1.TabIndex = 0;
             // 
-            // txtCep
+            // MskCelular
             // 
-            this.txtCep.Location = new System.Drawing.Point(129, 434);
-            this.txtCep.Margin = new System.Windows.Forms.Padding(8);
-            this.txtCep.Multiline = true;
-            this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(135, 23);
-            this.txtCep.TabIndex = 38;
+            this.MskCelular.Location = new System.Drawing.Point(129, 559);
+            this.MskCelular.Mask = "(00) 0 0000-0000";
+            this.MskCelular.Name = "MskCelular";
+            this.MskCelular.Size = new System.Drawing.Size(121, 20);
+            this.MskCelular.TabIndex = 13;
+            this.MskCelular.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.MskCelular_MaskInputRejected);
+            // 
+            // MskCEP
+            // 
+            this.MskCEP.Location = new System.Drawing.Point(129, 437);
+            this.MskCEP.Mask = "00000-000";
+            this.MskCEP.Name = "MskCEP";
+            this.MskCEP.Size = new System.Drawing.Size(80, 20);
+            this.MskCEP.TabIndex = 10;
+            // 
+            // MskCPF
+            // 
+            this.MskCPF.Location = new System.Drawing.Point(129, 281);
+            this.MskCPF.Mask = "000.000.000-00";
+            this.MskCPF.Name = "MskCPF";
+            this.MskCPF.Size = new System.Drawing.Size(121, 20);
+            this.MskCPF.TabIndex = 6;
+            this.MskCPF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Location = new System.Drawing.Point(401, 69);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(116, 25);
+            this.btnLimpar.TabIndex = 39;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
             // 
             // label4
             // 
@@ -135,7 +162,7 @@
             this.dtpNascimento.Margin = new System.Windows.Forms.Padding(8);
             this.dtpNascimento.Name = "dtpNascimento";
             this.dtpNascimento.Size = new System.Drawing.Size(121, 20);
-            this.dtpNascimento.TabIndex = 36;
+            this.dtpNascimento.TabIndex = 5;
             // 
             // label17
             // 
@@ -156,7 +183,7 @@
             this.cbSexo.Location = new System.Drawing.Point(129, 210);
             this.cbSexo.Name = "cbSexo";
             this.cbSexo.Size = new System.Drawing.Size(121, 21);
-            this.cbSexo.TabIndex = 34;
+            this.cbSexo.TabIndex = 4;
             this.cbSexo.Text = "Escolha o sexo...";
             // 
             // txtBairro
@@ -166,7 +193,7 @@
             this.txtBairro.Multiline = true;
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(135, 23);
-            this.txtBairro.TabIndex = 33;
+            this.txtBairro.TabIndex = 9;
             // 
             // label16
             // 
@@ -195,7 +222,7 @@
             this.txtSobrenome.Multiline = true;
             this.txtSobrenome.Name = "txtSobrenome";
             this.txtSobrenome.Size = new System.Drawing.Size(135, 23);
-            this.txtSobrenome.TabIndex = 27;
+            this.txtSobrenome.TabIndex = 3;
             // 
             // label13
             // 
@@ -224,7 +251,7 @@
             this.txtEstado.Multiline = true;
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(135, 23);
-            this.txtEstado.TabIndex = 24;
+            this.txtEstado.TabIndex = 12;
             // 
             // txtCidade
             // 
@@ -233,7 +260,7 @@
             this.txtCidade.Multiline = true;
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(135, 23);
-            this.txtCidade.TabIndex = 23;
+            this.txtCidade.TabIndex = 11;
             // 
             // txtNumero
             // 
@@ -242,7 +269,7 @@
             this.txtNumero.Multiline = true;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(80, 23);
-            this.txtNumero.TabIndex = 22;
+            this.txtNumero.TabIndex = 8;
             // 
             // txtEndereco
             // 
@@ -251,25 +278,7 @@
             this.txtEndereco.Multiline = true;
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(376, 23);
-            this.txtEndereco.TabIndex = 21;
-            // 
-            // txtCelular
-            // 
-            this.txtCelular.Location = new System.Drawing.Point(129, 551);
-            this.txtCelular.Margin = new System.Windows.Forms.Padding(8);
-            this.txtCelular.Multiline = true;
-            this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(155, 23);
-            this.txtCelular.TabIndex = 20;
-            // 
-            // txtcpf
-            // 
-            this.txtcpf.Location = new System.Drawing.Point(129, 278);
-            this.txtcpf.Margin = new System.Windows.Forms.Padding(8);
-            this.txtcpf.Multiline = true;
-            this.txtcpf.Name = "txtcpf";
-            this.txtcpf.Size = new System.Drawing.Size(225, 23);
-            this.txtcpf.TabIndex = 17;
+            this.txtEndereco.TabIndex = 7;
             // 
             // txtNome
             // 
@@ -278,7 +287,7 @@
             this.txtNome.Multiline = true;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(337, 23);
-            this.txtNome.TabIndex = 16;
+            this.txtNome.TabIndex = 2;
             // 
             // txtId
             // 
@@ -286,7 +295,7 @@
             this.txtId.Multiline = true;
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(80, 25);
-            this.txtId.TabIndex = 15;
+            this.txtId.TabIndex = 1;
             // 
             // panel4
             // 
@@ -305,7 +314,7 @@
             this.btnSair.Location = new System.Drawing.Point(336, 28);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(86, 27);
-            this.btnSair.TabIndex = 3;
+            this.btnSair.TabIndex = 17;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.BtnSair_Click);
@@ -315,7 +324,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(232, 28);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(86, 27);
-            this.btnExcluir.TabIndex = 2;
+            this.btnExcluir.TabIndex = 16;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
@@ -325,7 +334,7 @@
             this.btnEditar.Location = new System.Drawing.Point(129, 28);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(86, 27);
-            this.btnEditar.TabIndex = 1;
+            this.btnEditar.TabIndex = 15;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
@@ -335,7 +344,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(18, 28);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(86, 27);
-            this.btnCadastrar.TabIndex = 0;
+            this.btnCadastrar.TabIndex = 14;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.Button1_Click);
@@ -448,16 +457,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "ID";
             // 
-            // btnLimpar
-            // 
-            this.btnLimpar.Location = new System.Drawing.Point(401, 69);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(116, 25);
-            this.btnLimpar.TabIndex = 39;
-            this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
-            // 
             // FormCadPessoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -496,7 +495,6 @@
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnCadastrar;
-        public System.Windows.Forms.TextBox txtCep;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dtpNascimento;
         private System.Windows.Forms.Label label17;
@@ -511,10 +509,11 @@
         public System.Windows.Forms.TextBox txtCidade;
         public System.Windows.Forms.TextBox txtNumero;
         public System.Windows.Forms.TextBox txtEndereco;
-        public System.Windows.Forms.TextBox txtCelular;
-        public System.Windows.Forms.TextBox txtcpf;
         public System.Windows.Forms.TextBox txtNome;
         public System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.MaskedTextBox MskCEP;
+        public System.Windows.Forms.MaskedTextBox MskCPF;
+        public System.Windows.Forms.MaskedTextBox MskCelular;
     }
 }

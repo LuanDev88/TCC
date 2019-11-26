@@ -62,7 +62,7 @@
             this.txtId.Multiline = true;
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(38, 23);
-            this.txtId.TabIndex = 0;
+            this.txtId.TabIndex = 1;
             // 
             // txtNome
             // 
@@ -137,7 +137,7 @@
             this.btnSair.Location = new System.Drawing.Point(24, 573);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(74, 35);
-            this.btnSair.TabIndex = 25;
+            this.btnSair.TabIndex = 10;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.BtnSair_Click);
@@ -200,7 +200,7 @@
             this.txtVenda.Multiline = true;
             this.txtVenda.Name = "txtVenda";
             this.txtVenda.Size = new System.Drawing.Size(100, 24);
-            this.txtVenda.TabIndex = 14;
+            this.txtVenda.TabIndex = 4;
             // 
             // txtCustoUnitario
             // 
@@ -210,7 +210,7 @@
             this.txtCustoUnitario.Multiline = true;
             this.txtCustoUnitario.Name = "txtCustoUnitario";
             this.txtCustoUnitario.Size = new System.Drawing.Size(100, 23);
-            this.txtCustoUnitario.TabIndex = 15;
+            this.txtCustoUnitario.TabIndex = 3;
             // 
             // txtObs
             // 
@@ -218,8 +218,13 @@
             this.txtObs.Location = new System.Drawing.Point(142, 355);
             this.txtObs.Multiline = true;
             this.txtObs.Name = "txtObs";
+<<<<<<< HEAD
             this.txtObs.Size = new System.Drawing.Size(373, 190);
             this.txtObs.TabIndex = 19;
+=======
+            this.txtObs.Size = new System.Drawing.Size(322, 239);
+            this.txtObs.TabIndex = 6;
+>>>>>>> master
             this.txtObs.Text = "\r\n\r\n";
             // 
             // btnSalvar
@@ -228,7 +233,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(142, 573);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(84, 35);
-            this.btnSalvar.TabIndex = 21;
+            this.btnSalvar.TabIndex = 7;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
@@ -239,7 +244,7 @@
             this.btnEditar.Location = new System.Drawing.Point(236, 573);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(84, 35);
-            this.btnEditar.TabIndex = 22;
+            this.btnEditar.TabIndex = 8;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -250,7 +255,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(331, 573);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(84, 35);
-            this.btnExcluir.TabIndex = 24;
+            this.btnExcluir.TabIndex = 9;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
@@ -263,7 +268,7 @@
             this.txtFabricante.Multiline = true;
             this.txtFabricante.Name = "txtFabricante";
             this.txtFabricante.Size = new System.Drawing.Size(100, 24);
-            this.txtFabricante.TabIndex = 25;
+            this.txtFabricante.TabIndex = 5;
             // 
             // txtQuantidade
             // 
