@@ -218,13 +218,10 @@
             this.txtObs.Location = new System.Drawing.Point(142, 355);
             this.txtObs.Multiline = true;
             this.txtObs.Name = "txtObs";
-<<<<<<< HEAD
             this.txtObs.Size = new System.Drawing.Size(373, 190);
             this.txtObs.TabIndex = 19;
-=======
             this.txtObs.Size = new System.Drawing.Size(322, 239);
             this.txtObs.TabIndex = 6;
->>>>>>> master
             this.txtObs.Text = "\r\n\r\n";
             // 
             // btnSalvar

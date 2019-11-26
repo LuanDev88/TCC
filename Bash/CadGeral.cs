@@ -58,5 +58,11 @@ namespace Bash
         {
             
         }
+
+        private void btnFuncionario_Click(object sender, EventArgs e)
+        {
+            FormCadFuncionario fun = new FormCadFuncionario();
+            fun.ShowDialog();
+        }
     }
 }

@@ -72,6 +72,7 @@
             this.btnFuncionario.Text = "Cadastro de Funcionarios";
             this.btnFuncionario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnFuncionario.UseVisualStyleBackColor = true;
+            this.btnFuncionario.Click += new System.EventHandler(this.btnFuncionario_Click);
             // 
             // btnUsuarios
             // 
