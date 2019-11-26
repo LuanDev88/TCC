@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnFuncionario = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnCadastros_Produtos = new System.Windows.Forms.Button();
             this.btnCadastro = new System.Windows.Forms.Button();
@@ -46,7 +45,6 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnFuncionario);
             this.panel1.Controls.Add(this.btnUsuarios);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.BtnCadastros_Produtos);
             this.panel1.Controls.Add(this.btnCadastro);
@@ -66,7 +64,7 @@
             this.btnFuncionario.ForeColor = System.Drawing.Color.Black;
             this.btnFuncionario.Image = global::Bash.Properties.Resources.identification;
             this.btnFuncionario.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnFuncionario.Location = new System.Drawing.Point(740, 217);
+            this.btnFuncionario.Location = new System.Drawing.Point(665, 372);
             this.btnFuncionario.Margin = new System.Windows.Forms.Padding(50);
             this.btnFuncionario.Name = "btnFuncionario";
             this.btnFuncionario.Size = new System.Drawing.Size(111, 112);
@@ -85,7 +83,7 @@
             this.btnUsuarios.ForeColor = System.Drawing.Color.Black;
             this.btnUsuarios.Image = global::Bash.Properties.Resources.Rectangle_4;
             this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnUsuarios.Location = new System.Drawing.Point(318, 429);
+            this.btnUsuarios.Location = new System.Drawing.Point(454, 375);
             this.btnUsuarios.Margin = new System.Windows.Forms.Padding(50);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(111, 109);
@@ -94,26 +92,6 @@
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnUsuarios.UseVisualStyleBackColor = true;
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = global::Bash.Properties.Resources.Rectangle_2;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(529, 429);
-            this.button1.Margin = new System.Windows.Forms.Padding(50);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 109);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Cadastro de Estoque";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label1
             // 
@@ -134,7 +112,7 @@
             this.BtnCadastros_Produtos.ForeColor = System.Drawing.Color.Black;
             this.BtnCadastros_Produtos.Image = global::Bash.Properties.Resources.Rectangle_3;
             this.BtnCadastros_Produtos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnCadastros_Produtos.Location = new System.Drawing.Point(529, 217);
+            this.BtnCadastros_Produtos.Location = new System.Drawing.Point(665, 211);
             this.BtnCadastros_Produtos.Margin = new System.Windows.Forms.Padding(50);
             this.BtnCadastros_Produtos.Name = "BtnCadastros_Produtos";
             this.BtnCadastros_Produtos.Size = new System.Drawing.Size(111, 112);
@@ -154,7 +132,7 @@
             this.btnCadastro.ForeColor = System.Drawing.Color.Black;
             this.btnCadastro.Image = global::Bash.Properties.Resources.Rectangle_1;
             this.btnCadastro.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCadastro.Location = new System.Drawing.Point(318, 217);
+            this.btnCadastro.Location = new System.Drawing.Point(454, 211);
             this.btnCadastro.Margin = new System.Windows.Forms.Padding(50);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Size = new System.Drawing.Size(111, 112);
@@ -193,6 +171,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnFuncionario;
         private System.Windows.Forms.Button btnUsuarios;
-        private System.Windows.Forms.Button button1;
     }
 }

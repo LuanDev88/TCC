@@ -72,12 +72,6 @@
     <Compile Include="FormCadProdutos.Designer.cs">
       <DependentUpon>FormCadProdutos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormEstoque.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormEstoque.Designer.cs">
-      <DependentUpon>FormEstoque.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,9 +103,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCadProdutos.resx">
       <DependentUpon>FormCadProdutos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormEstoque.resx">
-      <DependentUpon>FormEstoque.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>

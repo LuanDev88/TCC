@@ -56,8 +56,7 @@ namespace Bash
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            FormEstoque est = new FormEstoque();
-            est.ShowDialog();
+            
         }
     }
 }
