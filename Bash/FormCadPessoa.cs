@@ -47,18 +47,18 @@ namespace Bash
             try
             {
                 con.Open();
-                MySqlCommand cmd = new MySqlCommand("inserir_cliente", con);
+                MySqlCommand cmd = new MySqlCommand("insert_cliente", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@nome", MySqlDbType.VarChar).Value = txtNome.Text.Trim();
                 cmd.Parameters.Add("@sobrenome", MySqlDbType.VarChar).Value = txtSobrenome.Text.Trim();
                 cmd.Parameters.Add("@sexo", MySqlDbType.VarChar).Value = cbSexo.Text.Trim();
                 cmd.Parameters.Add("@data_nascimento", MySqlDbType.Date).Value = Convert.ToDateTime(dtpNascimento.Text.Trim());
-                cmd.Parameters.Add("@cpf", MySqlDbType.VarChar).Value = txtcpf.Text.Trim();
+                cmd.Parameters.Add("@cpf", MySqlDbType.VarChar).Value = MskCPF.Text.Trim();
                 cmd.Parameters.Add("@endereco", MySqlDbType.VarChar).Value = txtEndereco.Text.Trim();
                 cmd.Parameters.Add("@numero", MySqlDbType.Int32).Value = txtNumero.Text.Trim();
                 cmd.Parameters.Add("@bairro", MySqlDbType.VarChar).Value = txtBairro.Text.Trim();
-                cmd.Parameters.Add("@cep", MySqlDbType.VarChar).Value = txtCep.Text.Trim();
-                cmd.Parameters.Add("@celular", MySqlDbType.VarChar).Value = txtCelular.Text.Trim();
+                cmd.Parameters.Add("@cep", MySqlDbType.VarChar).Value = MskCEP.Text.Trim();
+                cmd.Parameters.Add("@celular", MySqlDbType.VarChar).Value = MskCelular.Text.Trim();
                 cmd.Parameters.Add("@cidade", MySqlDbType.VarChar).Value = txtCidade.Text.Trim();
                 cmd.Parameters.Add("@estado", MySqlDbType.VarChar).Value = txtEstado.Text.Trim();
 
@@ -68,16 +68,16 @@ namespace Bash
 
                 con.Close();
                 txtId.Text = "";
-                txtcpf.Text = "";
+                MskCPF.Text = "";
                 txtNome.Text = "";
                 txtEndereco.Text = "";
-                txtCelular.Text = "";
+                MskCelular.Text = "";
                 txtEndereco.Text = "";
                 txtNumero.Text = "";
                 txtEstado.Text = "";
                 txtCidade.Text = "";
                 txtSobrenome.Text = "";
-                txtCep.Text = "";
+                MskCEP.Text = "";
                 txtCidade.Text = "";
                 txtBairro.Text = "";
                 cbSexo.Text = "Escolha o sexo...";
@@ -111,12 +111,12 @@ namespace Bash
                 cmd.Parameters.Add("@sobrenome", MySqlDbType.VarChar).Value = txtSobrenome.Text.Trim();
                 cmd.Parameters.Add("@sexo", MySqlDbType.VarChar).Value = cbSexo.Text.Trim();
                 cmd.Parameters.Add("@data_nascimento", MySqlDbType.Date).Value = Convert.ToDateTime(dtpNascimento.Text.Trim());
-                cmd.Parameters.Add("@cpf", MySqlDbType.VarChar).Value = txtcpf.Text.Trim();
+                cmd.Parameters.Add("@cpf", MySqlDbType.VarChar).Value = MskCPF.Text.Trim();
                 cmd.Parameters.Add("@endereco", MySqlDbType.VarChar).Value = txtEndereco.Text.Trim();
                 cmd.Parameters.Add("@numero", MySqlDbType.Int32).Value = txtNumero.Text.Trim();
                 cmd.Parameters.Add("@bairro", MySqlDbType.VarChar).Value = txtBairro.Text.Trim();
-                cmd.Parameters.Add("@cep", MySqlDbType.VarChar).Value = txtCep.Text.Trim();
-                cmd.Parameters.Add("@celular", MySqlDbType.VarChar).Value = txtCelular.Text.Trim();
+                cmd.Parameters.Add("@cep", MySqlDbType.VarChar).Value = MskCEP.Text.Trim();
+                cmd.Parameters.Add("@celular", MySqlDbType.VarChar).Value = MskCelular.Text.Trim();
                 cmd.Parameters.Add("@cidade", MySqlDbType.VarChar).Value = txtCidade.Text.Trim();
                 cmd.Parameters.Add("@estado", MySqlDbType.VarChar).Value = txtEstado.Text.Trim();
 
@@ -126,16 +126,16 @@ namespace Bash
 
                 con.Close();
                 txtId.Text = "";
-                txtcpf.Text = "";
+                MskCPF.Text = "";
                 txtNome.Text = "";
                 txtEndereco.Text = "";
-                txtCelular.Text = "";
+                MskCelular.Text = "";
                 txtEndereco.Text = "";
                 txtNumero.Text = "";
                 txtEstado.Text = "";
                 txtCidade.Text = "";
                 txtSobrenome.Text = "";
-                txtCep.Text = "";
+                MskCEP.Text = "";
                 txtCidade.Text = "";
                 txtBairro.Text = "";
                 cbSexo.Text = "Escolha o sexo...";
@@ -164,16 +164,16 @@ namespace Bash
                 con.Close();
                 con.Close();
                 txtId.Text = "";
-                txtcpf.Text = "";
+                MskCPF.Text = "";
                 txtNome.Text = "";
                 txtEndereco.Text = "";
-                txtCelular.Text = "";
+                MskCelular.Text = "";
                 txtEndereco.Text = "";
                 txtNumero.Text = "";
                 txtEstado.Text = "";
                 txtCidade.Text = "";
                 txtSobrenome.Text = "";
-                txtCep.Text = "";
+                MskCEP.Text = "";
                 txtCidade.Text = "";
                 txtBairro.Text = "";
                 cbSexo.Text = "Escolha o sexo...";
@@ -224,14 +224,14 @@ namespace Bash
                 {
                     txtId.Text = rd["id_cliente"].ToString();
                     txtNome.Text = rd["nome"].ToString();
-                    txtcpf.Text = rd["cpf"].ToString();
-                    txtCelular.Text = rd["celular"].ToString();
+                    MskCPF.Text = rd["cpf"].ToString();
+                    MskCelular.Text = rd["celular"].ToString();
                     txtEndereco.Text = rd["endereco"].ToString();
                     txtNumero.Text = rd["numero"].ToString();
                     txtCidade.Text = rd["cidade"].ToString();
                     txtEstado.Text = rd["estado"].ToString();
                     txtSobrenome.Text = rd["sobrenome"].ToString();
-                    txtCep.Text = rd["cep"].ToString();
+                    MskCEP.Text = rd["cep"].ToString();
                     txtBairro.Text = rd["bairro"].ToString();
                     cbSexo.Text = rd["sexo"].ToString();
                     //dtpNascimento.Text = rd["data_nascimento"].ToString();
@@ -254,20 +254,35 @@ namespace Bash
         {
             con.Close();
             txtId.Text = "";
-            txtcpf.Text = "";
+            MskCPF.Text = "";
             txtNome.Text = "";
             txtEndereco.Text = "";
-            txtCelular.Text = "";
+            MskCelular.Text = "";
             txtEndereco.Text = "";
             txtNumero.Text = "";
             txtEstado.Text = "";
             txtCidade.Text = "";
             txtSobrenome.Text = "";
-            txtCep.Text = "";
+            MskCEP.Text = "";
             txtCidade.Text = "";
             txtBairro.Text = "";
             cbSexo.Text = "Escolha o sexo...";
             dtpNascimento.Value = DateTime.Now;
+        }
+
+        private void txtcpf_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void MskCelular_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }

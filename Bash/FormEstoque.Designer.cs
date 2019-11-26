@@ -73,7 +73,7 @@
             this.txtPesquisar.Location = new System.Drawing.Point(200, 142);
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(326, 27);
-            this.txtPesquisar.TabIndex = 8;
+            this.txtPesquisar.TabIndex = 1;
             this.txtPesquisar.Text = "   Pesquise o Produto Pelo nome ou ID";
             this.txtPesquisar.Click += new System.EventHandler(this.txtPesquisar_Click);
             this.txtPesquisar.Enter += new System.EventHandler(this.txtPesquisar_Enter);
@@ -86,7 +86,7 @@
             this.txtNomeProduto.Multiline = true;
             this.txtNomeProduto.Name = "txtNomeProduto";
             this.txtNomeProduto.Size = new System.Drawing.Size(225, 28);
-            this.txtNomeProduto.TabIndex = 10;
+            this.txtNomeProduto.TabIndex = 3;
             // 
             // txtFabricante
             // 
@@ -96,7 +96,7 @@
             this.txtFabricante.Multiline = true;
             this.txtFabricante.Name = "txtFabricante";
             this.txtFabricante.Size = new System.Drawing.Size(266, 28);
-            this.txtFabricante.TabIndex = 11;
+            this.txtFabricante.TabIndex = 4;
             // 
             // txtValorVenda
             // 
@@ -106,7 +106,7 @@
             this.txtValorVenda.Multiline = true;
             this.txtValorVenda.Name = "txtValorVenda";
             this.txtValorVenda.Size = new System.Drawing.Size(100, 28);
-            this.txtValorVenda.TabIndex = 12;
+            this.txtValorVenda.TabIndex = 6;
             // 
             // txtValorCompra
             // 
@@ -116,7 +116,7 @@
             this.txtValorCompra.Multiline = true;
             this.txtValorCompra.Name = "txtValorCompra";
             this.txtValorCompra.Size = new System.Drawing.Size(100, 28);
-            this.txtValorCompra.TabIndex = 13;
+            this.txtValorCompra.TabIndex = 5;
             // 
             // label2
             // 
@@ -176,7 +176,7 @@
             this.txtObs.Multiline = true;
             this.txtObs.Name = "txtObs";
             this.txtObs.Size = new System.Drawing.Size(346, 159);
-            this.txtObs.TabIndex = 20;
+            this.txtObs.TabIndex = 8;
             // 
             // label7
             // 
@@ -196,7 +196,7 @@
             this.txtIdProduto.Multiline = true;
             this.txtIdProduto.Name = "txtIdProduto";
             this.txtIdProduto.Size = new System.Drawing.Size(78, 28);
-            this.txtIdProduto.TabIndex = 22;
+            this.txtIdProduto.TabIndex = 2;
             // 
             // label8
             // 
@@ -216,13 +216,13 @@
             this.txtQuantidade.Multiline = true;
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(100, 28);
-            this.txtQuantidade.TabIndex = 24;
+            this.txtQuantidade.TabIndex = 7;
             // 
             // FormEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(746, 765);
+            this.ClientSize = new System.Drawing.Size(746, 749);
             this.Controls.Add(this.txtQuantidade);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtIdProduto);
