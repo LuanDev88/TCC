@@ -22,6 +22,10 @@ namespace Bash
         public bool habilitarDel = false;
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
+            if (con.State == ConnectionState.Open)
+            {
+                con.Close();
+            }
             if (txtPesquisa.Text == "Digite o 'Código do funcionário' a ser pesquisado")
             {
                 return;
@@ -121,6 +125,10 @@ namespace Bash
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            if (con.State == ConnectionState.Open)
+            {
+                con.Close();
+            }
             try
             {
                 con.Open();
@@ -157,6 +165,10 @@ namespace Bash
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            if (con.State == ConnectionState.Open)
+            {
+                con.Close();
+            }
             if (habilitarEdit == true)
             {
                 try
@@ -194,7 +206,12 @@ namespace Bash
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
-        { if (habilitarDel == true)
+        {
+            if (con.State == ConnectionState.Open)
+            {
+                con.Close();
+            }
+            if (habilitarDel == true)
             {
                 try
                 {

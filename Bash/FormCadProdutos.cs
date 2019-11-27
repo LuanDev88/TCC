@@ -20,6 +20,10 @@ namespace Bash
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
+            if (con.State == ConnectionState.Open)
+            {
+                con.Close();
+            }
             try
             {
                 con.Open();
@@ -60,6 +64,10 @@ namespace Bash
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
+            if (con.State == ConnectionState.Open)
+            {
+                con.Close();
+            }
             if (txtPesquisar.Text == "Pesquise o Produto Pelo Numero de identificação 'ID'")
             {
                 MessageBox.Show("selecione um Item");
@@ -115,6 +123,10 @@ namespace Bash
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            if (con.State == ConnectionState.Open)
+            {
+                con.Close();
+            }
             try
             {
                 con.Open();

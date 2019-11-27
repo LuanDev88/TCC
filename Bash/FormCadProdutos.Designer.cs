@@ -88,7 +88,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(136, 620);
+            this.panel1.Size = new System.Drawing.Size(136, 664);
             this.panel1.TabIndex = 13;
             // 
             // btnPesquisar
@@ -218,8 +218,6 @@
             this.txtObs.Location = new System.Drawing.Point(142, 355);
             this.txtObs.Multiline = true;
             this.txtObs.Name = "txtObs";
-            this.txtObs.Size = new System.Drawing.Size(373, 190);
-            this.txtObs.TabIndex = 19;
             this.txtObs.Size = new System.Drawing.Size(322, 239);
             this.txtObs.TabIndex = 6;
             this.txtObs.Text = "\r\n\r\n";
@@ -303,7 +301,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(527, 620);
+            this.ClientSize = new System.Drawing.Size(527, 664);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtPesquisar);
             this.Controls.Add(this.txtQuantidade);

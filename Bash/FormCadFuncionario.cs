@@ -26,6 +26,10 @@ namespace Bash
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            if (con.State == ConnectionState.Open)
+            {
+                con.Close();
+            }
             try
             {
                 con.Open();
@@ -74,6 +78,10 @@ namespace Bash
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
+            if (con.State == ConnectionState.Open)
+            {
+                con.Close();
+            }
             try
             {
                 con.Open();
@@ -132,6 +140,10 @@ namespace Bash
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            if (con.State == ConnectionState.Open)
+            {
+                con.Close();
+            }
             try
             {
                 con.Open();
@@ -184,6 +196,10 @@ namespace Bash
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+            if (con.State == ConnectionState.Open)
+            {
+                con.Close();
+            }
             try
             {
                 con.Open();

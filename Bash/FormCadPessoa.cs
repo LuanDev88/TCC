@@ -44,6 +44,10 @@ namespace Bash
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            if (con.State == ConnectionState.Open)
+            {
+                con.Close();
+            }
             try
             {
                 con.Open();
@@ -99,7 +103,10 @@ namespace Bash
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-
+            if (con.State == ConnectionState.Open)
+            {
+                con.Close();
+            }
             try
             {
                 con.Open();
@@ -152,6 +159,10 @@ namespace Bash
 
         private void BtnExcluir_Click(object sender, EventArgs e)
         {
+            if (con.State == ConnectionState.Open)
+            {
+                con.Close();
+            }
             try
             {
                 con.Open();
@@ -212,6 +223,10 @@ namespace Bash
 
         private void BtnPesquisar_Click_1(object sender, EventArgs e)
         {
+            if (con.State == ConnectionState.Open)
+            {
+                con.Close();
+            }
             try
             {
                 con.Open();
@@ -281,6 +296,11 @@ namespace Bash
         }
 
         private void MskCelular_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
         }
