@@ -83,6 +83,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.lblNome);
+            this.panel1.Controls.Add(this.btnSalvar);
             this.panel1.Controls.Add(this.lblId);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -255,7 +256,7 @@
             this.btnExcluir.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.Image = global::Bash.Properties.Resources.file;
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnExcluir.Location = new System.Drawing.Point(329, 625);
+            this.btnExcluir.Location = new System.Drawing.Point(298, 625);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(84, 62);
             this.btnExcluir.TabIndex = 9;
@@ -271,7 +272,7 @@
             this.btnEditar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Image = global::Bash.Properties.Resources.note__1_;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEditar.Location = new System.Drawing.Point(234, 625);
+            this.btnEditar.Location = new System.Drawing.Point(162, 624);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(84, 62);
             this.btnEditar.TabIndex = 8;
@@ -287,7 +288,7 @@
             this.btnSalvar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.Image = global::Bash.Properties.Resources.save_file__1_;
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalvar.Location = new System.Drawing.Point(140, 625);
+            this.btnSalvar.Location = new System.Drawing.Point(31, 625);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(84, 62);
             this.btnSalvar.TabIndex = 7;
@@ -330,7 +331,6 @@
             this.Controls.Add(this.txtFabricante);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtObs);
             this.Controls.Add(this.txtCustoUnitario);
             this.Controls.Add(this.txtVenda);
