@@ -232,5 +232,23 @@
   <ItemGroup>
     <None Include="Resources\search %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-file %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archive %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

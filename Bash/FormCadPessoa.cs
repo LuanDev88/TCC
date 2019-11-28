@@ -86,7 +86,7 @@ namespace Bash
                 txtBairro.Text = "";
                 cbSexo.Text = "Escolha o sexo...";
                 dtpNascimento.Value = DateTime.Now;
-                
+
             }
 
             catch (Exception er)
@@ -98,7 +98,7 @@ namespace Bash
 
         private void BtnPesquisar_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void BtnEditar_Click(object sender, EventArgs e)
@@ -110,7 +110,7 @@ namespace Bash
             try
             {
                 con.Open();
-                MySqlCommand cmd = new MySqlCommand("UPDATE cliente SET nome= @nome,sobrenome= @sobrenome,sexo=@sexo, data_nascimento= @data_nascimento," + 
+                MySqlCommand cmd = new MySqlCommand("UPDATE cliente SET nome= @nome,sobrenome= @sobrenome,sexo=@sexo, data_nascimento= @data_nascimento," +
                 "cpf=@cpf, endereco = @endereco, numero=@numero,bairro = @bairro,cep=@cep,celular= @celular,cidade=cidade,estado=@estado WHERE id_cliente = @id_cliente;", con);
                 //cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@id_cliente", MySqlDbType.Int32).Value = txtId.Text.Trim();
@@ -227,6 +227,12 @@ namespace Bash
             {
                 con.Close();
             }
+            if (txtPesquisar.Text == "Pesquise o Produto Pelo Numero de identificação 'ID'")
+            {
+                MessageBox.Show("insira o ID do Cliente");
+                return;
+            }
+
             try
             {
                 con.Open();
@@ -237,6 +243,7 @@ namespace Bash
                 MySqlDataReader rd = cmd.ExecuteReader();
                 if (rd.Read())
                 {
+                    txtPesquisar.Text = "Pesquise o Produto Pelo Numero de identificação 'ID'";
                     txtId.Text = rd["id_cliente"].ToString();
                     txtNome.Text = rd["nome"].ToString();
                     MskCPF.Text = rd["cpf"].ToString();
@@ -249,12 +256,12 @@ namespace Bash
                     MskCEP.Text = rd["cep"].ToString();
                     txtBairro.Text = rd["bairro"].ToString();
                     cbSexo.Text = rd["sexo"].ToString();
-                    //dtpNascimento.Text = rd["data_nascimento"].ToString();
+                    dtpNascimento.Text = rd["data_nascimento"].ToString();
 
                 }
                 else
                 {
-                    
+
 
                 }
                 con.Close();
@@ -303,6 +310,12 @@ namespace Bash
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
+
+        }
+
+        private void txtPesquisar_Enter(object sender, EventArgs e)
+        {
+            txtPesquisar.Text = "";
         }
     }
 }

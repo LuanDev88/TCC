@@ -39,12 +39,12 @@ namespace Bash
                 cmd.Parameters.Add("@sobrenome", MySqlDbType.VarChar).Value = txtSobrenome.Text.Trim();
                 cmd.Parameters.Add("@sexo", MySqlDbType.VarChar).Value = cbSexo.Text.Trim();
                 cmd.Parameters.Add("@data_nascimento", MySqlDbType.Date).Value = Convert.ToDateTime(dtpNascimento.Text.Trim());
-                cmd.Parameters.Add("@cpf", MySqlDbType.VarChar).Value = txtcpf.Text.Trim();
+                cmd.Parameters.Add("@cpf", MySqlDbType.VarChar).Value = mskCpf.Text.Trim();
                 cmd.Parameters.Add("@endereco", MySqlDbType.VarChar).Value = txtEndereco.Text.Trim();
                 cmd.Parameters.Add("@numero", MySqlDbType.Int32).Value = txtNumero.Text.Trim();
                 cmd.Parameters.Add("@bairro", MySqlDbType.VarChar).Value = txtBairro.Text.Trim();
-                cmd.Parameters.Add("@cep", MySqlDbType.VarChar).Value = txtCep.Text.Trim();
-                cmd.Parameters.Add("@celular", MySqlDbType.VarChar).Value = txtCelular.Text.Trim();
+                cmd.Parameters.Add("@cep", MySqlDbType.VarChar).Value = mskCep.Text.Trim();
+                cmd.Parameters.Add("@celular", MySqlDbType.VarChar).Value = mskCelular.Text.Trim();
                 cmd.Parameters.Add("@cidade", MySqlDbType.VarChar).Value = txtCidade.Text.Trim();
                 cmd.Parameters.Add("@estado", MySqlDbType.VarChar).Value = txtEstado.Text.Trim();
                 cmd.Parameters.Add("@funcao", MySqlDbType.VarChar).Value = cbFunc.Text.Trim();
@@ -53,16 +53,16 @@ namespace Bash
                 MessageBox.Show("Registro Inserido!!");
                 con.Close();
                 txtCod.Text = "";
-                txtcpf.Text = "";
+                mskCpf.Text = "";
                 txtNome.Text = "";
                 txtEndereco.Text = "";
-                txtCelular.Text = "";
+                mskCelular.Text = "";
                 txtEndereco.Text = "";
                 txtNumero.Text = "";
                 txtEstado.Text = "";
                 txtCidade.Text = "";
                 txtSobrenome.Text = "";
-                txtCep.Text = "";
+                mskCep.Text = "";
                 txtCidade.Text = "";
                 txtBairro.Text = "";
                 cbSexo.Text = "Escolha o sexo...";
@@ -82,59 +82,69 @@ namespace Bash
             {
                 con.Close();
             }
-            try
+            if (txtPesquisar.Text == "Pesquise o Funcionario Pelo Cod. Funcionario")
             {
-                con.Open();
-                MySqlCommand cmd = new MySqlCommand("select * from funcionario where cod_funcionario = ?;", con);
-                //cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("cod_funcionario", MySqlDbType.Int32).Value = txtCod.Text;
-
-                MySqlDataReader rd = cmd.ExecuteReader();
-                if (rd.Read())
-                {
-                    txtCod.Text = rd["cod_funcionario"].ToString();
-                    txtNome.Text = rd["nome"].ToString();
-                    txtcpf.Text = rd["cpf"].ToString();
-                    txtCelular.Text = rd["celular"].ToString();
-                    txtEndereco.Text = rd["endereco"].ToString();
-                    txtNumero.Text = rd["numero"].ToString();
-                    txtCidade.Text = rd["cidade"].ToString();
-                    txtEstado.Text = rd["estado"].ToString();
-                    txtSobrenome.Text = rd["sobrenome"].ToString();
-                    txtCep.Text = rd["cep"].ToString();
-                    txtBairro.Text = rd["bairro"].ToString();
-                    cbSexo.Text = rd["sexo"].ToString();
-                    dtpNascimento.Text = rd["data_nascimento"].ToString();
-                    cbFunc.Text = rd["funcao"].ToString();
-
-                }
-                else
-                {
-                    MessageBox.Show("Registro não encontrado");
-                    con.Close();
-                    txtCod.Text = "";
-                    txtcpf.Text = "";
-                    txtNome.Text = "";
-                    txtEndereco.Text = "";
-                    txtCelular.Text = "";
-                    txtEndereco.Text = "";
-                    txtNumero.Text = "";
-                    txtEstado.Text = "";
-                    txtCidade.Text = "";
-                    txtSobrenome.Text = "";
-                    txtCep.Text = "";
-                    txtCidade.Text = "";
-                    txtBairro.Text = "";
-                    cbSexo.Text = "Escolha o sexo...";
-                    dtpNascimento.Value = DateTime.Now;
-                    cbFunc.Text = "Escolha a função...";
-
-                }
-                con.Close();
-
+                MessageBox.Show("Digite o Cod. Funcionario");
+                return;
             }
-            finally
+            else
             {
+
+
+                try
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("select * from funcionario where cod_funcionario = ?;", con);
+                    //cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("cod_funcionario", MySqlDbType.Int32).Value = txtCod.Text;
+
+                    MySqlDataReader rd = cmd.ExecuteReader();
+                    if (rd.Read())
+                    {
+                        txtCod.Text = rd["cod_funcionario"].ToString();
+                        txtNome.Text = rd["nome"].ToString();
+                        mskCpf.Text = rd["cpf"].ToString();
+                        mskCelular.Text = rd["celular"].ToString();
+                        txtEndereco.Text = rd["endereco"].ToString();
+                        txtNumero.Text = rd["numero"].ToString();
+                        txtCidade.Text = rd["cidade"].ToString();
+                        txtEstado.Text = rd["estado"].ToString();
+                        txtSobrenome.Text = rd["sobrenome"].ToString();
+                        mskCep.Text = rd["cep"].ToString();
+                        txtBairro.Text = rd["bairro"].ToString();
+                        cbSexo.Text = rd["sexo"].ToString();
+                        dtpNascimento.Text = rd["data_nascimento"].ToString();
+                        cbFunc.Text = rd["funcao"].ToString();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Registro não encontrado");
+                        con.Close();
+                        txtCod.Text = "";
+                        mskCpf.Text = "";
+                        txtNome.Text = "";
+                        txtEndereco.Text = "";
+                        mskCelular.Text = "";
+                        txtEndereco.Text = "";
+                        txtNumero.Text = "";
+                        txtEstado.Text = "";
+                        txtCidade.Text = "";
+                        txtSobrenome.Text = "";
+                        mskCep.Text = "";
+                        txtCidade.Text = "";
+                        txtBairro.Text = "";
+                        cbSexo.Text = "Escolha o sexo...";
+                        dtpNascimento.Value = DateTime.Now;
+                        cbFunc.Text = "Escolha a função...";
+
+                    }
+                    con.Close();
+
+                }
+                finally
+                {
+                }
             }
         }
 
@@ -156,12 +166,12 @@ namespace Bash
                 cmd.Parameters.Add("@sobrenome", MySqlDbType.VarChar).Value = txtSobrenome.Text.Trim();
                 cmd.Parameters.Add("@sexo", MySqlDbType.VarChar).Value = cbSexo.Text.Trim();
                 cmd.Parameters.Add("@data_nascimento", MySqlDbType.Date).Value = Convert.ToDateTime(dtpNascimento.Text.Trim());
-                cmd.Parameters.Add("@cpf", MySqlDbType.VarChar).Value = txtcpf.Text.Trim();
+                cmd.Parameters.Add("@cpf", MySqlDbType.VarChar).Value = mskCpf.Text.Trim();
                 cmd.Parameters.Add("@endereco", MySqlDbType.VarChar).Value = txtEndereco.Text.Trim();
                 cmd.Parameters.Add("@numero", MySqlDbType.Int32).Value = txtNumero.Text.Trim();
                 cmd.Parameters.Add("@bairro", MySqlDbType.VarChar).Value = txtBairro.Text.Trim();
-                cmd.Parameters.Add("@cep", MySqlDbType.VarChar).Value = txtCep.Text.Trim();
-                cmd.Parameters.Add("@celular", MySqlDbType.VarChar).Value = txtCelular.Text.Trim();
+                cmd.Parameters.Add("@cep", MySqlDbType.VarChar).Value = mskCep.Text.Trim();
+                cmd.Parameters.Add("@celular", MySqlDbType.VarChar).Value = mskCelular.Text.Trim();
                 cmd.Parameters.Add("@cidade", MySqlDbType.VarChar).Value = txtCidade.Text.Trim();
                 cmd.Parameters.Add("@estado", MySqlDbType.VarChar).Value = txtEstado.Text.Trim();
 
@@ -170,16 +180,16 @@ namespace Bash
 
                 con.Close();
                 txtCod.Text = "";
-                txtcpf.Text = "";
+                mskCpf.Text = "";
                 txtNome.Text = "";
                 txtEndereco.Text = "";
-                txtCelular.Text = "";
+                mskCelular.Text = "";
                 txtEndereco.Text = "";
                 txtNumero.Text = "";
                 txtEstado.Text = "";
                 txtCidade.Text = "";
                 txtSobrenome.Text = "";
-                txtCep.Text = "";
+                mskCep.Text = "";
                 txtCidade.Text = "";
                 txtBairro.Text = "";
                 cbSexo.Text = "Escolha o sexo...";
@@ -211,16 +221,16 @@ namespace Bash
                 con.Close();
                 con.Close();
                 txtCod.Text = "";
-                txtcpf.Text = "";
+                mskCpf.Text = "";
                 txtNome.Text = "";
                 txtEndereco.Text = "";
-                txtCelular.Text = "";
+                mskCelular.Text = "";
                 txtEndereco.Text = "";
                 txtNumero.Text = "";
                 txtEstado.Text = "";
                 txtCidade.Text = "";
                 txtSobrenome.Text = "";
-                txtCep.Text = "";
+                mskCep.Text = "";
                 txtCidade.Text = "";
                 txtBairro.Text = "";
                 cbSexo.Text = "Escolha o sexo...";
@@ -237,16 +247,16 @@ namespace Bash
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             txtCod.Text = "";
-            txtcpf.Text = "";
+            mskCpf.Text = "";
             txtNome.Text = "";
             txtEndereco.Text = "";
-            txtCelular.Text = "";
+            mskCelular.Text = "";
             txtEndereco.Text = "";
             txtNumero.Text = "";
             txtEstado.Text = "";
             txtCidade.Text = "";
             txtSobrenome.Text = "";
-            txtCep.Text = "";
+            mskCep.Text = "";
             txtCidade.Text = "";
             txtBairro.Text = "";
             cbSexo.Text = "Escolha o sexo...";

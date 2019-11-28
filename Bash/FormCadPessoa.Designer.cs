@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.MskCelular = new System.Windows.Forms.MaskedTextBox();
             this.MskCEP = new System.Windows.Forms.MaskedTextBox();
             this.MskCPF = new System.Windows.Forms.MaskedTextBox();
-            this.btnLimpar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
             this.label17 = new System.Windows.Forms.Label();
@@ -42,7 +42,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.txtSobrenome = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.btnPesquisar = new System.Windows.Forms.Button();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.txtNumero = new System.Windows.Forms.TextBox();
@@ -65,6 +64,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -72,10 +72,10 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtPesquisar);
             this.panel1.Controls.Add(this.MskCelular);
             this.panel1.Controls.Add(this.MskCEP);
             this.panel1.Controls.Add(this.MskCPF);
-            this.panel1.Controls.Add(this.btnLimpar);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.dtpNascimento);
             this.panel1.Controls.Add(this.label17);
@@ -106,89 +106,96 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(544, 699);
+            this.panel1.Size = new System.Drawing.Size(544, 734);
             this.panel1.TabIndex = 0;
+            // 
+            // txtPesquisar
+            // 
+            this.txtPesquisar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPesquisar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisar.Location = new System.Drawing.Point(96, 105);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(373, 27);
+            this.txtPesquisar.TabIndex = 40;
+            this.txtPesquisar.Text = "Pesquise o Produto Pelo Numero de identificação \'ID\'";
+            this.txtPesquisar.Enter += new System.EventHandler(this.txtPesquisar_Enter);
             // 
             // MskCelular
             // 
-            this.MskCelular.Location = new System.Drawing.Point(129, 559);
+            this.MskCelular.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MskCelular.Location = new System.Drawing.Point(176, 601);
             this.MskCelular.Mask = "(00) 0 0000-0000";
             this.MskCelular.Name = "MskCelular";
-            this.MskCelular.Size = new System.Drawing.Size(121, 20);
+            this.MskCelular.Size = new System.Drawing.Size(121, 23);
             this.MskCelular.TabIndex = 13;
             this.MskCelular.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.MskCelular_MaskInputRejected);
             // 
             // MskCEP
             // 
-            this.MskCEP.Location = new System.Drawing.Point(129, 437);
+            this.MskCEP.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MskCEP.Location = new System.Drawing.Point(176, 492);
             this.MskCEP.Mask = "00000-000";
             this.MskCEP.Name = "MskCEP";
-            this.MskCEP.Size = new System.Drawing.Size(80, 20);
+            this.MskCEP.Size = new System.Drawing.Size(80, 23);
             this.MskCEP.TabIndex = 10;
             // 
             // MskCPF
             // 
-            this.MskCPF.Location = new System.Drawing.Point(129, 281);
+            this.MskCPF.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MskCPF.Location = new System.Drawing.Point(176, 336);
             this.MskCPF.Mask = "000.000.000-00";
             this.MskCPF.Name = "MskCPF";
-            this.MskCPF.Size = new System.Drawing.Size(121, 20);
+            this.MskCPF.Size = new System.Drawing.Size(121, 23);
             this.MskCPF.TabIndex = 6;
             this.MskCPF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.Location = new System.Drawing.Point(401, 69);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(116, 25);
-            this.btnLimpar.TabIndex = 39;
-            this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 442);
+            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(42, 496);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 15);
+            this.label4.Size = new System.Drawing.Size(34, 19);
             this.label4.TabIndex = 37;
             this.label4.Text = "CEP";
             // 
             // dtpNascimento
             // 
+            this.dtpNascimento.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNascimento.Location = new System.Drawing.Point(129, 242);
+            this.dtpNascimento.Location = new System.Drawing.Point(176, 297);
             this.dtpNascimento.Margin = new System.Windows.Forms.Padding(8);
             this.dtpNascimento.Name = "dtpNascimento";
-            this.dtpNascimento.Size = new System.Drawing.Size(121, 20);
+            this.dtpNascimento.Size = new System.Drawing.Size(121, 23);
             this.dtpNascimento.TabIndex = 5;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(12, 216);
+            this.label17.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(42, 273);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(32, 15);
+            this.label17.Size = new System.Drawing.Size(39, 19);
             this.label17.TabIndex = 35;
             this.label17.Text = "Sexo";
             // 
             // cbSexo
             // 
+            this.cbSexo.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSexo.FormattingEnabled = true;
             this.cbSexo.Items.AddRange(new object[] {
             "Masculino",
             "Feminino"});
-            this.cbSexo.Location = new System.Drawing.Point(129, 210);
+            this.cbSexo.Location = new System.Drawing.Point(176, 265);
             this.cbSexo.Name = "cbSexo";
-            this.cbSexo.Size = new System.Drawing.Size(121, 21);
+            this.cbSexo.Size = new System.Drawing.Size(121, 23);
             this.cbSexo.TabIndex = 4;
             this.cbSexo.Text = "Escolha o sexo...";
             // 
             // txtBairro
             // 
-            this.txtBairro.Location = new System.Drawing.Point(129, 395);
+            this.txtBairro.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBairro.Location = new System.Drawing.Point(176, 450);
             this.txtBairro.Margin = new System.Windows.Forms.Padding(8);
             this.txtBairro.Multiline = true;
             this.txtBairro.Name = "txtBairro";
@@ -198,26 +205,27 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(12, 403);
+            this.label16.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(42, 454);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(42, 15);
+            this.label16.Size = new System.Drawing.Size(48, 19);
             this.label16.TabIndex = 32;
             this.label16.Text = "Bairro";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(12, 247);
+            this.label15.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(42, 301);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(101, 15);
+            this.label15.Size = new System.Drawing.Size(121, 19);
             this.label15.TabIndex = 30;
             this.label15.Text = "Data Nascimento";
             // 
             // txtSobrenome
             // 
-            this.txtSobrenome.Location = new System.Drawing.Point(129, 176);
+            this.txtSobrenome.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSobrenome.Location = new System.Drawing.Point(176, 231);
             this.txtSobrenome.Margin = new System.Windows.Forms.Padding(8);
             this.txtSobrenome.Multiline = true;
             this.txtSobrenome.Name = "txtSobrenome";
@@ -227,26 +235,17 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(12, 184);
+            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(42, 241);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(68, 15);
+            this.label13.Size = new System.Drawing.Size(81, 19);
             this.label13.TabIndex = 26;
             this.label13.Text = "Sobrenome";
             // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Location = new System.Drawing.Point(228, 106);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(116, 25);
-            this.btnPesquisar.TabIndex = 25;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            this.btnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click_1);
-            // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(129, 512);
+            this.txtEstado.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstado.Location = new System.Drawing.Point(176, 567);
             this.txtEstado.Margin = new System.Windows.Forms.Padding(8);
             this.txtEstado.Multiline = true;
             this.txtEstado.Name = "txtEstado";
@@ -255,7 +254,8 @@
             // 
             // txtCidade
             // 
-            this.txtCidade.Location = new System.Drawing.Point(129, 473);
+            this.txtCidade.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCidade.Location = new System.Drawing.Point(176, 528);
             this.txtCidade.Margin = new System.Windows.Forms.Padding(8);
             this.txtCidade.Multiline = true;
             this.txtCidade.Name = "txtCidade";
@@ -264,7 +264,8 @@
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(129, 356);
+            this.txtNumero.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumero.Location = new System.Drawing.Point(176, 411);
             this.txtNumero.Margin = new System.Windows.Forms.Padding(8);
             this.txtNumero.Multiline = true;
             this.txtNumero.Name = "txtNumero";
@@ -273,25 +274,28 @@
             // 
             // txtEndereco
             // 
-            this.txtEndereco.Location = new System.Drawing.Point(129, 317);
+            this.txtEndereco.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEndereco.Location = new System.Drawing.Point(176, 372);
             this.txtEndereco.Margin = new System.Windows.Forms.Padding(8);
             this.txtEndereco.Multiline = true;
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(376, 23);
+            this.txtEndereco.Size = new System.Drawing.Size(314, 23);
             this.txtEndereco.TabIndex = 7;
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(129, 137);
+            this.txtNome.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(176, 192);
             this.txtNome.Margin = new System.Windows.Forms.Padding(8);
             this.txtNome.Multiline = true;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(337, 23);
+            this.txtNome.Size = new System.Drawing.Size(314, 23);
             this.txtNome.TabIndex = 2;
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(129, 106);
+            this.txtId.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.Location = new System.Drawing.Point(176, 161);
             this.txtId.Multiline = true;
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(80, 25);
@@ -304,49 +308,73 @@
             this.panel4.Controls.Add(this.btnEditar);
             this.panel4.Controls.Add(this.btnCadastrar);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 629);
+            this.panel4.Location = new System.Drawing.Point(0, 630);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(544, 70);
+            this.panel4.Size = new System.Drawing.Size(544, 104);
             this.panel4.TabIndex = 14;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(336, 28);
+            this.btnSair.FlatAppearance.BorderSize = 0;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Image = global::Bash.Properties.Resources.exit;
+            this.btnSair.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSair.Location = new System.Drawing.Point(418, 28);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(86, 27);
+            this.btnSair.Size = new System.Drawing.Size(86, 64);
             this.btnSair.TabIndex = 17;
             this.btnSair.Text = "Sair";
+            this.btnSair.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(232, 28);
+            this.btnExcluir.FlatAppearance.BorderSize = 0;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Image = global::Bash.Properties.Resources.file;
+            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnExcluir.Location = new System.Drawing.Point(295, 28);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(86, 27);
+            this.btnExcluir.Size = new System.Drawing.Size(86, 64);
             this.btnExcluir.TabIndex = 16;
             this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(129, 28);
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Image = global::Bash.Properties.Resources.note__1_;
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEditar.Location = new System.Drawing.Point(157, 28);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(86, 27);
+            this.btnEditar.Size = new System.Drawing.Size(86, 64);
             this.btnEditar.TabIndex = 15;
             this.btnEditar.Text = "Editar";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(18, 28);
+            this.btnCadastrar.FlatAppearance.BorderSize = 0;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Image = global::Bash.Properties.Resources.save_file__1_;
+            this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCadastrar.Location = new System.Drawing.Point(25, 28);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(86, 27);
+            this.btnCadastrar.Size = new System.Drawing.Size(86, 64);
             this.btnCadastrar.TabIndex = 14;
             this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.Button1_Click);
             // 
@@ -372,50 +400,50 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(12, 520);
+            this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(42, 571);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 15);
+            this.label11.Size = new System.Drawing.Size(53, 19);
             this.label11.TabIndex = 11;
             this.label11.Text = "Estado";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(12, 481);
+            this.label10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(42, 538);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(45, 15);
+            this.label10.Size = new System.Drawing.Size(54, 19);
             this.label10.TabIndex = 10;
             this.label10.Text = "Cidade";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(12, 364);
+            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(42, 415);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 15);
+            this.label9.Size = new System.Drawing.Size(96, 19);
             this.label9.TabIndex = 9;
             this.label9.Text = "Numero Casa";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(12, 325);
+            this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(42, 376);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 15);
+            this.label8.Size = new System.Drawing.Size(69, 19);
             this.label8.TabIndex = 8;
             this.label8.Text = "Endereço";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 559);
+            this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(42, 605);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 15);
+            this.label7.Size = new System.Drawing.Size(55, 19);
             this.label7.TabIndex = 7;
             this.label7.Text = "Celular";
             // 
@@ -431,38 +459,51 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 286);
+            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(42, 340);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 15);
+            this.label3.Size = new System.Drawing.Size(33, 19);
             this.label3.TabIndex = 3;
             this.label3.Text = "CPF";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 139);
+            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(42, 196);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 15);
+            this.label2.Size = new System.Drawing.Size(105, 19);
             this.label2.TabIndex = 2;
             this.label2.Text = "Primeiro Nome";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 110);
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(42, 167);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 15);
+            this.label1.Size = new System.Drawing.Size(23, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "ID";
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.FlatAppearance.BorderSize = 0;
+            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPesquisar.Image = global::Bash.Properties.Resources.search__1_;
+            this.btnPesquisar.Location = new System.Drawing.Point(46, 100);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(44, 34);
+            this.btnPesquisar.TabIndex = 25;
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click_1);
             // 
             // FormCadPessoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(544, 699);
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.ClientSize = new System.Drawing.Size(544, 734);
             this.Controls.Add(this.panel1);
             this.Name = "FormCadPessoa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -512,9 +553,9 @@
         public System.Windows.Forms.TextBox txtEndereco;
         public System.Windows.Forms.TextBox txtNome;
         public System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.MaskedTextBox MskCEP;
         public System.Windows.Forms.MaskedTextBox MskCPF;
         public System.Windows.Forms.MaskedTextBox MskCelular;
+        private System.Windows.Forms.TextBox txtPesquisar;
     }
 }

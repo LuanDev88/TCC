@@ -50,5 +50,10 @@ namespace Bash
             }
             con.Close();
         }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

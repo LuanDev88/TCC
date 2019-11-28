@@ -43,9 +43,9 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Gainsboro;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(280, 0);
+            this.panel3.Location = new System.Drawing.Point(173, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1184, 791);
+            this.panel3.Size = new System.Drawing.Size(1184, 752);
             this.panel3.TabIndex = 2;
             // 
             // panel1
@@ -62,7 +62,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(276, 791);
+            this.panel1.Size = new System.Drawing.Size(276, 752);
             this.panel1.TabIndex = 3;
             // 
             // btnCadastros
@@ -74,7 +74,7 @@
             this.btnCadastros.ForeColor = System.Drawing.Color.Snow;
             this.btnCadastros.Image = global::Bash.Properties.Resources.desktop;
             this.btnCadastros.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCadastros.Location = new System.Drawing.Point(40, 280);
+            this.btnCadastros.Location = new System.Drawing.Point(39, 246);
             this.btnCadastros.Margin = new System.Windows.Forms.Padding(3, 15, 3, 15);
             this.btnCadastros.Name = "btnCadastros";
             this.btnCadastros.Size = new System.Drawing.Size(196, 66);
@@ -93,7 +93,7 @@
             this.btnRelatorio.ForeColor = System.Drawing.Color.Snow;
             this.btnRelatorio.Image = global::Bash.Properties.Resources.marketing;
             this.btnRelatorio.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRelatorio.Location = new System.Drawing.Point(40, 404);
+            this.btnRelatorio.Location = new System.Drawing.Point(39, 370);
             this.btnRelatorio.Margin = new System.Windows.Forms.Padding(3, 15, 3, 15);
             this.btnRelatorio.Name = "btnRelatorio";
             this.btnRelatorio.Size = new System.Drawing.Size(196, 66);
@@ -112,7 +112,7 @@
             this.btnSair.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnSair.Image = global::Bash.Properties.Resources.logout;
             this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSair.Location = new System.Drawing.Point(40, 712);
+            this.btnSair.Location = new System.Drawing.Point(39, 632);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(196, 66);
             this.btnSair.TabIndex = 6;
@@ -142,7 +142,7 @@
             this.btnCaixa.ForeColor = System.Drawing.Color.Snow;
             this.btnCaixa.Image = global::Bash.Properties.Resources.pos;
             this.btnCaixa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCaixa.Location = new System.Drawing.Point(40, 158);
+            this.btnCaixa.Location = new System.Drawing.Point(39, 124);
             this.btnCaixa.Margin = new System.Windows.Forms.Padding(3, 15, 3, 15);
             this.btnCaixa.Name = "btnCaixa";
             this.btnCaixa.Size = new System.Drawing.Size(196, 66);
@@ -161,7 +161,7 @@
             this.btnTesteBanco.ForeColor = System.Drawing.Color.Snow;
             this.btnTesteBanco.Image = global::Bash.Properties.Resources.icons8_banco_de_dados_481;
             this.btnTesteBanco.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTesteBanco.Location = new System.Drawing.Point(40, 556);
+            this.btnTesteBanco.Location = new System.Drawing.Point(39, 522);
             this.btnTesteBanco.Margin = new System.Windows.Forms.Padding(3, 15, 3, 15);
             this.btnTesteBanco.Name = "btnTesteBanco";
             this.btnTesteBanco.Size = new System.Drawing.Size(196, 66);
@@ -177,7 +177,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1464, 791);
+            this.ClientSize = new System.Drawing.Size(1357, 752);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
