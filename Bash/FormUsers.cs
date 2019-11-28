@@ -125,6 +125,12 @@ namespace Bash
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            if (txtUser.Text == "" || txtPassword.Text == "")
+            {
+                MessageBox.Show("Preencha os campos antes de cadastrar");
+                return;
+            }
+
             if (con.State == ConnectionState.Open)
             {
                 con.Close();
@@ -153,7 +159,7 @@ namespace Bash
 
             catch (Exception er)
             {
-                MessageBox.Show(er.Message);
+                //MessageBox.Show(er.Message);
                 con.Close();
             }
         }
@@ -200,7 +206,7 @@ namespace Bash
             }
             else
             {
-                MessageBox.Show("Pesquise por um registro inserido antes de realizar edições");
+                MessageBox.Show("Pesquise um funcionário antes de editar");
                 return;
             }
         }
@@ -239,7 +245,7 @@ namespace Bash
 
             else
             {
-                MessageBox.Show("Pesquise por um registro inserido antes de deletar");
+                MessageBox.Show("Pesquise um funcionário antes de excluir");
                 return;
             }
         }

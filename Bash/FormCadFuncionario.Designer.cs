@@ -60,14 +60,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
+            this.mskCelular = new System.Windows.Forms.MaskedTextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.mskCpf = new System.Windows.Forms.MaskedTextBox();
+            this.mskCep = new System.Windows.Forms.MaskedTextBox();
             this.cbFunc = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cbSexo = new System.Windows.Forms.ComboBox();
-            this.mskCep = new System.Windows.Forms.MaskedTextBox();
-            this.mskCpf = new System.Windows.Forms.MaskedTextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.mskCelular = new System.Windows.Forms.MaskedTextBox();
-            this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -92,7 +92,7 @@
             this.dtpNascimento.Margin = new System.Windows.Forms.Padding(8);
             this.dtpNascimento.Name = "dtpNascimento";
             this.dtpNascimento.Size = new System.Drawing.Size(121, 23);
-            this.dtpNascimento.TabIndex = 36;
+            this.dtpNascimento.TabIndex = 5;
             this.dtpNascimento.ValueChanged += new System.EventHandler(this.dtpNascimento_ValueChanged);
             // 
             // label17
@@ -114,7 +114,7 @@
             this.txtBairro.Multiline = true;
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(135, 23);
-            this.txtBairro.TabIndex = 33;
+            this.txtBairro.TabIndex = 10;
             this.txtBairro.TextChanged += new System.EventHandler(this.txtBairro_TextChanged);
             // 
             // label16
@@ -147,7 +147,7 @@
             this.txtSobrenome.Multiline = true;
             this.txtSobrenome.Name = "txtSobrenome";
             this.txtSobrenome.Size = new System.Drawing.Size(225, 23);
-            this.txtSobrenome.TabIndex = 27;
+            this.txtSobrenome.TabIndex = 3;
             this.txtSobrenome.TextChanged += new System.EventHandler(this.txtSobrenome_TextChanged);
             // 
             // label13
@@ -181,7 +181,7 @@
             this.txtEstado.Multiline = true;
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(135, 23);
-            this.txtEstado.TabIndex = 24;
+            this.txtEstado.TabIndex = 13;
             this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
             // 
             // txtCidade
@@ -192,7 +192,7 @@
             this.txtCidade.Multiline = true;
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(135, 23);
-            this.txtCidade.TabIndex = 23;
+            this.txtCidade.TabIndex = 12;
             this.txtCidade.TextChanged += new System.EventHandler(this.txtCidade_TextChanged);
             // 
             // txtNumero
@@ -203,7 +203,7 @@
             this.txtNumero.Multiline = true;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(80, 23);
-            this.txtNumero.TabIndex = 22;
+            this.txtNumero.TabIndex = 9;
             this.txtNumero.TextChanged += new System.EventHandler(this.txtNumero_TextChanged);
             // 
             // txtEndereco
@@ -214,7 +214,7 @@
             this.txtEndereco.Multiline = true;
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(376, 23);
-            this.txtEndereco.TabIndex = 21;
+            this.txtEndereco.TabIndex = 8;
             this.txtEndereco.TextChanged += new System.EventHandler(this.txtEndereco_TextChanged);
             // 
             // txtNome
@@ -225,7 +225,7 @@
             this.txtNome.Multiline = true;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(155, 23);
-            this.txtNome.TabIndex = 16;
+            this.txtNome.TabIndex = 2;
             this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // txtCod
@@ -235,7 +235,7 @@
             this.txtCod.Multiline = true;
             this.txtCod.Name = "txtCod";
             this.txtCod.Size = new System.Drawing.Size(80, 25);
-            this.txtCod.TabIndex = 15;
+            this.txtCod.TabIndex = 1;
             this.txtCod.TextChanged += new System.EventHandler(this.txtCod_TextChanged);
             // 
             // panel4
@@ -256,7 +256,7 @@
             this.btnSair.Location = new System.Drawing.Point(336, 28);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(86, 27);
-            this.btnSair.TabIndex = 3;
+            this.btnSair.TabIndex = 18;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
@@ -266,7 +266,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(232, 28);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(86, 27);
-            this.btnExcluir.TabIndex = 2;
+            this.btnExcluir.TabIndex = 17;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
@@ -276,7 +276,7 @@
             this.btnEditar.Location = new System.Drawing.Point(129, 28);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(86, 27);
-            this.btnEditar.TabIndex = 1;
+            this.btnEditar.TabIndex = 16;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -286,7 +286,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(18, 28);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(86, 27);
-            this.btnCadastrar.TabIndex = 0;
+            this.btnCadastrar.TabIndex = 15;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
@@ -453,6 +453,53 @@
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // txtPesquisar
+            // 
+            this.txtPesquisar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPesquisar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisar.Location = new System.Drawing.Point(99, 83);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(373, 27);
+            this.txtPesquisar.TabIndex = 19;
+            this.txtPesquisar.Text = "Pesquise o Funcionario Pelo Cod. Funcionario";
+            // 
+            // mskCelular
+            // 
+            this.mskCelular.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskCelular.Location = new System.Drawing.Point(129, 610);
+            this.mskCelular.Mask = "(00)00000-0000";
+            this.mskCelular.Name = "mskCelular";
+            this.mskCelular.Size = new System.Drawing.Size(100, 23);
+            this.mskCelular.TabIndex = 14;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(12, 321);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(33, 19);
+            this.label14.TabIndex = 45;
+            this.label14.Text = "CPF";
+            // 
+            // mskCpf
+            // 
+            this.mskCpf.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskCpf.Location = new System.Drawing.Point(129, 317);
+            this.mskCpf.Mask = "000.000.000-00";
+            this.mskCpf.Name = "mskCpf";
+            this.mskCpf.Size = new System.Drawing.Size(100, 23);
+            this.mskCpf.TabIndex = 6;
+            // 
+            // mskCep
+            // 
+            this.mskCep.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskCep.Location = new System.Drawing.Point(129, 497);
+            this.mskCep.Mask = "00000-00";
+            this.mskCep.Name = "mskCep";
+            this.mskCep.Size = new System.Drawing.Size(101, 23);
+            this.mskCep.TabIndex = 11;
+            // 
             // cbFunc
             // 
             this.cbFunc.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -465,7 +512,7 @@
             this.cbFunc.Location = new System.Drawing.Point(129, 356);
             this.cbFunc.Name = "cbFunc";
             this.cbFunc.Size = new System.Drawing.Size(135, 23);
-            this.cbFunc.TabIndex = 42;
+            this.cbFunc.TabIndex = 7;
             this.cbFunc.Text = "Escolha a função...";
             this.cbFunc.SelectedIndexChanged += new System.EventHandler(this.cbFunc_SelectedIndexChanged);
             // 
@@ -490,56 +537,9 @@
             this.cbSexo.Location = new System.Drawing.Point(129, 248);
             this.cbSexo.Name = "cbSexo";
             this.cbSexo.Size = new System.Drawing.Size(121, 23);
-            this.cbSexo.TabIndex = 34;
+            this.cbSexo.TabIndex = 4;
             this.cbSexo.Text = "Escolha o sexo...";
             this.cbSexo.SelectedIndexChanged += new System.EventHandler(this.cbSexo_SelectedIndexChanged);
-            // 
-            // mskCep
-            // 
-            this.mskCep.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskCep.Location = new System.Drawing.Point(129, 497);
-            this.mskCep.Mask = "00000-00";
-            this.mskCep.Name = "mskCep";
-            this.mskCep.Size = new System.Drawing.Size(101, 23);
-            this.mskCep.TabIndex = 43;
-            // 
-            // mskCpf
-            // 
-            this.mskCpf.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskCpf.Location = new System.Drawing.Point(129, 317);
-            this.mskCpf.Mask = "000.000.000-00";
-            this.mskCpf.Name = "mskCpf";
-            this.mskCpf.Size = new System.Drawing.Size(100, 23);
-            this.mskCpf.TabIndex = 44;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(12, 321);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(33, 19);
-            this.label14.TabIndex = 45;
-            this.label14.Text = "CPF";
-            // 
-            // mskCelular
-            // 
-            this.mskCelular.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskCelular.Location = new System.Drawing.Point(129, 610);
-            this.mskCelular.Mask = "(00)00000-0000";
-            this.mskCelular.Name = "mskCelular";
-            this.mskCelular.Size = new System.Drawing.Size(100, 23);
-            this.mskCelular.TabIndex = 46;
-            // 
-            // txtPesquisar
-            // 
-            this.txtPesquisar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPesquisar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisar.Location = new System.Drawing.Point(99, 83);
-            this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(373, 27);
-            this.txtPesquisar.TabIndex = 47;
-            this.txtPesquisar.Text = "Pesquise o Funcionario Pelo Cod. Funcionario";
             // 
             // FormCadFuncionario
             // 

@@ -20,6 +20,11 @@ namespace Bash
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
+            if(txtNome.Text == "" || txtCustoUnitario.Text == "" || txtVenda.Text == "" || txtFabricante.Text == "" || txtQuantidade.Text == "" || txtObs.Text == "")
+            {
+                MessageBox.Show("Preencha todos os campos antes de cadastrar");
+                return;
+            }
             if (con.State == ConnectionState.Open)
             {
                 con.Close();
@@ -52,7 +57,7 @@ namespace Bash
 
             catch (Exception er)
             {
-                MessageBox.Show(er.Message);
+                //MessageBox.Show(er.Message);
                 con.Close();
             }
         }
@@ -123,6 +128,12 @@ namespace Bash
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            if(txtId.Text == "")
+            {
+                MessageBox.Show("Pesquise o ID de algum produto antes de editar");
+                return;
+            }
+
             if (con.State == ConnectionState.Open)
             {
                 con.Close();
@@ -156,7 +167,7 @@ namespace Bash
 
             catch (Exception er)
             {
-                MessageBox.Show(er.Message);
+                //MessageBox.Show(er.Message);
                 con.Close();
             }
 
@@ -164,7 +175,11 @@ namespace Bash
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-
+            if (txtId.Text == "")
+            {
+                MessageBox.Show("Pesquise o ID de algum produto antes de excluir");
+                return;
+            }
             try
             {
                 con.Open();
@@ -186,7 +201,7 @@ namespace Bash
             }
             catch (Exception er)
             {
-                MessageBox.Show(er.Message);
+                //MessageBox.Show(er.Message);
                 con.Close();
             }
         }

@@ -26,6 +26,12 @@ namespace Bash
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            if (txtNome.Text == "" || txtSobrenome.Text == "" || cbSexo.Text == "Escolha o sexo..." || dtpNascimento.Value == DateTime.Now || mskCpf.Text == "" || cbFunc.Text == "" || txtEndereco.Text == "" || txtNumero.Text == "" || txtBairro.Text == "" || mskCep.Text == "" || txtCidade.Text == "" || txtEstado.Text == "" || mskCelular.Text == "")
+            {
+                MessageBox.Show("Preencha todos os campos antes de cadastar");
+                return;
+            }
+
             if (con.State == ConnectionState.Open)
             {
                 con.Close();
@@ -71,7 +77,7 @@ namespace Bash
             }
             catch (Exception er)
             {
-                MessageBox.Show(er.Message);
+                //MessageBox.Show(er.Message);
                 con.Close();
             }
         }
@@ -150,6 +156,12 @@ namespace Bash
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            if (txtCod.Text == "")
+            {
+                MessageBox.Show("Pesquise um funcionário antes de editar");
+                return;
+            }
+
             if (con.State == ConnectionState.Open)
             {
                 con.Close();
@@ -199,13 +211,18 @@ namespace Bash
 
             catch (Exception er)
             {
-                MessageBox.Show(er.Message);
+                //MessageBox.Show(er.Message);
                 con.Close();
             }
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+            if (txtCod.Text == "")
+            {
+                MessageBox.Show("Pesquise um funcionário antes de excluir");
+            }
+
             if (con.State == ConnectionState.Open)
             {
                 con.Close();
@@ -240,7 +257,7 @@ namespace Bash
             }
             catch (Exception er)
             {
-                MessageBox.Show(er.Message);
+                //MessageBox.Show(er.Message);
             }
         }
 

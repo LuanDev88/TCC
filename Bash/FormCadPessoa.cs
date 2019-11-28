@@ -44,6 +44,12 @@ namespace Bash
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            if (txtNome.Text == "" || txtSobrenome.Text == "" || cbSexo.Text == "Escolha o sexo..." || dtpNascimento.Value == DateTime.Now || MskCPF.Text == "" || txtEndereco.Text == "" || txtNumero.Text == "" || txtBairro.Text == "" || MskCEP.Text == "" || txtCidade.Text == "" || txtEstado.Text == "" || MskCelular.Text == "")
+            {
+                MessageBox.Show("Preencha todos os campos antes de cadastrar");
+                return;
+            }
+
             if (con.State == ConnectionState.Open)
             {
                 con.Close();
@@ -91,7 +97,7 @@ namespace Bash
 
             catch (Exception er)
             {
-                MessageBox.Show(er.Message);
+                //MessageBox.Show(er.Message);
                 con.Close();
             }
         }
@@ -103,6 +109,11 @@ namespace Bash
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
+            if (txtId.Text == "")
+            {
+                MessageBox.Show("Pesquise uma pessoa antes de editar");
+            }
+
             if (con.State == ConnectionState.Open)
             {
                 con.Close();
@@ -151,7 +162,7 @@ namespace Bash
 
             catch (Exception er)
             {
-                MessageBox.Show(er.Message);
+                //MessageBox.Show(er.Message);
                 con.Close();
             }
 
@@ -159,6 +170,11 @@ namespace Bash
 
         private void BtnExcluir_Click(object sender, EventArgs e)
         {
+            if (txtId.Text == "")
+            {
+                MessageBox.Show("Pesquise uma pessoa antes de excluir");
+            }
+
             if (con.State == ConnectionState.Open)
             {
                 con.Close();
@@ -193,7 +209,7 @@ namespace Bash
             }
             catch (Exception er)
             {
-                MessageBox.Show(er.Message);
+                //MessageBox.Show(er.Message);
             }
         }
 
