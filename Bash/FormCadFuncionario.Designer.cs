@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadFuncionario));
             this.label4 = new System.Windows.Forms.Label();
             this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
             this.label17 = new System.Windows.Forms.Label();
@@ -253,41 +254,65 @@
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(336, 28);
+            this.btnSair.FlatAppearance.BorderSize = 0;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
+            this.btnSair.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSair.Location = new System.Drawing.Point(459, 19);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(86, 27);
+            this.btnSair.Size = new System.Drawing.Size(86, 66);
             this.btnSair.TabIndex = 3;
             this.btnSair.Text = "Sair";
+            this.btnSair.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(232, 28);
+            this.btnExcluir.FlatAppearance.BorderSize = 0;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Image = global::Bash.Properties.Resources.file;
+            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnExcluir.Location = new System.Drawing.Point(314, 19);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(86, 27);
+            this.btnExcluir.Size = new System.Drawing.Size(86, 66);
             this.btnExcluir.TabIndex = 2;
             this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(129, 28);
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Image = global::Bash.Properties.Resources.note__1_;
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEditar.Location = new System.Drawing.Point(164, 19);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(86, 27);
+            this.btnEditar.Size = new System.Drawing.Size(86, 66);
             this.btnEditar.TabIndex = 1;
             this.btnEditar.Text = "Editar";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(18, 28);
+            this.btnCadastrar.FlatAppearance.BorderSize = 0;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Image = global::Bash.Properties.Resources.save_file__1_;
+            this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCadastrar.Location = new System.Drawing.Point(16, 19);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(86, 27);
+            this.btnCadastrar.Size = new System.Drawing.Size(86, 66);
             this.btnCadastrar.TabIndex = 0;
             this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
@@ -549,6 +574,7 @@
             this.ClientSize = new System.Drawing.Size(573, 742);
             this.Controls.Add(this.panel1);
             this.Name = "FormCadFuncionario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCadFuncionario";
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
