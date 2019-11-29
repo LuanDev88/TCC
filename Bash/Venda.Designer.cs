@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDeletar = new System.Windows.Forms.Button();
             this.lblCpfCliente = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lblNomeCliente = new System.Windows.Forms.Label();
@@ -69,6 +70,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.btnDeletar);
             this.panel1.Controls.Add(this.lblCpfCliente);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.lblNomeCliente);
@@ -99,6 +101,21 @@
             this.panel1.Size = new System.Drawing.Size(602, 752);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnDeletar
+            // 
+            this.btnDeletar.BackColor = System.Drawing.Color.Red;
+            this.btnDeletar.FlatAppearance.BorderSize = 0;
+            this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeletar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletar.Location = new System.Drawing.Point(188, 701);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Size = new System.Drawing.Size(182, 36);
+            this.btnDeletar.TabIndex = 30;
+            this.btnDeletar.Text = "Deletar";
+            this.btnDeletar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeletar.UseVisualStyleBackColor = false;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // lblCpfCliente
             // 
@@ -513,5 +530,6 @@
         private System.Windows.Forms.TextBox txtPesquiseCliente;
         public System.Windows.Forms.Label lblNomeCliente;
         public System.Windows.Forms.DataGridView dtgVenda;
+        private System.Windows.Forms.Button btnDeletar;
     }
 }

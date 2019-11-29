@@ -159,5 +159,13 @@ namespace Bash
             dtgVenda.Columns.Add("Quantidade", "Quantidade");
             dtgVenda.Columns.Add("Valor Total do Produto", "Valor Total do Produto");
         }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+            int linha = dtgVenda.CurrentRow.Index;
+            dtgVenda.Rows.RemoveAt(linha);
+            dtgVenda.Refresh();
+            
+        }
     }
 }
