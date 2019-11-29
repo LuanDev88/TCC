@@ -42,10 +42,10 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(173, 0);
+            this.panel3.Location = new System.Drawing.Point(293, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1184, 752);
+            this.panel3.Size = new System.Drawing.Size(1061, 752);
             this.panel3.TabIndex = 2;
             // 
             // panel1
@@ -62,7 +62,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(276, 752);
+            this.panel1.Size = new System.Drawing.Size(289, 752);
             this.panel1.TabIndex = 3;
             // 
             // btnCadastros
@@ -112,7 +112,7 @@
             this.btnSair.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnSair.Image = global::Bash.Properties.Resources.logout;
             this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSair.Location = new System.Drawing.Point(39, 632);
+            this.btnSair.Location = new System.Drawing.Point(39, 661);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(196, 66);
             this.btnSair.TabIndex = 6;

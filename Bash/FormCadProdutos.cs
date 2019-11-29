@@ -20,7 +20,7 @@ namespace Bash
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            if(txtNome.Text == "" || txtCustoUnitario.Text == "" || txtVenda.Text == "" || txtFabricante.Text == "" || txtQuantidade.Text == "" || txtObs.Text == "")
+            if (txtNome.Text == "" || txtCustoUnitario.Text == "" || txtVenda.Text == "" || txtFabricante.Text == "" || txtQuantidade.Text == "" || txtObs.Text == "")
             {
                 MessageBox.Show("Preencha todos os campos antes de cadastrar");
                 return;
@@ -57,7 +57,7 @@ namespace Bash
 
             catch (Exception er)
             {
-                //MessageBox.Show(er.Message);
+                MessageBox.Show(er.Message);
                 con.Close();
             }
         }
