@@ -98,7 +98,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(602, 752);
+            this.panel1.Size = new System.Drawing.Size(577, 752);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -108,7 +108,7 @@
             this.btnDeletar.FlatAppearance.BorderSize = 0;
             this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeletar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletar.Location = new System.Drawing.Point(188, 701);
+            this.btnDeletar.Location = new System.Drawing.Point(140, 702);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(182, 36);
             this.btnDeletar.TabIndex = 30;
@@ -267,7 +267,7 @@
             this.btnInserir.FlatAppearance.BorderSize = 0;
             this.btnInserir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInserir.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInserir.Location = new System.Drawing.Point(402, 701);
+            this.btnInserir.Location = new System.Drawing.Point(333, 702);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(182, 36);
             this.btnInserir.TabIndex = 5;
@@ -302,7 +302,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(420, 602);
+            this.label3.Location = new System.Drawing.Point(401, 603);
             this.label3.Margin = new System.Windows.Forms.Padding(8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 19);
@@ -331,7 +331,7 @@
             // txtValorItem
             // 
             this.txtValorItem.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValorItem.Location = new System.Drawing.Point(424, 632);
+            this.txtValorItem.Location = new System.Drawing.Point(405, 633);
             this.txtValorItem.Multiline = true;
             this.txtValorItem.Name = "txtValorItem";
             this.txtValorItem.Size = new System.Drawing.Size(158, 32);
@@ -422,10 +422,10 @@
             this.panel2.Controls.Add(this.dtgVenda);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(602, 0);
+            this.panel2.Location = new System.Drawing.Point(577, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(448, 567);
+            this.panel2.Size = new System.Drawing.Size(473, 567);
             this.panel2.TabIndex = 2;
             // 
             // dtgVenda
@@ -435,11 +435,11 @@
             this.dtgVenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgVenda.Dock = System.Windows.Forms.DockStyle.Right;
             this.dtgVenda.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dtgVenda.Location = new System.Drawing.Point(-1, 0);
+            this.dtgVenda.Location = new System.Drawing.Point(0, 0);
             this.dtgVenda.Name = "dtgVenda";
             this.dtgVenda.ReadOnly = true;
             this.dtgVenda.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dtgVenda.Size = new System.Drawing.Size(445, 563);
+            this.dtgVenda.Size = new System.Drawing.Size(469, 563);
             this.dtgVenda.TabIndex = 1;
             this.dtgVenda.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.da_CellContentClick);
             // 

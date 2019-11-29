@@ -148,6 +148,10 @@ namespace Bash
             item.Cells[4].Value = txtValorItem.Text;
             dtgVenda.Rows.Add(item);
 
+            decimal soma = 0;
+            foreach (DataGridViewRow dr in dtgVenda.Rows) soma += Convert.ToDecimal(dr.Cells[4].Value);
+            txtValorTotal.Text = Convert.ToString(soma);
+
 
         }
 
