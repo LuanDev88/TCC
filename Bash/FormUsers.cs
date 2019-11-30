@@ -22,6 +22,11 @@ namespace Bash
         public bool habilitarDel = false;
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
+            if(txtPesquisa.Text == "Digite o 'Código do funcionário' a ser pesquisado")
+            {
+                MessageBox.Show("Insira o código de algum funcionário antes de pesquisar");
+            }
+
             if (con.State == ConnectionState.Open)
             {
                 con.Close();

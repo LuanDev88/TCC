@@ -90,7 +90,7 @@ namespace Bash
             }
             if (txtPesquisar.Text == "Pesquise o Funcionario Pelo Cod. Funcionario")
             {
-                MessageBox.Show("Digite o Cod. Funcionario");
+                MessageBox.Show("Insira o código de algum funcionário antes de pesquisar");
                 return;
             }
             else

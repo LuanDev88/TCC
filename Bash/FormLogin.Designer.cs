@@ -42,8 +42,8 @@
             this.btnLogin.Location = new System.Drawing.Point(215, 303);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(86, 27);
-            this.btnLogin.TabIndex = 19;
-            this.btnLogin.Text = "Entrar";
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "&Entrar";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -52,8 +52,8 @@
             this.btnSair.Location = new System.Drawing.Point(111, 303);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(86, 27);
-            this.btnSair.TabIndex = 18;
-            this.btnSair.Text = "Sair";
+            this.btnSair.TabIndex = 3;
+            this.btnSair.Text = "&Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
@@ -76,7 +76,7 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(165, 23);
-            this.txtSenha.TabIndex = 22;
+            this.txtSenha.TabIndex = 2;
             // 
             // txtUsuario
             // 
@@ -85,7 +85,7 @@
             this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(165, 23);
-            this.txtUsuario.TabIndex = 21;
+            this.txtUsuario.TabIndex = 1;
             // 
             // label2
             // 
@@ -109,6 +109,7 @@
             // 
             // FormLogin
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(438, 416);

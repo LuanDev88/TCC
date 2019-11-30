@@ -31,8 +31,8 @@ namespace Bash
             con.Open();
                 MySqlCommand cmd = new MySqlCommand("select * from usuario where senha = @senha AND usuario = @usuario;", con);
 
-            cmd.Parameters.Add("usuario", MySqlDbType.VarChar).Value = txtUsuario.Text;
-            cmd.Parameters.Add("senha", MySqlDbType.VarChar).Value = txtSenha.Text;
+            cmd.Parameters.Add("usuario", MySqlDbType.VarChar).Value = txtUsuario.Text.Trim();
+            cmd.Parameters.Add("senha", MySqlDbType.VarChar).Value = txtSenha.Text.Trim();
 
             MySqlDataReader rd = cmd.ExecuteReader();
             if (rd.Read())

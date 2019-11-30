@@ -75,7 +75,7 @@ namespace Bash
             }
             if (txtPesquisar.Text == "Pesquise o Produto Pelo Numero de identificação 'ID'")
             {
-                MessageBox.Show("selecione um Item");
+                MessageBox.Show("Insira o ID de algum produto antes de pesquisar");
                 return;
             }
             else

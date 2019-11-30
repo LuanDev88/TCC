@@ -111,7 +111,7 @@ namespace Bash
         {
             if (txtId.Text == "")
             {
-                MessageBox.Show("Pesquise uma pessoa antes de editar");
+                MessageBox.Show("Pesquise um cliente antes de editar");
             }
 
             if (con.State == ConnectionState.Open)
@@ -172,7 +172,7 @@ namespace Bash
         {
             if (txtId.Text == "")
             {
-                MessageBox.Show("Pesquise uma pessoa antes de excluir");
+                MessageBox.Show("Pesquise um cliente antes de excluir");
             }
 
             if (con.State == ConnectionState.Open)
@@ -243,9 +243,9 @@ namespace Bash
             {
                 con.Close();
             }
-            if (txtPesquisar.Text == "Pesquise o Produto Pelo Numero de identificação 'ID'")
+            if (txtPesquisar.Text == "Pesquise o Cliente Pelo Numero de identificação 'ID'")
             {
-                MessageBox.Show("insira o ID do Cliente");
+                MessageBox.Show("Insira o ID de algum cliente antes de pesquisar");
                 return;
             }
 
@@ -259,7 +259,7 @@ namespace Bash
                 MySqlDataReader rd = cmd.ExecuteReader();
                 if (rd.Read())
                 {
-                    txtPesquisar.Text = "Pesquise o Produto Pelo Numero de identificação 'ID'";
+                    txtPesquisar.Text = "Pesquise o Cliente Pelo Numero de identificação 'ID'";
                     txtId.Text = rd["id_cliente"].ToString();
                     txtNome.Text = rd["nome"].ToString();
                     MskCPF.Text = rd["cpf"].ToString();

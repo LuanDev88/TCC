@@ -42,6 +42,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.txtSobrenome = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.txtNumero = new System.Windows.Forms.TextBox();
@@ -64,7 +65,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnPesquisar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -117,7 +117,7 @@
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(373, 27);
             this.txtPesquisar.TabIndex = 40;
-            this.txtPesquisar.Text = "Pesquise o Produto Pelo Numero de identificação \'ID\'";
+            this.txtPesquisar.Text = "Pesquise o Cliente Pelo Numero de identificação \'ID\'";
             this.txtPesquisar.Enter += new System.EventHandler(this.txtPesquisar_Enter);
             // 
             // MskCelular
@@ -241,6 +241,18 @@
             this.label13.Size = new System.Drawing.Size(81, 19);
             this.label13.TabIndex = 26;
             this.label13.Text = "Sobrenome";
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.FlatAppearance.BorderSize = 0;
+            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPesquisar.Image = global::Bash.Properties.Resources.search__1_;
+            this.btnPesquisar.Location = new System.Drawing.Point(46, 100);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(44, 34);
+            this.btnPesquisar.TabIndex = 25;
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click_1);
             // 
             // txtEstado
             // 
@@ -485,18 +497,6 @@
             this.label1.Size = new System.Drawing.Size(23, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "ID";
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.FlatAppearance.BorderSize = 0;
-            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPesquisar.Image = global::Bash.Properties.Resources.search__1_;
-            this.btnPesquisar.Location = new System.Drawing.Point(46, 100);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(44, 34);
-            this.btnPesquisar.TabIndex = 25;
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            this.btnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click_1);
             // 
             // FormCadPessoa
             // 
