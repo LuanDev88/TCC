@@ -48,7 +48,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtQtd = new System.Windows.Forms.TextBox();
             this.txtDesconto = new System.Windows.Forms.TextBox();
-            this.txtValorItem = new System.Windows.Forms.TextBox();
+            this.txtValorVenda = new System.Windows.Forms.TextBox();
             this.btnCaixa = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblValorProduto = new System.Windows.Forms.Label();
@@ -60,6 +60,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtValorTotal = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.lblIdCliente = new System.Windows.Forms.Label();
+            this.txtest = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgVenda)).BeginInit();
@@ -70,6 +72,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.txtest);
+            this.panel1.Controls.Add(this.lblIdCliente);
             this.panel1.Controls.Add(this.btnDeletar);
             this.panel1.Controls.Add(this.lblCpfCliente);
             this.panel1.Controls.Add(this.label12);
@@ -89,7 +93,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtQtd);
             this.panel1.Controls.Add(this.txtDesconto);
-            this.panel1.Controls.Add(this.txtValorItem);
+            this.panel1.Controls.Add(this.txtValorVenda);
             this.panel1.Controls.Add(this.btnCaixa);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lblValorProduto);
@@ -328,14 +332,14 @@
             this.txtDesconto.Size = new System.Drawing.Size(158, 32);
             this.txtDesconto.TabIndex = 3;
             // 
-            // txtValorItem
+            // txtValorVenda
             // 
-            this.txtValorItem.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValorItem.Location = new System.Drawing.Point(405, 633);
-            this.txtValorItem.Multiline = true;
-            this.txtValorItem.Name = "txtValorItem";
-            this.txtValorItem.Size = new System.Drawing.Size(158, 32);
-            this.txtValorItem.TabIndex = 2;
+            this.txtValorVenda.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtValorVenda.Location = new System.Drawing.Point(405, 633);
+            this.txtValorVenda.Multiline = true;
+            this.txtValorVenda.Name = "txtValorVenda";
+            this.txtValorVenda.Size = new System.Drawing.Size(158, 32);
+            this.txtValorVenda.TabIndex = 2;
             // 
             // btnCaixa
             // 
@@ -414,6 +418,7 @@
             this.btnFinalizar.Text = "Finalizar Venda";
             this.btnFinalizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFinalizar.UseVisualStyleBackColor = false;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // panel2
             // 
@@ -472,6 +477,25 @@
             this.label8.TabIndex = 22;
             this.label8.Text = "Valor Total Venda";
             // 
+            // lblIdCliente
+            // 
+            this.lblIdCliente.AutoSize = true;
+            this.lblIdCliente.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdCliente.Location = new System.Drawing.Point(401, 166);
+            this.lblIdCliente.Margin = new System.Windows.Forms.Padding(8);
+            this.lblIdCliente.Name = "lblIdCliente";
+            this.lblIdCliente.Size = new System.Drawing.Size(0, 19);
+            this.lblIdCliente.TabIndex = 31;
+            // 
+            // txtest
+            // 
+            this.txtest.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtest.Location = new System.Drawing.Point(357, 532);
+            this.txtest.Multiline = true;
+            this.txtest.Name = "txtest";
+            this.txtest.Size = new System.Drawing.Size(158, 32);
+            this.txtest.TabIndex = 32;
+            // 
             // Venda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -513,7 +537,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtQtd;
         private System.Windows.Forms.TextBox txtDesconto;
-        private System.Windows.Forms.TextBox txtValorItem;
+        private System.Windows.Forms.TextBox txtValorVenda;
         private System.Windows.Forms.Button btnFinalizar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblNomeProduto;
@@ -531,5 +555,7 @@
         public System.Windows.Forms.Label lblNomeCliente;
         public System.Windows.Forms.DataGridView dtgVenda;
         private System.Windows.Forms.Button btnDeletar;
+        private System.Windows.Forms.Label lblIdCliente;
+        private System.Windows.Forms.TextBox txtest;
     }
 }
