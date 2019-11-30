@@ -159,7 +159,7 @@ namespace Bash
 
             catch (Exception er)
             {
-                //MessageBox.Show(er.Message);
+                MessageBox.Show(er.Message);
                 con.Close();
             }
         }

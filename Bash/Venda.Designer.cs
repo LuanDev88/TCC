@@ -61,6 +61,7 @@
             this.txtValorTotal = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.lblIdCliente = new System.Windows.Forms.Label();
+            this.txtest = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgVenda)).BeginInit();
@@ -71,6 +72,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.txtest);
             this.panel1.Controls.Add(this.lblIdCliente);
             this.panel1.Controls.Add(this.btnDeletar);
             this.panel1.Controls.Add(this.lblCpfCliente);
@@ -485,6 +487,15 @@
             this.lblIdCliente.Size = new System.Drawing.Size(0, 19);
             this.lblIdCliente.TabIndex = 31;
             // 
+            // txtest
+            // 
+            this.txtest.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtest.Location = new System.Drawing.Point(357, 532);
+            this.txtest.Multiline = true;
+            this.txtest.Name = "txtest";
+            this.txtest.Size = new System.Drawing.Size(158, 32);
+            this.txtest.TabIndex = 32;
+            // 
             // Venda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -545,5 +556,6 @@
         public System.Windows.Forms.DataGridView dtgVenda;
         private System.Windows.Forms.Button btnDeletar;
         private System.Windows.Forms.Label lblIdCliente;
+        private System.Windows.Forms.TextBox txtest;
     }
 }
