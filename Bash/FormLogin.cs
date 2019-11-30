@@ -37,9 +37,10 @@ namespace Bash
             MySqlDataReader rd = cmd.ExecuteReader();
             if (rd.Read())
             {
+                this.Hide();
                 FormPrincipal Geral = new FormPrincipal();
                 Geral.ShowDialog();
-                this.Close();
+                
             }
             else
             {
