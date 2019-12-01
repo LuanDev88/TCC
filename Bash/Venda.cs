@@ -182,76 +182,58 @@ namespace Bash
 
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
-            int UltimaVenda = 0;
             if (con.State == ConnectionState.Open)
             {
                 con.Close();
             }
-            try
+            con.Open();
+            
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO venda(valor_venda, data_venda, fk_id_cliente) VALUES (@valor_venda, @data_venda, @fk_id_cliente)", con);
+            cmd.Parameters.Add("@valor_venda", MySqlDbType.Decimal).Value = Convert.ToDecimal(txtValorTotal.Text);
+            cmd.Parameters.Add("@data_venda", MySqlDbType.Date).Value = DateTime.Now;
+            cmd.Parameters.Add("@fk_id_cliente", MySqlDbType.Int32).Value = Convert.ToInt32(lblIdCliente.Text);
+            int idvenda = (int)cmd.ExecuteNonQuery();
+            foreach (DataGridViewRow dr in dtgVenda.Rows)
             {
-                con.Open();
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO venda(valor_venda, data_venda, fk_id_cliente) VALUES (@valor_venda, @data_venda, @fk_id_cliente)", con);
-                cmd.Parameters.Add("@valor_venda", MySqlDbType.Decimal).Value = Convert.ToDecimal(txtValorTotal.Text);
-                cmd.Parameters.Add("@data_venda", MySqlDbType.Date).Value = DateTime.Now;
-                cmd.Parameters.Add("@fk_id_cliente", MySqlDbType.Int32).Value = Convert.ToInt32(lblIdCliente.Text);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("teste");
-                con.Close();
-                con.Open();
-                MySqlCommand cmdIDVenda = new MySqlCommand("SELECT max(id_venda) as id_venda FROM venda", con);
-                MySqlDataReader rvd = cmdIDVenda.ExecuteReader();
-                if (rvd.Read())
-                {
-
-                    UltimaVenda = Convert.ToInt32(rvd["id_venda"].ToString());
-                }
-                foreach (DataGridViewRow dr in dtgVenda.Rows)
+                MySqlCommand cmditens = new MySqlCommand("INSERT INTO itens_venda(quantidade_vendida, fk_venda, fk_id_produto, valor_produto, valor_total) " +
+                    "VALUES(@quantidade_vendida, @fk_venda, @fk_id_produto, @valor_produto, @valor_total)", con);
+               //cmditens.CommandType = CommandType.StoredProcedure;
+                string ven = "update produto set quantidade = (quantidade_vendida - @quantidade2) from produto where Id_produto = @id_produto2";
+                MySqlCommand cmditemvenda = new MySqlCommand(ven, con);
+                cmditemvenda.Parameters.Add("@quantidade2", MySqlDbType.Int32).Value = Convert.ToInt32(dr.Cells[3].Value);
+                cmditemvenda.Parameters.Add("@id_produto2", MySqlDbType.Int32).Value = Convert.ToInt32(dr.Cells[0].Value);
+                cmditens.Parameters.Add("@quantidade_vendida", MySqlDbType.Int32).Value = Convert.ToInt32(dr.Cells[3].Value);
+                cmditens.Parameters.Add("@fk_id_produto", MySqlDbType.Int32).Value = Convert.ToInt32(dr.Cells[0].Value);
+                cmditens.Parameters.Add("@fk_venda", MySqlDbType.Int32).Value = idvenda;
+                cmditens.Parameters.Add("valor_produto", MySqlDbType.Decimal).Value = Convert.ToDecimal(dr.Cells[2].Value);
+                cmditens.Parameters.Add("valor_total", MySqlDbType.Decimal).Value = Convert.ToDecimal(dr.Cells[4].Value);
+                MySqlCommand estoque = new MySqlCommand("estoque", con);
+                estoque.CommandType = CommandType.StoredProcedure;
+                estoque.Parameters.AddWithValue("@id_venda", MySqlDbType.Int32).Value = idvenda;
+                if (con.State == ConnectionState.Open)
                 {
                     con.Close();
-                    con.Open();
-                    MySqlCommand cmdItens = new MySqlCommand("INSERT INTO itens_venda(quantidade_vendida, fk_venda, fk_id_produto, valor_produto, valor_total) VALUES(@quantidade_vendida, @fk_venda, @fk_id_produto, @valor_produto, @valor_total)", con);
-                    cmdItens.Parameters.Add("@quantidade_vendida", MySqlDbType.Int32).Value = Convert.ToInt32(dr.Cells[3].Value);
-                    cmdItens.Parameters.Add("@fk_venda", MySqlDbType.Int32).Value = UltimaVenda;
-                    cmdItens.Parameters.Add("@fk_id_produto", MySqlDbType.Int32).Value = Convert.ToInt32(dr.Cells[0].Value);
-                    cmdItens.Parameters.Add("@valor_produto", MySqlDbType.Int32).Value = Convert.ToDecimal(dr.Cells[2].Value);
-                    cmdItens.Parameters.Add("@valor_total", MySqlDbType.Int32).Value = Convert.ToDecimal(dr.Cells[4].Value);
-                    cmdItens.ExecuteNonQuery();
-
                 }
-            }
-            catch (Exception er)
-            {
-                MessageBox.Show(er.Message);
+                con.Open();
+                cmditens.ExecuteNonQuery();
+
+                estoque.ExecuteNonQuery();
                 con.Close();
             }
+            DialogResult venda = MessageBox.Show("Venda Realizada Com Sucesso!! Deseja imprimir a nota?", "Venda", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (venda == DialogResult.Yes)
+            {
+                this.Close();
 
-           
-            //int idvenda = (int)cmd.ExecuteScalar();
-            //foreach (DataGridViewRow dr in dtgVenda.Rows)
-            //{
-            //    MySqlCommand cmdItens = new MySqlCommand("INSERT INTO itens_venda(quantidade_vendida, fk_venda, fk_id_produto, valor_produto, valor_total) VALUES (@quantidade_vendida, @fk_venda, @fk_id_produto, @valor_produto, @valor_total)", con);
-            //    string ven = "update produto set quantidade = (quantidade - @quantidade2) from produto where id_produto = @id_produto2";
-            //    MySqlCommand cmditemvenda = new MySqlCommand(ven, con);
-            //    cmditemvenda.Parameters.Add("@quantidade2", MySqlDbType.Int32).Value = Convert.ToInt32(dr.Cells[3].Value);
-            //    cmditemvenda.Parameters.Add("@id_produto2", MySqlDbType.Int32).Value = Convert.ToInt32(dr.Cells[0].Value);
-            //    cmdItens.Parameters.Add("@quantidade", MySqlDbType.Int32).Value = Convert.ToInt32(dr.Cells[3].Value);
-            //    cmdItens.Parameters.Add("@id_produto", MySqlDbType.Int32).Value = Convert.ToInt32(dr.Cells[0].Value);
-            //    cmdItens.Parameters.Add("@id_venda", MySqlDbType.Int32).Value = idvenda;
-            //    cmdItens.Parameters.Add("@valor_produto", MySqlDbType.Decimal).Value = Convert.ToDecimal(dr.Cells[2].Value);
-            //    cmdItens.Parameters.Add("@valor_total", MySqlDbType.Decimal).Value = Convert.ToDecimal(dr.Cells[4].Value);
-            //    MySqlCommand estoque = new MySqlCommand("select produto.id_produto, produto.quantidade, itens_venda.fk_id_produto, itens_venda.quantidade_vendida, itens_venda.fk_venda, (produto.quantidade - itens_venda.quantidade_vendida) as estoque from produto inner join itens_venda on itens_venda.fk_id_produto = produto.id_produto where itens_venda.fk_venda = @id_venda;, update produto set produto.quantidade = (produto.quantidade - itens_venda.quantidade_vendida) from produto inner join itens_venda on itens_venda.fk_id_produto = produto.id_produto where itens_venda.fk_venda = @id_venda;");
-            //    estoque.Parameters.Add("@id_venda", MySqlDbType.Int32).Value = idvenda;
-            //    if (con.State == ConnectionState.Open)
-            //    {
-            //        con.Close();
-            //    }
-            //    con.Open();
-            //    cmdItens.ExecuteNonQuery();
-            //    estoque.ExecuteNonQuery();
-            //    con.Close();
+            }
+            else if (venda == DialogResult.No)
+            {
+                this.Close();
+            }
+
 
         }
 
-        }
+    }
     }
 
