@@ -73,6 +73,16 @@ namespace Bash.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BASH_Logo {
+            get {
+                object obj = ResourceManager.GetObject("BASH-Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Caixa {
             get {
                 object obj = ResourceManager.GetObject("Caixa", resourceCulture);
@@ -336,6 +346,26 @@ namespace Bash.Properties {
         internal static System.Drawing.Bitmap identification {
             get {
                 object obj = ResourceManager.GetObject("identification", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imagem_de_fundo_bash {
+            get {
+                object obj = ResourceManager.GetObject("imagem-de-fundo-bash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imagem_de_fundo_bash1 {
+            get {
+                object obj = ResourceManager.GetObject("imagem-de-fundo-bash1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

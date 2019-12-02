@@ -30,11 +30,12 @@
         {
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -56,17 +57,6 @@
             this.btnSair.Text = "&Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Kozuka Gothic Pr6N M", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(45, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(322, 172);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "BASH";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtSenha
             // 
@@ -107,6 +97,16 @@
             this.label3.TabIndex = 23;
             this.label3.Text = "Usuário";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Bash.Properties.Resources.BASH_Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(16, -31);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(409, 284);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormLogin
             // 
             this.AcceptButton = this.btnLogin;
@@ -117,11 +117,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnSair);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "FormLogin";
             this.Text = "FormLogin";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,10 +132,10 @@
 
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox txtSenha;
         public System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

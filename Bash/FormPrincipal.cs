@@ -119,5 +119,10 @@ namespace Bash
                 MessageBox.Show(er.Message);
             }
         }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
