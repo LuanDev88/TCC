@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblIdCliente = new System.Windows.Forms.Label();
             this.btnDeletar = new System.Windows.Forms.Button();
             this.lblCpfCliente = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -60,8 +61,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtValorTotal = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.lblIdCliente = new System.Windows.Forms.Label();
-            this.txtest = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgVenda)).BeginInit();
@@ -72,7 +71,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.txtest);
             this.panel1.Controls.Add(this.lblIdCliente);
             this.panel1.Controls.Add(this.btnDeletar);
             this.panel1.Controls.Add(this.lblCpfCliente);
@@ -105,6 +103,16 @@
             this.panel1.Size = new System.Drawing.Size(577, 752);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lblIdCliente
+            // 
+            this.lblIdCliente.AutoSize = true;
+            this.lblIdCliente.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdCliente.Location = new System.Drawing.Point(401, 166);
+            this.lblIdCliente.Margin = new System.Windows.Forms.Padding(8);
+            this.lblIdCliente.Name = "lblIdCliente";
+            this.lblIdCliente.Size = new System.Drawing.Size(0, 19);
+            this.lblIdCliente.TabIndex = 31;
             // 
             // btnDeletar
             // 
@@ -477,25 +485,6 @@
             this.label8.TabIndex = 22;
             this.label8.Text = "Valor Total Venda";
             // 
-            // lblIdCliente
-            // 
-            this.lblIdCliente.AutoSize = true;
-            this.lblIdCliente.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdCliente.Location = new System.Drawing.Point(401, 166);
-            this.lblIdCliente.Margin = new System.Windows.Forms.Padding(8);
-            this.lblIdCliente.Name = "lblIdCliente";
-            this.lblIdCliente.Size = new System.Drawing.Size(0, 19);
-            this.lblIdCliente.TabIndex = 31;
-            // 
-            // txtest
-            // 
-            this.txtest.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtest.Location = new System.Drawing.Point(357, 532);
-            this.txtest.Multiline = true;
-            this.txtest.Name = "txtest";
-            this.txtest.Size = new System.Drawing.Size(158, 32);
-            this.txtest.TabIndex = 32;
-            // 
             // Venda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -556,6 +545,5 @@
         public System.Windows.Forms.DataGridView dtgVenda;
         private System.Windows.Forms.Button btnDeletar;
         private System.Windows.Forms.Label lblIdCliente;
-        private System.Windows.Forms.TextBox txtest;
     }
 }
