@@ -11,10 +11,10 @@ using MySql.Data.MySqlClient;
 
 namespace Bash
 {
-    public partial class FormCadFuncionario : Form
+    public partial class Bash : Form
     {
         MySqlConnection con = new MySqlConnection("Server=127.0.0.1;Database=bash;Uid=root;Pwd=;");
-        public FormCadFuncionario()
+        public Bash()
         {
             InitializeComponent();
         }

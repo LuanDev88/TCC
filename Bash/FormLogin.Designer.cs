@@ -136,7 +136,11 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+<<<<<<< HEAD
             this.Text = "FormLogin";
+=======
+            this.Text = "Bash";
+>>>>>>> master
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
