@@ -252,15 +252,15 @@ namespace Bash
             try
             {
                 con.Open();
-                MySqlCommand cmd = new MySqlCommand("select * from cliente where id_cliente = ?;", con);
+                MySqlCommand cmd = new MySqlCommand("select * from cliente where id = ? ;", con);
                 //cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("id_cliente", MySqlDbType.Int32).Value = txtId.Text;
+                cmd.Parameters.Add("id", MySqlDbType.Int32).Value = txtPesquisar.Text;
 
                 MySqlDataReader rd = cmd.ExecuteReader();
                 if (rd.Read())
                 {
-                    txtPesquisar.Text = "Pesquise o Cliente Pelo Numero de identificação 'ID'";
-                    txtId.Text = rd["id_cliente"].ToString();
+                    txtPesquisar.Text = "Pesquise o Cliente Pelo Número de identificação 'ID'";
+                    txtId.Text = rd["id"].ToString();
                     txtNome.Text = rd["nome"].ToString();
                     MskCPF.Text = rd["cpf"].ToString();
                     MskCelular.Text = rd["celular"].ToString();

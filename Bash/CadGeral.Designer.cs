@@ -102,7 +102,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(277, 39);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Pagina de Cadastros";
+            this.label1.Text = "Página de Cadastros";
             // 
             // BtnCadastros_Produtos
             // 

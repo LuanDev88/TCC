@@ -100,9 +100,9 @@ namespace Bash
                 try
                 {
                     con.Open();
-                    MySqlCommand cmd = new MySqlCommand("select * from funcionario where cod_funcionario = ?;", con);
+                    MySqlCommand cmd = new MySqlCommand("select * from funcionario where cod_funcionario = ? ;", con);
                     //cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("cod_funcionario", MySqlDbType.Int32).Value = txtCod.Text;
+                    cmd.Parameters.Add("cod_funcionario", MySqlDbType.Int32).Value = txtPesquisar.Text;
 
                     MySqlDataReader rd = cmd.ExecuteReader();
                     if (rd.Read())
@@ -443,6 +443,11 @@ namespace Bash
         private void txtcpf_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtPesquisar_Enter(object sender, EventArgs e)
+        {
+            txtPesquisar.Text = "";
         }
     }
     }

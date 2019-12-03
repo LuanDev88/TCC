@@ -54,7 +54,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(289, 752);
+            this.panel1.Size = new System.Drawing.Size(289, 749);
             this.panel1.TabIndex = 3;
             // 
             // btnCadastros
@@ -90,7 +90,7 @@
             this.btnRelatorio.Name = "btnRelatorio";
             this.btnRelatorio.Size = new System.Drawing.Size(196, 66);
             this.btnRelatorio.TabIndex = 7;
-            this.btnRelatorio.Text = "Relatorios";
+            this.btnRelatorio.Text = "Relatórios";
             this.btnRelatorio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRelatorio.UseVisualStyleBackColor = true;
             this.btnRelatorio.Click += new System.EventHandler(this.BtnEstoque_Click_1);
@@ -176,7 +176,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1357, 752);
+            this.ClientSize = new System.Drawing.Size(1357, 749);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

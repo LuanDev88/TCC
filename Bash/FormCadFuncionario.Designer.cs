@@ -487,6 +487,7 @@
             this.txtPesquisar.Size = new System.Drawing.Size(373, 27);
             this.txtPesquisar.TabIndex = 19;
             this.txtPesquisar.Text = "Pesquise o Funcionario Pelo Cod. Funcionario";
+            this.txtPesquisar.Enter += new System.EventHandler(this.txtPesquisar_Enter);
             // 
             // mskCelular
             // 
