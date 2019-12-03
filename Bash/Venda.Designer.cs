@@ -35,7 +35,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.lblNomeCliente = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnPesquisarCliente = new System.Windows.Forms.Button();
             this.txtPesquiseCliente = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.lblDescricao = new System.Windows.Forms.Label();
@@ -50,7 +49,6 @@
             this.txtQtd = new System.Windows.Forms.TextBox();
             this.txtDesconto = new System.Windows.Forms.TextBox();
             this.txtValorVenda = new System.Windows.Forms.TextBox();
-            this.btnCaixa = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblValorProduto = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,6 +59,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtValorTotal = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnPesquisarCliente = new System.Windows.Forms.Button();
+            this.btnCaixa = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgVenda)).BeginInit();
@@ -174,26 +174,6 @@
             this.label9.TabIndex = 26;
             this.label9.Text = "Nome Do Cliente";
             // 
-            // btnPesquisarCliente
-            // 
-            this.btnPesquisarCliente.BackColor = System.Drawing.SystemColors.Control;
-            this.btnPesquisarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnPesquisarCliente.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnPesquisarCliente.FlatAppearance.BorderSize = 0;
-            this.btnPesquisarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPesquisarCliente.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisarCliente.ForeColor = System.Drawing.Color.Black;
-            this.btnPesquisarCliente.Image = global::Bash.Properties.Resources.search__1_;
-            this.btnPesquisarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPesquisarCliente.Location = new System.Drawing.Point(21, 116);
-            this.btnPesquisarCliente.Margin = new System.Windows.Forms.Padding(0);
-            this.btnPesquisarCliente.Name = "btnPesquisarCliente";
-            this.btnPesquisarCliente.Size = new System.Drawing.Size(37, 27);
-            this.btnPesquisarCliente.TabIndex = 25;
-            this.btnPesquisarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPesquisarCliente.UseVisualStyleBackColor = false;
-            this.btnPesquisarCliente.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // txtPesquiseCliente
             // 
             this.txtPesquiseCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -227,7 +207,6 @@
             this.lblDescricao.Size = new System.Drawing.Size(75, 26);
             this.lblDescricao.TabIndex = 22;
             this.lblDescricao.Text = "Não sei";
-            this.lblDescricao.Click += new System.EventHandler(this.label9_Click);
             // 
             // lblId
             // 
@@ -330,6 +309,7 @@
             this.txtQtd.Size = new System.Drawing.Size(158, 32);
             this.txtQtd.TabIndex = 4;
             this.txtQtd.TextChanged += new System.EventHandler(this.txtQtd_TextChanged);
+            this.txtQtd.Leave += new System.EventHandler(this.txtQtd_Leave);
             // 
             // txtDesconto
             // 
@@ -348,26 +328,6 @@
             this.txtValorVenda.Name = "txtValorVenda";
             this.txtValorVenda.Size = new System.Drawing.Size(158, 32);
             this.txtValorVenda.TabIndex = 2;
-            // 
-            // btnCaixa
-            // 
-            this.btnCaixa.BackColor = System.Drawing.SystemColors.Control;
-            this.btnCaixa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCaixa.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnCaixa.FlatAppearance.BorderSize = 0;
-            this.btnCaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCaixa.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCaixa.ForeColor = System.Drawing.Color.Black;
-            this.btnCaixa.Image = global::Bash.Properties.Resources.search__1_;
-            this.btnCaixa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCaixa.Location = new System.Drawing.Point(21, 292);
-            this.btnCaixa.Margin = new System.Windows.Forms.Padding(0);
-            this.btnCaixa.Name = "btnCaixa";
-            this.btnCaixa.Size = new System.Drawing.Size(37, 27);
-            this.btnCaixa.TabIndex = 7;
-            this.btnCaixa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCaixa.UseVisualStyleBackColor = false;
-            this.btnCaixa.Click += new System.EventHandler(this.btnCaixa_Click);
             // 
             // label2
             // 
@@ -484,6 +444,46 @@
             this.label8.Size = new System.Drawing.Size(122, 19);
             this.label8.TabIndex = 22;
             this.label8.Text = "Valor Total Venda";
+            // 
+            // btnPesquisarCliente
+            // 
+            this.btnPesquisarCliente.BackColor = System.Drawing.SystemColors.Control;
+            this.btnPesquisarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnPesquisarCliente.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnPesquisarCliente.FlatAppearance.BorderSize = 0;
+            this.btnPesquisarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPesquisarCliente.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisarCliente.ForeColor = System.Drawing.Color.Black;
+            this.btnPesquisarCliente.Image = global::Bash.Properties.Resources.search__1_;
+            this.btnPesquisarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPesquisarCliente.Location = new System.Drawing.Point(21, 116);
+            this.btnPesquisarCliente.Margin = new System.Windows.Forms.Padding(0);
+            this.btnPesquisarCliente.Name = "btnPesquisarCliente";
+            this.btnPesquisarCliente.Size = new System.Drawing.Size(37, 27);
+            this.btnPesquisarCliente.TabIndex = 25;
+            this.btnPesquisarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPesquisarCliente.UseVisualStyleBackColor = false;
+            this.btnPesquisarCliente.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btnCaixa
+            // 
+            this.btnCaixa.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCaixa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCaixa.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnCaixa.FlatAppearance.BorderSize = 0;
+            this.btnCaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCaixa.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCaixa.ForeColor = System.Drawing.Color.Black;
+            this.btnCaixa.Image = global::Bash.Properties.Resources.search__1_;
+            this.btnCaixa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCaixa.Location = new System.Drawing.Point(21, 292);
+            this.btnCaixa.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCaixa.Name = "btnCaixa";
+            this.btnCaixa.Size = new System.Drawing.Size(37, 27);
+            this.btnCaixa.TabIndex = 7;
+            this.btnCaixa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCaixa.UseVisualStyleBackColor = false;
+            this.btnCaixa.Click += new System.EventHandler(this.btnCaixa_Click);
             // 
             // Venda
             // 

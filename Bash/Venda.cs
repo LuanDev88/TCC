@@ -40,8 +40,13 @@ namespace Bash
 
         private void btnCaixa_Click(object sender, EventArgs e)
         {
+          
             try
             {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
                 con.Open();
                 MySqlCommand cmd = new MySqlCommand("select * from produto where id_produto = ?;", con);
                 //cmd.CommandType = CommandType.StoredProcedure;
@@ -74,12 +79,6 @@ namespace Bash
         }
 
        
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -97,7 +96,7 @@ namespace Bash
                 MySqlDataReader rd = cmd.ExecuteReader();
                 if (rd.Read())
                 {                    
-                    txtPesquiseCliente.Text = "Pesquise o Cliente Pelo Numero de identificação 'ID'";
+                    txtPesquiseCliente.Text = "Pesquise o Clinte Pelo Numero de identificação 'ID'";
                     lblNomeCliente.Text = rd["nome"].ToString();
                     lblCpfCliente.Text = rd["cpf"].ToString();
                     lblIdCliente.Text = rd["id"].ToString();
@@ -236,6 +235,32 @@ namespace Bash
 
         }
 
+        private void txtQtd_Leave(object sender, EventArgs e)
+        {
+            if (con.State == ConnectionState.Open)
+            {
+                con.Close();
+            }
+            con.Open();
+            MySqlCommand cmd = new MySqlCommand("select * from produto where id_produto = @id_produto;", con);
+            cmd.Parameters.Add("id_produto", MySqlDbType.Int32).Value = lblId.Text;
+            //cmd.Parameters.Add("quantidade", MySqlDbType.Int32).Value = txtQtd.Text;
+            MySqlDataReader rd = cmd.ExecuteReader();
+            int valor1;
+            bool conversaoSucedida = int.TryParse(txtQtd.Text, out valor1);
+            if (rd.Read())
+            {
+                int valor2 = Convert.ToInt32(rd["quantidade"].ToString());
+                if (valor1 > valor2)
+                {
+                    MessageBox.Show("Quantidade insuficiente, por favor faça um pedido desse produto!");
+
+                    return;
+                }
+
+
+            }
+        }
     }
     }
 
