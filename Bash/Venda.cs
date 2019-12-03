@@ -97,7 +97,7 @@ namespace Bash
                 MySqlDataReader rd = cmd.ExecuteReader();
                 if (rd.Read())
                 {                    
-                    txtPesquiseCliente.Text = "Pesquise o Clinte Pelo Numero de identificação 'ID'";
+                    txtPesquiseCliente.Text = "Pesquise o Cliente Pelo Numero de identificação 'ID'";
                     lblNomeCliente.Text = rd["nome"].ToString();
                     lblCpfCliente.Text = rd["cpf"].ToString();
                     lblIdCliente.Text = rd["id"].ToString();
