@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.cliente = new System.Windows.Forms.TabPage();
             this.DtgPessoa = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.cliente.SuspendLayout();
-=======
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -48,7 +46,6 @@
             this.tabPage3.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
->>>>>>> master
             ((System.ComponentModel.ISupportInitialize)(this.DtgPessoa)).BeginInit();
             this.tbCliente.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -59,7 +56,6 @@
             // 
             // tabPage3
             // 
-<<<<<<< HEAD
             this.tabControl1.Controls.Add(this.cliente);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -68,7 +64,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1272, 788);
             this.tabControl1.TabIndex = 1;
-=======
             this.tabPage3.Controls.Add(this.DtgProduto);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
@@ -88,11 +83,9 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Funcionários";
             this.tabPage2.UseVisualStyleBackColor = true;
->>>>>>> master
             // 
             // cliente
             // 
-<<<<<<< HEAD
             this.cliente.Controls.Add(this.DtgPessoa);
             this.cliente.Location = new System.Drawing.Point(4, 22);
             this.cliente.Name = "cliente";
@@ -101,7 +94,6 @@
             this.cliente.TabIndex = 0;
             this.cliente.Text = "tabPage1";
             this.cliente.UseVisualStyleBackColor = true;
-=======
             this.tabPage1.Controls.Add(this.DtgPessoa);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -110,7 +102,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Clientes";
             this.tabPage1.UseVisualStyleBackColor = true;
->>>>>>> master
             // 
             // DtgPessoa
             // 
@@ -119,24 +110,20 @@
             this.DtgPessoa.AllowUserToOrderColumns = true;
             this.DtgPessoa.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.DtgPessoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-<<<<<<< HEAD
             this.DtgPessoa.Location = new System.Drawing.Point(3, 3);
             this.DtgPessoa.Name = "DtgPessoa";
             this.DtgPessoa.ReadOnly = true;
             this.DtgPessoa.Size = new System.Drawing.Size(1060, 756);
-=======
             this.DtgPessoa.Location = new System.Drawing.Point(0, 3);
             this.DtgPessoa.Name = "DtgPessoa";
             this.DtgPessoa.ReadOnly = true;
             this.DtgPessoa.Size = new System.Drawing.Size(1261, 756);
->>>>>>> master
             this.DtgPessoa.TabIndex = 1;
             this.DtgPessoa.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgPessoa_CellContentDoubleClick);
             this.DtgPessoa.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DtgPessoa_CellMouseDoubleClick);
             // 
             // tbCliente
             // 
-<<<<<<< HEAD
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -144,7 +131,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
-=======
             this.tbCliente.Controls.Add(this.tabPage1);
             this.tbCliente.Controls.Add(this.tabPage2);
             this.tbCliente.Controls.Add(this.tabPage3);
@@ -206,7 +192,6 @@
             this.DtgVendas.ReadOnly = true;
             this.DtgVendas.Size = new System.Drawing.Size(1261, 756);
             this.DtgVendas.TabIndex = 4;
->>>>>>> master
             // 
             // FormRelatorios
             // 
@@ -220,14 +205,11 @@
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
-<<<<<<< HEAD
             this.tabControl1.ResumeLayout(false);
             this.cliente.ResumeLayout(false);
-=======
             this.tabPage3.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
->>>>>>> master
             ((System.ComponentModel.ISupportInitialize)(this.DtgPessoa)).EndInit();
             this.tbCliente.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
@@ -240,12 +222,9 @@
 
         #endregion
 
-<<<<<<< HEAD
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage cliente;
-=======
         private System.Windows.Forms.TabPage tabPage3;
->>>>>>> master
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage1;
         public System.Windows.Forms.DataGridView DtgPessoa;
