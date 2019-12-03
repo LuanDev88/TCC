@@ -136,7 +136,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(13, 354);
+            this.label7.Location = new System.Drawing.Point(12, 371);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(86, 19);
             this.label7.TabIndex = 106;
@@ -221,10 +221,10 @@
             // txtObs
             // 
             this.txtObs.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObs.Location = new System.Drawing.Point(142, 355);
+            this.txtObs.Location = new System.Drawing.Point(142, 371);
             this.txtObs.Multiline = true;
             this.txtObs.Name = "txtObs";
-            this.txtObs.Size = new System.Drawing.Size(322, 239);
+            this.txtObs.Size = new System.Drawing.Size(322, 84);
             this.txtObs.TabIndex = 8;
             this.txtObs.Text = "\r\n\r\n";
             // 

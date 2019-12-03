@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblIdCliente = new System.Windows.Forms.Label();
-            this.btnDeletar = new System.Windows.Forms.Button();
             this.lblCpfCliente = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lblNomeCliente = new System.Windows.Forms.Label();
@@ -42,7 +41,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblNomeProduto = new System.Windows.Forms.Label();
-            this.btnInserir = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,14 +51,16 @@
             this.lblValorProduto = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPesquisarProduto = new System.Windows.Forms.TextBox();
-            this.btnFinalizar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dtgVenda = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtValorTotal = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnDeletar = new System.Windows.Forms.Button();
             this.btnPesquisarCliente = new System.Windows.Forms.Button();
+            this.btnInserir = new System.Windows.Forms.Button();
             this.btnCaixa = new System.Windows.Forms.Button();
+            this.btnFinalizar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgVenda)).BeginInit();
@@ -114,26 +114,11 @@
             this.lblIdCliente.Size = new System.Drawing.Size(0, 19);
             this.lblIdCliente.TabIndex = 31;
             // 
-            // btnDeletar
-            // 
-            this.btnDeletar.BackColor = System.Drawing.Color.Red;
-            this.btnDeletar.FlatAppearance.BorderSize = 0;
-            this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeletar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletar.Location = new System.Drawing.Point(140, 702);
-            this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.Size = new System.Drawing.Size(182, 36);
-            this.btnDeletar.TabIndex = 30;
-            this.btnDeletar.Text = "Deletar";
-            this.btnDeletar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeletar.UseVisualStyleBackColor = false;
-            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
-            // 
             // lblCpfCliente
             // 
             this.lblCpfCliente.AutoSize = true;
             this.lblCpfCliente.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCpfCliente.Location = new System.Drawing.Point(262, 201);
+            this.lblCpfCliente.Location = new System.Drawing.Point(262, 211);
             this.lblCpfCliente.Margin = new System.Windows.Forms.Padding(8);
             this.lblCpfCliente.Name = "lblCpfCliente";
             this.lblCpfCliente.Size = new System.Drawing.Size(66, 39);
@@ -144,7 +129,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(265, 166);
+            this.label12.Location = new System.Drawing.Point(265, 176);
             this.label12.Margin = new System.Windows.Forms.Padding(8);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(105, 19);
@@ -155,7 +140,7 @@
             // 
             this.lblNomeCliente.AutoSize = true;
             this.lblNomeCliente.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeCliente.Location = new System.Drawing.Point(54, 201);
+            this.lblNomeCliente.Location = new System.Drawing.Point(54, 211);
             this.lblNomeCliente.Margin = new System.Windows.Forms.Padding(8);
             this.lblNomeCliente.Name = "lblNomeCliente";
             this.lblNomeCliente.Size = new System.Drawing.Size(97, 39);
@@ -167,7 +152,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(57, 166);
+            this.label9.Location = new System.Drawing.Point(57, 176);
             this.label9.Margin = new System.Windows.Forms.Padding(8);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(119, 19);
@@ -190,34 +175,34 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(331, 463);
+            this.label10.Location = new System.Drawing.Point(265, 463);
             this.label10.Margin = new System.Windows.Forms.Padding(8);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 19);
+            this.label10.Size = new System.Drawing.Size(127, 19);
             this.label10.TabIndex = 23;
-            this.label10.Text = "Descrição";
+            this.label10.Text = "Descrição Produto";
             // 
             // lblDescricao
             // 
             this.lblDescricao.AutoSize = true;
             this.lblDescricao.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescricao.Location = new System.Drawing.Point(328, 498);
+            this.lblDescricao.Location = new System.Drawing.Point(264, 508);
             this.lblDescricao.Margin = new System.Windows.Forms.Padding(8);
             this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(75, 26);
+            this.lblDescricao.Size = new System.Drawing.Size(94, 26);
             this.lblDescricao.TabIndex = 22;
-            this.lblDescricao.Text = "Não sei";
+            this.lblDescricao.Text = "Descrição";
             // 
             // lblId
             // 
             this.lblId.AutoSize = true;
             this.lblId.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblId.Location = new System.Drawing.Point(70, 388);
+            this.lblId.Location = new System.Drawing.Point(57, 388);
             this.lblId.Margin = new System.Windows.Forms.Padding(8);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(42, 39);
+            this.lblId.Size = new System.Drawing.Size(45, 39);
             this.lblId.TabIndex = 21;
-            this.lblId.Text = "Id";
+            this.lblId.Text = "ID";
             // 
             // label7
             // 
@@ -234,7 +219,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(331, 353);
+            this.label6.Location = new System.Drawing.Point(265, 353);
             this.label6.Margin = new System.Windows.Forms.Padding(8);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(123, 19);
@@ -245,33 +230,18 @@
             // 
             this.lblNomeProduto.AutoSize = true;
             this.lblNomeProduto.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeProduto.Location = new System.Drawing.Point(328, 388);
+            this.lblNomeProduto.Location = new System.Drawing.Point(262, 388);
             this.lblNomeProduto.Margin = new System.Windows.Forms.Padding(8);
             this.lblNomeProduto.Name = "lblNomeProduto";
-            this.lblNomeProduto.Size = new System.Drawing.Size(97, 39);
+            this.lblNomeProduto.Size = new System.Drawing.Size(123, 39);
             this.lblNomeProduto.TabIndex = 18;
-            this.lblNomeProduto.Text = "Nome";
-            // 
-            // btnInserir
-            // 
-            this.btnInserir.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnInserir.FlatAppearance.BorderSize = 0;
-            this.btnInserir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInserir.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInserir.Location = new System.Drawing.Point(333, 702);
-            this.btnInserir.Name = "btnInserir";
-            this.btnInserir.Size = new System.Drawing.Size(182, 36);
-            this.btnInserir.TabIndex = 5;
-            this.btnInserir.Text = "Inserir Item";
-            this.btnInserir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInserir.UseVisualStyleBackColor = false;
-            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click_1);
+            this.lblNomeProduto.Text = "Produto";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(23, 603);
+            this.label5.Location = new System.Drawing.Point(23, 589);
             this.label5.Margin = new System.Windows.Forms.Padding(8);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 19);
@@ -282,7 +252,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(222, 603);
+            this.label4.Location = new System.Drawing.Point(222, 589);
             this.label4.Margin = new System.Windows.Forms.Padding(8);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 19);
@@ -293,17 +263,17 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(401, 603);
+            this.label3.Location = new System.Drawing.Point(401, 589);
             this.label3.Margin = new System.Windows.Forms.Padding(8);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 19);
+            this.label3.Size = new System.Drawing.Size(78, 19);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Valor Venda";
+            this.label3.Text = "Valor Total";
             // 
             // txtQtd
             // 
             this.txtQtd.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQtd.Location = new System.Drawing.Point(27, 632);
+            this.txtQtd.Location = new System.Drawing.Point(27, 618);
             this.txtQtd.Multiline = true;
             this.txtQtd.Name = "txtQtd";
             this.txtQtd.Size = new System.Drawing.Size(158, 32);
@@ -314,7 +284,7 @@
             // txtDesconto
             // 
             this.txtDesconto.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDesconto.Location = new System.Drawing.Point(226, 633);
+            this.txtDesconto.Location = new System.Drawing.Point(226, 619);
             this.txtDesconto.Multiline = true;
             this.txtDesconto.Name = "txtDesconto";
             this.txtDesconto.Size = new System.Drawing.Size(158, 32);
@@ -323,7 +293,7 @@
             // txtValorVenda
             // 
             this.txtValorVenda.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValorVenda.Location = new System.Drawing.Point(405, 633);
+            this.txtValorVenda.Location = new System.Drawing.Point(405, 619);
             this.txtValorVenda.Multiline = true;
             this.txtValorVenda.Name = "txtValorVenda";
             this.txtValorVenda.Size = new System.Drawing.Size(158, 32);
@@ -333,7 +303,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(73, 463);
+            this.label2.Location = new System.Drawing.Point(57, 463);
             this.label2.Margin = new System.Windows.Forms.Padding(8);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 19);
@@ -344,7 +314,7 @@
             // 
             this.lblValorProduto.AutoSize = true;
             this.lblValorProduto.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValorProduto.Location = new System.Drawing.Point(80, 498);
+            this.lblValorProduto.Location = new System.Drawing.Point(54, 495);
             this.lblValorProduto.Margin = new System.Windows.Forms.Padding(8);
             this.lblValorProduto.Name = "lblValorProduto";
             this.lblValorProduto.Size = new System.Drawing.Size(89, 39);
@@ -372,21 +342,6 @@
             this.txtPesquisarProduto.Text = "   Pesquise o Produto Pelo ID";
             this.txtPesquisarProduto.Click += new System.EventHandler(this.TxtPesquisar_Click);
             this.txtPesquisarProduto.TextChanged += new System.EventHandler(this.TxtPesquisar_TextChanged);
-            // 
-            // btnFinalizar
-            // 
-            this.btnFinalizar.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnFinalizar.FlatAppearance.BorderSize = 0;
-            this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFinalizar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizar.Location = new System.Drawing.Point(856, 704);
-            this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(182, 36);
-            this.btnFinalizar.TabIndex = 7;
-            this.btnFinalizar.Text = "Finalizar Venda";
-            this.btnFinalizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFinalizar.UseVisualStyleBackColor = false;
-            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // panel2
             // 
@@ -427,7 +382,7 @@
             // txtValorTotal
             // 
             this.txtValorTotal.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValorTotal.Location = new System.Drawing.Point(659, 664);
+            this.txtValorTotal.Location = new System.Drawing.Point(623, 632);
             this.txtValorTotal.Multiline = true;
             this.txtValorTotal.Name = "txtValorTotal";
             this.txtValorTotal.Size = new System.Drawing.Size(180, 45);
@@ -438,12 +393,29 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(655, 634);
+            this.label8.Location = new System.Drawing.Point(619, 602);
             this.label8.Margin = new System.Windows.Forms.Padding(8);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(122, 19);
             this.label8.TabIndex = 22;
             this.label8.Text = "Valor Total Venda";
+            // 
+            // btnDeletar
+            // 
+            this.btnDeletar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnDeletar.FlatAppearance.BorderSize = 0;
+            this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeletar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletar.Image = global::Bash.Properties.Resources.shopping_cart__1_;
+            this.btnDeletar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDeletar.Location = new System.Drawing.Point(99, 662);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Size = new System.Drawing.Size(182, 76);
+            this.btnDeletar.TabIndex = 30;
+            this.btnDeletar.Text = "Deletar";
+            this.btnDeletar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeletar.UseVisualStyleBackColor = false;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // btnPesquisarCliente
             // 
@@ -465,6 +437,23 @@
             this.btnPesquisarCliente.UseVisualStyleBackColor = false;
             this.btnPesquisarCliente.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // btnInserir
+            // 
+            this.btnInserir.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnInserir.FlatAppearance.BorderSize = 0;
+            this.btnInserir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInserir.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInserir.Image = global::Bash.Properties.Resources.purchase__1_;
+            this.btnInserir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnInserir.Location = new System.Drawing.Point(359, 662);
+            this.btnInserir.Name = "btnInserir";
+            this.btnInserir.Size = new System.Drawing.Size(187, 76);
+            this.btnInserir.TabIndex = 5;
+            this.btnInserir.Text = "Inserir Item";
+            this.btnInserir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInserir.UseVisualStyleBackColor = false;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click_1);
+            // 
             // btnCaixa
             // 
             this.btnCaixa.BackColor = System.Drawing.SystemColors.Control;
@@ -484,6 +473,23 @@
             this.btnCaixa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCaixa.UseVisualStyleBackColor = false;
             this.btnCaixa.Click += new System.EventHandler(this.btnCaixa_Click);
+            // 
+            // btnFinalizar
+            // 
+            this.btnFinalizar.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnFinalizar.FlatAppearance.BorderSize = 0;
+            this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFinalizar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizar.Image = global::Bash.Properties.Resources.cash_register;
+            this.btnFinalizar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFinalizar.Location = new System.Drawing.Point(822, 664);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(216, 76);
+            this.btnFinalizar.TabIndex = 7;
+            this.btnFinalizar.Text = "Finalizar Venda";
+            this.btnFinalizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFinalizar.UseVisualStyleBackColor = false;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // Venda
             // 

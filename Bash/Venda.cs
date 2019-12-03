@@ -159,6 +159,14 @@ namespace Bash
             foreach (DataGridViewRow dr in dtgVenda.Rows) soma += Convert.ToDecimal(dr.Cells[4].Value);
             txtValorTotal.Text = Convert.ToString(soma);
 
+            lblDescricao.Text = "Descrição";
+            lblId.Text = "Id";
+            lblValorProduto.Text = "00,00";
+            lblNomeProduto.Text = "Produto";
+            txtPesquisarProduto.Text = "Pesquise o Produto Pelo ID";
+            txtQtd.Text = "";
+            txtValorVenda.Text = "";
+
 
         }
 

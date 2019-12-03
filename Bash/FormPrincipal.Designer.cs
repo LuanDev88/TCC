@@ -32,14 +32,13 @@
             this.btnCadastros = new System.Windows.Forms.Button();
             this.btnRelatorio = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnCaixa = new System.Windows.Forms.Button();
-            this.btnTesteBanco = new System.Windows.Forms.Button();
+            this.btnPainel = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picImagem = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImagem)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -49,9 +48,8 @@
             this.panel1.Controls.Add(this.btnCadastros);
             this.panel1.Controls.Add(this.btnRelatorio);
             this.panel1.Controls.Add(this.btnSair);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnCaixa);
-            this.panel1.Controls.Add(this.btnTesteBanco);
+            this.panel1.Controls.Add(this.btnPainel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(1);
@@ -68,7 +66,7 @@
             this.btnCadastros.ForeColor = System.Drawing.Color.Snow;
             this.btnCadastros.Image = global::Bash.Properties.Resources.desktop;
             this.btnCadastros.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCadastros.Location = new System.Drawing.Point(39, 246);
+            this.btnCadastros.Location = new System.Drawing.Point(39, 330);
             this.btnCadastros.Margin = new System.Windows.Forms.Padding(3, 15, 3, 15);
             this.btnCadastros.Name = "btnCadastros";
             this.btnCadastros.Size = new System.Drawing.Size(196, 66);
@@ -87,7 +85,7 @@
             this.btnRelatorio.ForeColor = System.Drawing.Color.Snow;
             this.btnRelatorio.Image = global::Bash.Properties.Resources.marketing;
             this.btnRelatorio.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRelatorio.Location = new System.Drawing.Point(39, 370);
+            this.btnRelatorio.Location = new System.Drawing.Point(39, 454);
             this.btnRelatorio.Margin = new System.Windows.Forms.Padding(3, 15, 3, 15);
             this.btnRelatorio.Name = "btnRelatorio";
             this.btnRelatorio.Size = new System.Drawing.Size(196, 66);
@@ -106,7 +104,7 @@
             this.btnSair.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnSair.Image = global::Bash.Properties.Resources.logout;
             this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSair.Location = new System.Drawing.Point(39, 661);
+            this.btnSair.Location = new System.Drawing.Point(39, 655);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(196, 66);
             this.btnSair.TabIndex = 6;
@@ -114,17 +112,6 @@
             this.btnSair.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.BtnSair_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Snow;
-            this.label1.Location = new System.Drawing.Point(47, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 29);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Painel Principal";
             // 
             // btnCaixa
             // 
@@ -136,7 +123,7 @@
             this.btnCaixa.ForeColor = System.Drawing.Color.Snow;
             this.btnCaixa.Image = global::Bash.Properties.Resources.pos;
             this.btnCaixa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCaixa.Location = new System.Drawing.Point(39, 124);
+            this.btnCaixa.Location = new System.Drawing.Point(39, 208);
             this.btnCaixa.Margin = new System.Windows.Forms.Padding(3, 15, 3, 15);
             this.btnCaixa.Name = "btnCaixa";
             this.btnCaixa.Size = new System.Drawing.Size(196, 66);
@@ -146,44 +133,42 @@
             this.btnCaixa.UseVisualStyleBackColor = true;
             this.btnCaixa.Click += new System.EventHandler(this.BtnCaixa_Click);
             // 
-            // btnTesteBanco
+            // btnPainel
             // 
-            this.btnTesteBanco.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnTesteBanco.FlatAppearance.BorderSize = 0;
-            this.btnTesteBanco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTesteBanco.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTesteBanco.ForeColor = System.Drawing.Color.Snow;
-            this.btnTesteBanco.Image = global::Bash.Properties.Resources.icons8_banco_de_dados_481;
-            this.btnTesteBanco.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTesteBanco.Location = new System.Drawing.Point(39, 522);
-            this.btnTesteBanco.Margin = new System.Windows.Forms.Padding(3, 15, 3, 15);
-            this.btnTesteBanco.Name = "btnTesteBanco";
-            this.btnTesteBanco.Size = new System.Drawing.Size(196, 66);
-            this.btnTesteBanco.TabIndex = 3;
-            this.btnTesteBanco.Text = "Teste de \r\nBanco";
-            this.btnTesteBanco.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTesteBanco.UseVisualStyleBackColor = true;
-            this.btnTesteBanco.Click += new System.EventHandler(this.BtnTesteBanco_Click);
+            this.btnPainel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnPainel.FlatAppearance.BorderSize = 0;
+            this.btnPainel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPainel.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPainel.ForeColor = System.Drawing.Color.Snow;
+            this.btnPainel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPainel.Location = new System.Drawing.Point(39, 61);
+            this.btnPainel.Margin = new System.Windows.Forms.Padding(3, 15, 3, 15);
+            this.btnPainel.Name = "btnPainel";
+            this.btnPainel.Size = new System.Drawing.Size(196, 66);
+            this.btnPainel.TabIndex = 3;
+            this.btnPainel.Text = "Painel Principal";
+            this.btnPainel.UseVisualStyleBackColor = true;
+            this.btnPainel.Click += new System.EventHandler(this.BtnTesteBanco_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.picImagem);
             this.panel3.Location = new System.Drawing.Point(293, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1061, 752);
             this.panel3.TabIndex = 2;
             // 
-            // pictureBox1
+            // picImagem
             // 
-            this.pictureBox1.Image = global::Bash.Properties.Resources.imagem_de_fundo_bash1;
-            this.pictureBox1.Location = new System.Drawing.Point(37, -14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(985, 779);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.picImagem.Image = global::Bash.Properties.Resources.imagem_de_fundo_bash1;
+            this.picImagem.Location = new System.Drawing.Point(37, 0);
+            this.picImagem.Name = "picImagem";
+            this.picImagem.Size = new System.Drawing.Size(985, 765);
+            this.picImagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImagem.TabIndex = 0;
+            this.picImagem.TabStop = false;
             // 
             // FormPrincipal
             // 
@@ -200,9 +185,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bash";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImagem)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -212,11 +196,10 @@
         private System.Windows.Forms.Button btnCadastros;
         private System.Windows.Forms.Button btnRelatorio;
         private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCaixa;
-        private System.Windows.Forms.Button btnTesteBanco;
+        private System.Windows.Forms.Button btnPainel;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picImagem;
     }
 }
 

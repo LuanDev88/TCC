@@ -103,21 +103,7 @@ namespace Bash
 
         private void BtnTesteBanco_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string str = "Server=127.0.0.1;Database=bash;Uid=root;Pwd=;";
-                string query = "select * from bash";
-                MySqlConnection con = new MySqlConnection(str);
-                MySqlCommand cmd = new MySqlCommand(query, con);
-                con.Open();
-                DataSet ds = new DataSet();
-                MessageBox.Show("Banco de Dados Conectado!");
-                con.Close();
-            }
-            catch (Exception er)
-            {
-                MessageBox.Show(er.Message);
-            }
+            
         }
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)

@@ -114,9 +114,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Bash.Properties.Resources.BASH_Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(12, -4);
+            this.pictureBox1.Location = new System.Drawing.Point(12, -33);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(409, 275);
+            this.pictureBox1.Size = new System.Drawing.Size(409, 323);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
@@ -136,11 +136,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-<<<<<<< HEAD
-            this.Text = "FormLogin";
-=======
             this.Text = "Bash";
->>>>>>> master
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

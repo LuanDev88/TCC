@@ -64,7 +64,7 @@
             this.btnFuncionario.ForeColor = System.Drawing.Color.Black;
             this.btnFuncionario.Image = global::Bash.Properties.Resources.identification;
             this.btnFuncionario.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnFuncionario.Location = new System.Drawing.Point(665, 372);
+            this.btnFuncionario.Location = new System.Drawing.Point(631, 370);
             this.btnFuncionario.Margin = new System.Windows.Forms.Padding(50);
             this.btnFuncionario.Name = "btnFuncionario";
             this.btnFuncionario.Size = new System.Drawing.Size(111, 112);
@@ -84,7 +84,7 @@
             this.btnUsuarios.ForeColor = System.Drawing.Color.Black;
             this.btnUsuarios.Image = global::Bash.Properties.Resources.Rectangle_4;
             this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnUsuarios.Location = new System.Drawing.Point(454, 375);
+            this.btnUsuarios.Location = new System.Drawing.Point(420, 373);
             this.btnUsuarios.Margin = new System.Windows.Forms.Padding(50);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(111, 109);
@@ -98,7 +98,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(465, 8);
+            this.label1.Location = new System.Drawing.Point(439, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(277, 39);
             this.label1.TabIndex = 5;
@@ -113,7 +113,7 @@
             this.BtnCadastros_Produtos.ForeColor = System.Drawing.Color.Black;
             this.BtnCadastros_Produtos.Image = global::Bash.Properties.Resources.Rectangle_3;
             this.BtnCadastros_Produtos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnCadastros_Produtos.Location = new System.Drawing.Point(665, 211);
+            this.BtnCadastros_Produtos.Location = new System.Drawing.Point(631, 209);
             this.BtnCadastros_Produtos.Margin = new System.Windows.Forms.Padding(50);
             this.BtnCadastros_Produtos.Name = "BtnCadastros_Produtos";
             this.BtnCadastros_Produtos.Size = new System.Drawing.Size(111, 112);
@@ -133,7 +133,7 @@
             this.btnCadastro.ForeColor = System.Drawing.Color.Black;
             this.btnCadastro.Image = global::Bash.Properties.Resources.Rectangle_1;
             this.btnCadastro.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCadastro.Location = new System.Drawing.Point(454, 211);
+            this.btnCadastro.Location = new System.Drawing.Point(420, 209);
             this.btnCadastro.Margin = new System.Windows.Forms.Padding(50);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Size = new System.Drawing.Size(111, 112);
